@@ -1,0 +1,672 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/kexec-tools</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="kexec-tools.html">kexec-tools</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="bad-return">2</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T gawk zlib xz</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T git</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>./bootstrap</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>aclocal -I config</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c echo 'm4_define([m4_require_silent_probe], [-])' | autom4te --language Autoconf-without-aclocal-m4  - /usr/share/aclocal-1.15/internal/ac-config-macro-dirs.m4  --trace='AC_DEFUN:$f::$n::${::}%' --trace='AC_DEFUN_ONCE:$f::$n::${::}%' --trace='AU_DEFUN:$f::$n::${::}%' --trace='_AM_AUTOCONF_VERSION:$f::$n::${::}%' --trace='AC_CONFIG_MACRO_DIR_TRACE:$f::$n::${::}%' --trace='AC_CONFIG_MACRO_DIR:$f::$n::${::}%' --trace='_AM_CONFIG_MACRO_DIRS:$f::$n::${::}%' configure.ac</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>autom4te --language Autoconf-without-aclocal-m4 - /usr/share/aclocal-1.15/internal/ac-config-macro-dirs.m4 --trace=AC_DEFUN:$f::$n::${::}% --trace=AC_DEFUN_ONCE:$f::$n::${::}% --trace=AU_DEFUN:$f::$n::${::}% --trace=_AM_AUTOCONF_VERSION:$f::$n::${::}% --trace=AC_CONFIG_MACRO_DIR_TRACE:$f::$n::${::}% --trace=AC_CONFIG_MACRO_DIR:$f::$n::${::}% --trace=_AM_CONFIG_MACRO_DIRS:$f::$n::${::}% configure.ac</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c /usr/bin/m4 --help </dev/null 2>&1 | grep reload-state >/dev/null</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --help</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c echo dumpdef | /usr/bin/m4 --nesting-limit=1024 2>&1 >/dev/null</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c (umask 077 &&
+	   mktemp -d /tmp/"am4tXXXXXX") 2>/dev/null</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c /usr/bin/m4 --nesting-limit=1024 --gnu --include=/usr/share/autoconf --debug=aflq --fatal-warning --debugfile=autom4te.cache/traces.0t --trace=AC_CONFIG_MACRO_DIR --trace=AC_CONFIG_MACRO_DIR_TRACE --trace=AC_DEFUN --trace=AC_DEFUN_ONCE --trace=AU_DEFUN --trace=_AM_AUTOCONF_VERSION --trace=_AM_CONFIG_MACRO_DIRS --trace=_m4_warn --trace=include --trace=m4_include --trace=m4_pattern_allow --trace=m4_pattern_forbid --reload-state=/usr/share/autoconf/autoconf/autoconf.m4f --undefine=__m4_version__ - /usr/share/aclocal-1.15/internal/ac-config-macro-dirs.m4 configure.ac > autom4te.cache/output.0t</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 --gnu --include=/usr/share/autoconf --debug=aflq --fatal-warning --debugfile=autom4te.cache/traces.0t --trace=AC_CONFIG_MACRO_DIR --trace=AC_CONFIG_MACRO_DIR_TRACE --trace=AC_DEFUN --trace=AC_DEFUN_ONCE --trace=AU_DEFUN --trace=_AM_AUTOCONF_VERSION --trace=_AM_CONFIG_MACRO_DIRS --trace=_m4_warn --trace=include --trace=m4_include --trace=m4_pattern_allow --trace=m4_pattern_forbid --reload-state=/usr/share/autoconf/autoconf/autoconf.m4f --undefine=__m4_version__ - /usr/share/aclocal-1.15/internal/ac-config-macro-dirs.m4 configure.ac</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4t8cWIPn/traces.m4</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4t8cWIPn/traces.m4</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>autoheader</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c (umask 077 &&
+	   mktemp -d /tmp/"ahXXXXXX") 2>/dev/null</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c '/usr/bin/autom4te' --language=autoconf  --trace AC_CONFIG_HEADERS:'$$config_h ||= '"'"'$1'"'"';' --trace AH_OUTPUT:'$$verbatim{'"'"'$1'"'"'} = '"'"'$2'"'"';' --trace AC_DEFINE_TRACE_LITERAL:'$$symbol{'"'"'$1'"'"'} = 1;' configure.ac >/tmp/ah77VsAR/traces.pl</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/autom4te --language=autoconf --trace AC_CONFIG_HEADERS:$$config_h ||= '$1'; --trace AH_OUTPUT:$$verbatim{'$1'} = '$2'; --trace AC_DEFINE_TRACE_LITERAL:$$symbol{'$1'} = 1; configure.ac</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c /usr/bin/m4 --help </dev/null 2>&1 | grep reload-state >/dev/null</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --help</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c echo dumpdef | /usr/bin/m4 --nesting-limit=1024 2>&1 >/dev/null</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c (umask 077 &&
+	   mktemp -d /tmp/"am4tXXXXXX") 2>/dev/null</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c /usr/bin/m4 --nesting-limit=1024 --gnu --include=/usr/share/autoconf --debug=aflq --fatal-warning --debugfile=autom4te.cache/traces.1t --trace=AC_CANONICAL_BUILD --trace=AC_CANONICAL_HOST --trace=AC_CANONICAL_SYSTEM --trace=AC_CANONICAL_TARGET --trace=AC_CONFIG_AUX_DIR --trace=AC_CONFIG_FILES --trace=AC_CONFIG_HEADERS --trace=AC_CONFIG_LIBOBJ_DIR --trace=AC_CONFIG_LINKS --trace=AC_CONFIG_SUBDIRS --trace=AC_DEFINE_TRACE_LITERAL --trace=AC_FC_FREEFORM --trace=AC_FC_PP_DEFINE --trace=AC_FC_PP_SRCEXT --trace=AC_FC_SRCEXT --trace=AC_INIT --trace=AC_LIBSOURCE --trace=AC_PROG_LIBTOOL --trace=AC_REQUIRE_AUX_FILE --trace=AC_SUBST --trace=AC_SUBST_TRACE --trace=AH_OUTPUT --trace=AM_AUTOMAKE_VERSION --trace=AM_CONDITIONAL --trace=AM_ENABLE_MULTILIB --trace=AM_GNU_GETTEXT --trace=AM_GNU_GETTEXT_INTL_SUBDIR --trace=AM_INIT_AUTOMAKE --trace=AM_MAINTAINER_MODE --trace=AM_MAKEFILE_INCLUDE --trace=AM_NLS --trace=AM_PATH_GUILE --trace=AM_POT_TOOLS --trace=AM_PROG_AR --trace=AM_PROG_CC_C_O --trace=AM_PROG_CXX_C_O --trace=AM_PROG_F77_C_O --trace=AM_PROG_FC_C_O --trace=AM_PROG_MOC --trace=AM_SILENT_RULES --trace=AM_XGETTEXT_OPTION --trace=LT_CONFIG_LTDL_DIR --trace=LT_INIT --trace=LT_SUPPORTED_TAG --trace=_AM_COND_ELSE --trace=_AM_COND_ENDIF --trace=_AM_COND_IF --trace=_AM_MAKEFILE_INCLUDE --trace=_AM_SUBST_NOTMAKE --trace=_LT_AC_TAGCONFIG --trace=_m4_warn --trace=include --trace=m4_include --trace=m4_pattern_allow --trace=m4_pattern_forbid --trace=m4_sinclude --trace=sinclude --reload-state=/usr/share/autoconf/autoconf/autoconf.m4f --undefine=__m4_version__ configure.ac > autom4te.cache/output.1t</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 --gnu --include=/usr/share/autoconf --debug=aflq --fatal-warning --debugfile=autom4te.cache/traces.1t --trace=AC_CANONICAL_BUILD --trace=AC_CANONICAL_HOST --trace=AC_CANONICAL_SYSTEM --trace=AC_CANONICAL_TARGET --trace=AC_CONFIG_AUX_DIR --trace=AC_CONFIG_FILES --trace=AC_CONFIG_HEADERS --trace=AC_CONFIG_LIBOBJ_DIR --trace=AC_CONFIG_LINKS --trace=AC_CONFIG_SUBDIRS --trace=AC_DEFINE_TRACE_LITERAL --trace=AC_FC_FREEFORM --trace=AC_FC_PP_DEFINE --trace=AC_FC_PP_SRCEXT --trace=AC_FC_SRCEXT --trace=AC_INIT --trace=AC_LIBSOURCE --trace=AC_PROG_LIBTOOL --trace=AC_REQUIRE_AUX_FILE --trace=AC_SUBST --trace=AC_SUBST_TRACE --trace=AH_OUTPUT --trace=AM_AUTOMAKE_VERSION --trace=AM_CONDITIONAL --trace=AM_ENABLE_MULTILIB --trace=AM_GNU_GETTEXT --trace=AM_GNU_GETTEXT_INTL_SUBDIR --trace=AM_INIT_AUTOMAKE --trace=AM_MAINTAINER_MODE --trace=AM_MAKEFILE_INCLUDE --trace=AM_NLS --trace=AM_PATH_GUILE --trace=AM_POT_TOOLS --trace=AM_PROG_AR --trace=AM_PROG_CC_C_O --trace=AM_PROG_CXX_C_O --trace=AM_PROG_F77_C_O --trace=AM_PROG_FC_C_O --trace=AM_PROG_MOC --trace=AM_SILENT_RULES --trace=AM_XGETTEXT_OPTION --trace=LT_CONFIG_LTDL_DIR --trace=LT_INIT --trace=LT_SUPPORTED_TAG --trace=_AM_COND_ELSE --trace=_AM_COND_ENDIF --trace=_AM_COND_IF --trace=_AM_MAKEFILE_INCLUDE --trace=_AM_SUBST_NOTMAKE --trace=_LT_AC_TAGCONFIG --trace=_m4_warn --trace=include --trace=m4_include --trace=m4_pattern_allow --trace=m4_pattern_forbid --trace=m4_sinclude --trace=sinclude --reload-state=/usr/share/autoconf/autoconf/autoconf.m4f --undefine=__m4_version__ configure.ac</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tOn1CH0/traces.m4</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tOn1CH0/traces.m4</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/autom4te --language=autoconf --output=configure configure.ac</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c /usr/bin/m4 --help </dev/null 2>&1 | grep reload-state >/dev/null</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --help</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c echo dumpdef | /usr/bin/m4 --nesting-limit=1024 2>&1 >/dev/null</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c (umask 077 &&
+	   mktemp -d /tmp/"am4tXXXXXX") 2>/dev/null</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tg6vVSI/traces.m4</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tg6vVSI/traces.m4</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tg6vVSI/traces.m4</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>./configure --host=x86_64-unknown-linux --prefix=/usr --sbindir=/usr/bin --without-lzma</code>
+        <ul class="level-4">
+          <li><span class="no-return">?</span>&nbsp;<code>cat</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">127</span>&nbsp;<code>/usr/convex/getsysinfo</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>clang --version</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>clang -v</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>clang -V</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>clang -qversion</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-53e056.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-eadaff.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-5f447c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config/config.sub sun4</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config/config.guess</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config/config.sub x86_64-unknown-linux-gnu</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config/config.sub x86_64-unknown-linux</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -mno-zero-initialized-in-bss -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/install -c conftest.one conftest.two /tmp/kexec-tools/src/kexec-tools/conftest.dir</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-1d5c3a.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-ba7d88.o -lz -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config.status</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="bad-return">2</span>&nbsp;<code>make</code>
+        <ul class="level-4">
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kexec.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kexec.d -MT kexec/kexec.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kexec.o -x c kexec/kexec.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name ifdown.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/ifdown.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/ifdown.d -MT kexec/ifdown.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/ifdown.o -x c kexec/ifdown.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-elf.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kexec-elf.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kexec-elf.d -MT kexec/kexec-elf.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kexec-elf.o -x c kexec/kexec-elf.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-elf-exec.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kexec-elf-exec.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kexec-elf-exec.d -MT kexec/kexec-elf-exec.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kexec-elf-exec.o -x c kexec/kexec-elf-exec.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-elf-core.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kexec-elf-core.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kexec-elf-core.d -MT kexec/kexec-elf-core.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kexec-elf-core.o -x c kexec/kexec-elf-core.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-elf-rel.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kexec-elf-rel.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kexec-elf-rel.d -MT kexec/kexec-elf-rel.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kexec-elf-rel.o -x c kexec/kexec-elf-rel.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-elf-boot.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kexec-elf-boot.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kexec-elf-boot.d -MT kexec/kexec-elf-boot.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kexec-elf-boot.o -x c kexec/kexec-elf-boot.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-iomem.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kexec-iomem.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kexec-iomem.d -MT kexec/kexec-iomem.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kexec-iomem.o -x c kexec/kexec-iomem.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name firmware_memmap.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/firmware_memmap.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/firmware_memmap.d -MT kexec/firmware_memmap.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/firmware_memmap.o -x c kexec/firmware_memmap.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name crashdump.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/crashdump.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/crashdump.d -MT kexec/crashdump.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/crashdump.o -x c kexec/crashdump.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name crashdump-xen.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/crashdump-xen.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/crashdump-xen.d -MT kexec/crashdump-xen.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/crashdump-xen.o -x c kexec/crashdump-xen.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name phys_arch.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/phys_arch.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/phys_arch.d -MT kexec/phys_arch.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/phys_arch.o -x c kexec/phys_arch.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kernel_version.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kernel_version.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kernel_version.d -MT kexec/kernel_version.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kernel_version.o -x c kexec/kernel_version.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name lzma.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/lzma.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/lzma.d -MT kexec/lzma.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/lzma.o -x c kexec/lzma.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name zlib.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/zlib.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/zlib.d -MT kexec/zlib.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/zlib.o -x c kexec/zlib.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-xen.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/kexec-xen.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/kexec-xen.d -MT kexec/kexec-xen.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/kexec-xen.o -x c kexec/kexec-xen.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name proc_iomem.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/proc_iomem.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/proc_iomem.d -MT kexec/proc_iomem.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/proc_iomem.o -x c kexec/proc_iomem.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name virt_to_phys.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/virt_to_phys.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/virt_to_phys.d -MT kexec/virt_to_phys.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/virt_to_phys.o -x c kexec/virt_to_phys.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name phys_to_virt.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/phys_to_virt.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/phys_to_virt.d -MT kexec/phys_to_virt.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/phys_to_virt.o -x c kexec/phys_to_virt.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name add_segment.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/add_segment.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/add_segment.d -MT kexec/add_segment.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/add_segment.o -x c kexec/add_segment.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name add_buffer.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/add_buffer.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/add_buffer.d -MT kexec/add_buffer.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/add_buffer.o -x c kexec/add_buffer.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name arch_reuse_initrd.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch_reuse_initrd.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch_reuse_initrd.d -MT kexec/arch_reuse_initrd.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch_reuse_initrd.o -x c kexec/arch_reuse_initrd.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-elf-x86.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/i386/kexec-elf-x86.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/i386/kexec-elf-x86.d -MT kexec/arch/i386/kexec-elf-x86.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/i386/kexec-elf-x86.o -x c kexec/arch/i386/kexec-elf-x86.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-bzImage.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/i386/kexec-bzImage.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/i386/kexec-bzImage.d -MT kexec/arch/i386/kexec-bzImage.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/i386/kexec-bzImage.o -x c kexec/arch/i386/kexec-bzImage.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-multiboot-x86.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/i386/kexec-multiboot-x86.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/i386/kexec-multiboot-x86.d -MT kexec/arch/i386/kexec-multiboot-x86.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/i386/kexec-multiboot-x86.o -x c kexec/arch/i386/kexec-multiboot-x86.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-beoboot-x86.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/i386/kexec-beoboot-x86.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/i386/kexec-beoboot-x86.d -MT kexec/arch/i386/kexec-beoboot-x86.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/i386/kexec-beoboot-x86.o -x c kexec/arch/i386/kexec-beoboot-x86.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-nbi.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/i386/kexec-nbi.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/i386/kexec-nbi.d -MT kexec/arch/i386/kexec-nbi.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/i386/kexec-nbi.o -x c kexec/arch/i386/kexec-nbi.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name x86-linux-setup.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/i386/x86-linux-setup.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/i386/x86-linux-setup.d -MT kexec/arch/i386/x86-linux-setup.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/i386/x86-linux-setup.o -x c kexec/arch/i386/x86-linux-setup.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-x86-common.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/i386/kexec-x86-common.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/i386/kexec-x86-common.d -MT kexec/arch/i386/kexec-x86-common.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/i386/kexec-x86-common.o -x c kexec/arch/i386/kexec-x86-common.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name crashdump-x86.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/i386/crashdump-x86.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/i386/crashdump-x86.d -MT kexec/arch/i386/crashdump-x86.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/i386/crashdump-x86.o -x c kexec/arch/i386/crashdump-x86.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-x86_64.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/x86_64/kexec-x86_64.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/x86_64/kexec-x86_64.d -MT kexec/arch/x86_64/kexec-x86_64.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/x86_64/kexec-x86_64.o -x c kexec/arch/x86_64/kexec-x86_64.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-elf-x86_64.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/x86_64/kexec-elf-x86_64.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/x86_64/kexec-elf-x86_64.d -MT kexec/arch/x86_64/kexec-elf-x86_64.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/x86_64/kexec-elf-x86_64.o -x c kexec/arch/x86_64/kexec-elf-x86_64.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-elf-rel-x86_64.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/x86_64/kexec-elf-rel-x86_64.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/x86_64/kexec-elf-rel-x86_64.d -MT kexec/arch/x86_64/kexec-elf-rel-x86_64.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/x86_64/kexec-elf-rel-x86_64.o -x c kexec/arch/x86_64/kexec-elf-rel-x86_64.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name kexec-bzImage64.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/kexec/arch/x86_64/kexec-bzImage64.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file kexec/arch/x86_64/kexec-bzImage64.d -MT kexec/arch/x86_64/kexec-bzImage64.o -sys-header-deps -I ./include -I ./util_lib/include -I include/ -I ./kexec/arch/x86_64/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o kexec/arch/x86_64/kexec-bzImage64.o -x c kexec/arch/x86_64/kexec-bzImage64.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name purgatory.c -mrelocation-model static -mthread-model posix -mno-zero-initialized-in-bss -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -mcode-model large -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/purgatory/purgatory.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file purgatory/purgatory.d -MT purgatory/purgatory.o -sys-header-deps -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -ffreestanding -fno-builtin -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o purgatory/purgatory.o -x c purgatory/purgatory.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name printf.c -mrelocation-model static -mthread-model posix -mno-zero-initialized-in-bss -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -mcode-model large -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/purgatory/printf.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file purgatory/printf.d -MT purgatory/printf.o -sys-header-deps -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -ffreestanding -fno-builtin -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o purgatory/printf.o -x c purgatory/printf.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name string.c -mrelocation-model static -mthread-model posix -mno-zero-initialized-in-bss -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -mcode-model large -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/purgatory/string.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file purgatory/string.d -MT purgatory/string.o -sys-header-deps -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -ffreestanding -fno-builtin -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o purgatory/string.o -x c purgatory/string.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1as -triple x86_64-unknown-linux-gnu -filetype obj -main-file-name entry64-32.S -target-cpu x86-64 -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -dwarf-version=4 -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -dwarf-debug-producer clang version 3.8.0 (tags/RELEASE_380/final) -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -mrelocation-model static -o purgatory/arch/x86_64/entry64-32.o /tmp/entry64-32-a78a33.s</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1as -triple x86_64-unknown-linux-gnu -filetype obj -main-file-name entry64.S -target-cpu x86-64 -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -dwarf-version=4 -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -dwarf-debug-producer clang version 3.8.0 (tags/RELEASE_380/final) -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -mrelocation-model static -o purgatory/arch/x86_64/entry64.o /tmp/entry64-225a52.s</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1as -triple x86_64-unknown-linux-gnu -filetype obj -main-file-name setup-x86_64.S -target-cpu x86-64 -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -dwarf-version=4 -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -dwarf-debug-producer clang version 3.8.0 (tags/RELEASE_380/final) -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -mrelocation-model static -o purgatory/arch/x86_64/setup-x86_64.o /tmp/setup-x86_64-4ef532.s</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1as -triple x86_64-unknown-linux-gnu -filetype obj -main-file-name stack.S -target-cpu x86-64 -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -dwarf-version=4 -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -dwarf-debug-producer clang version 3.8.0 (tags/RELEASE_380/final) -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -mrelocation-model static -o purgatory/arch/x86_64/stack.o /tmp/stack-6d714f.s</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name purgatory-x86_64.c -mrelocation-model static -mthread-model posix -mno-zero-initialized-in-bss -relaxed-aliasing -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -mcode-model large -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/kexec-tools/src/kexec-tools/purgatory/arch/x86_64/purgatory-x86_64.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file purgatory/arch/x86_64/purgatory-x86_64.d -MT purgatory/arch/x86_64/purgatory-x86_64.o -sys-header-deps -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -Wstrict-prototypes -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -ferror-limit 19 -fmessage-length 0 -ffreestanding -fno-builtin -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o purgatory/arch/x86_64/purgatory-x86_64.o -x c purgatory/arch/x86_64/purgatory-x86_64.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>clang -print-file-name=include</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1as -triple x86_64-unknown-linux-gnu -filetype obj -main-file-name entry32-16.S -target-cpu x86-64 -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -dwarf-version=4 -fdebug-compilation-dir /tmp/kexec-tools/src/kexec-tools -dwarf-debug-producer clang version 3.8.0 (tags/RELEASE_380/final) -I ./purgatory/include -I ./purgatory/arch/x86_64/include -I ./util_lib/include -I ./include -I include -I /usr/bin/../lib/clang/3.8.0/include -mrelocation-model static -o purgatory/arch/i386/entry32-16.o /tmp/entry32-16-3146c0.s</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

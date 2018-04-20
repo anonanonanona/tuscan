@@ -1,0 +1,664 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/nrpe</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="nrpe.html">nrpe</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="bad-return">2</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T openssl</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>./configure --host=x86_64-unknown-linux --prefix=/usr --sysconfdir=/etc/nrpe --libexecdir=/usr/lib/monitoring-plugins --enable-command-args --with-nrpe-user=0 --with-nrpe-group=0 --with-nagios-user=0 --with-nagios-group=0</code>
+        <ul class="level-4">
+          <li><span class="no-return">?</span>&nbsp;<code>cat</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">127</span>&nbsp;<code>/usr/convex/getsysinfo</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config.sub sun4</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config.guess</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config.sub x86_64-unknown-linux-gnu</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config.sub x86_64-unknown-linux</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>clang --version</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>clang -v</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>clang -V</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-f3f4b3.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./a.out</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-d8a7e9.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -f conftest.make</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-9fe3d6.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-21ae4e.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-16177f.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-28616f.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-938cb5.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-2bd3fb.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-0e5e8c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-ba6967.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-d3235c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-7e084d.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-7a25d0.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-ef4aba.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-a9ac47.o -lnsl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-55562f.o -lsocket -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-870d02.o -lwrap -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-1e6a38.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-98a3b8.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-265f1c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-b9b178.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-99b615.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/nrpe/src/nrpe-2.15/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/nrpe/src/nrpe-2.15 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/sbin/openssl dhparam -C 512</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>uniq confdefs.h</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config.status</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>perl subst init-script</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>perl subst init-script.debian</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>perl subst init-script.suse</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>perl subst sample-config/nrpe.cfg</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>perl subst sample-config/nrpe.xinetd</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>make</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd ./src/; make ; cd ..</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>make</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o nrpe /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/nrpe-643663.o /tmp/utils-62187c.o /tmp/acl-331c9c.o -lssl -lcrypto -lnsl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o check_nrpe /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/check_nrpe-43d8af.o /tmp/utils-3a52a6.o -lssl -lcrypto -lnsl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo ""</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "*** Compile finished ***"</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo ""</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "If the NRPE daemon and client compiled without any errors, you"</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "can continue with the installation or upgrade process."</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo ""</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "Read the PDF documentation (NRPE.pdf) for information on the next"</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "steps you should take to complete the installation or upgrade."</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo ""</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="bad-return">2</span>&nbsp;<code>fakeroot -- /usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/faked</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">2</span>&nbsp;<code>/usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+            <ul class="level-6">
+              <li><span class="bad-return">2</span>&nbsp;<code>make DESTDIR=/tmp/nrpe/pkg/nrpe install</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">2</span>&nbsp;<code>/bin/sh -c cd ./src/ && make install</code>
+                    <ul class="level-10">
+                      <li><span class="bad-return">2</span>&nbsp;<code>make install</code>
+                        <ul class="level-12">
+                          <li><span class="bad-return">2</span>&nbsp;<code>make install-plugin</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/install -c -m 775 -o 0 -g 0 -d /tmp/nrpe/pkg/nrpe/usr/lib/monitoring-plugins</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

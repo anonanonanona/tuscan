@@ -1,0 +1,1564 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/airspy</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="airspy.html">airspy</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="good-return">0</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T libusb>=1.0</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="no-return">?</span>&nbsp;<code>cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -Wno-dev ../</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -s  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -r  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/CMakeCCompilerId-a02bc3.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/CMakeCXXCompilerId-3ae9d9.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_ad95d/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_ad95d.dir/build.make CMakeFiles/cmTC_ad95d.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_ad95d.dir/testCCompiler.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name testCCompiler.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_ad95d.dir/testCCompiler.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_ad95d.dir/testCCompiler.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/testCCompiler.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_ad95d</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad95d.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ad95d /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_ad95d.dir/testCCompiler.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_455ee/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_455ee.dir/build.make CMakeFiles/cmTC_455ee.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_455ee.dir/CMakeCCompilerABI.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_455ee.dir/CMakeCCompilerABI.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_455ee.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_455ee</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_455ee.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_455ee /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_455ee.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_53b70/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_53b70.dir/build.make CMakeFiles/cmTC_53b70.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_53b70.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_53b70.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c11 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_53b70.dir/feature_tests.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_53b70</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53b70.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_53b70 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_53b70.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_dbfd2/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_dbfd2.dir/build.make CMakeFiles/cmTC_dbfd2.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_dbfd2.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_dbfd2.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c99 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_dbfd2.dir/feature_tests.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_dbfd2</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbfd2.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_dbfd2 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_dbfd2.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_a11bf/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_a11bf.dir/build.make CMakeFiles/cmTC_a11bf.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_a11bf.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_a11bf.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_a11bf.dir/feature_tests.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_a11bf</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a11bf.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a11bf /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_a11bf.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_f8cc1/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_f8cc1.dir/build.make CMakeFiles/cmTC_f8cc1.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_f8cc1.dir/testCXXCompiler.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name testCXXCompiler.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_f8cc1.dir/testCXXCompiler.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_f8cc1.dir/testCXXCompiler.cxx.o -x c++ /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_f8cc1</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8cc1.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f8cc1 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_f8cc1.dir/testCXXCompiler.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_35530/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_35530.dir/build.make CMakeFiles/cmTC_35530.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_35530.dir/CMakeCXXCompilerABI.cpp.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_35530.dir/CMakeCXXCompilerABI.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_35530.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_35530</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35530.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_35530 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_35530.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_0e779/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_0e779.dir/build.make CMakeFiles/cmTC_0e779.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_0e779.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_0e779.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++14 -fdeprecated-macro -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_0e779.dir/feature_tests.cxx.o -x c++ /tmp/airspy/src/host-1.0.7/build/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_0e779</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e779.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0e779 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_0e779.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_9947d/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_9947d.dir/build.make CMakeFiles/cmTC_9947d.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_9947d.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_9947d.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++11 -fdeprecated-macro -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_9947d.dir/feature_tests.cxx.o -x c++ /tmp/airspy/src/host-1.0.7/build/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_9947d</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9947d.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9947d /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_9947d.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_885b4/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_885b4.dir/build.make CMakeFiles/cmTC_885b4.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_885b4.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_885b4.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_885b4.dir/feature_tests.cxx.o -x c++ /tmp/airspy/src/host-1.0.7/build/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_885b4</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_885b4.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_885b4 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_885b4.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_2849c/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_2849c.dir/build.make CMakeFiles/cmTC_2849c.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_2849c.dir/CheckIncludeFile.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckIncludeFile.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_2849c.dir/CheckIncludeFile.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_2849c.dir/CheckIncludeFile.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_2849c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2849c.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2849c /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_2849c.dir/CheckIncludeFile.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_a8f59/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_a8f59.dir/build.make CMakeFiles/cmTC_a8f59.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_a8f59.dir/CheckIncludeFile.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckIncludeFile.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_a8f59.dir/CheckIncludeFile.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_a8f59.dir/CheckIncludeFile.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_a8f59</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8f59.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a8f59 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_a8f59.dir/CheckIncludeFile.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_af55a/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_af55a.dir/build.make CMakeFiles/cmTC_af55a.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_af55a.dir/CheckIncludeFile.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckIncludeFile.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_af55a.dir/CheckIncludeFile.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_af55a.dir/CheckIncludeFile.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_af55a</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af55a.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_af55a /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_af55a.dir/CheckIncludeFile.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_c73d4/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_c73d4.dir/build.make CMakeFiles/cmTC_c73d4.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_c73d4.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CMAKE_SIZEOF_UNSIGNED_SHORT.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_c73d4.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_c73d4.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_c73d4</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c73d4.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c73d4 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_c73d4.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_f216b/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_f216b.dir/build.make CMakeFiles/cmTC_f216b.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_f216b.dir/TestEndianess.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name TestEndianess.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_f216b.dir/TestEndianess.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_f216b.dir/TestEndianess.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/TestEndianess.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_f216b</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f216b.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f216b /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_f216b.dir/TestEndianess.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --version</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --exists --print-errors --short-errors libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --modversion libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --variable=prefix libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --variable=includedir libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --variable=libdir libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --libs-only-l libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --static --libs-only-l libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --libs-only-L libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --static --libs-only-L libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --libs libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --static --libs libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --libs-only-other libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --static --libs-only-other libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --cflags-only-I libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --static --cflags-only-I libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --cflags libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --static --cflags libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --cflags-only-other libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/pkg-config --static --cflags-only-other libusb-1.0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_201db/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_201db.dir/build.make CMakeFiles/cmTC_201db.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_201db.dir/CheckIncludeFiles.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckIncludeFiles.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_201db.dir/CheckIncludeFiles.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_201db.dir/CheckIncludeFiles.c.o -x c /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_201db</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_201db.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_201db /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_201db.dir/CheckIncludeFiles.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="bad-return">2</span>&nbsp;<code>/usr/bin/make cmTC_b8015/fast</code>
+            <ul class="level-6">
+              <li><span class="bad-return">2</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_b8015.dir/build.make CMakeFiles/cmTC_b8015.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_b8015.dir/CheckFunctionExists.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckFunctionExists.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_b8015.dir/CheckFunctionExists.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D CHECK_FUNCTION_EXISTS=pthread_create -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_b8015.dir/CheckFunctionExists.c.o -x c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_b8015</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8015.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b8015 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_b8015.dir/CheckFunctionExists.c.o -lpthreads -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_15874/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_15874.dir/build.make CMakeFiles/cmTC_15874.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_15874.dir/CheckFunctionExists.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckFunctionExists.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_15874.dir/CheckFunctionExists.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D CHECK_FUNCTION_EXISTS=pthread_create -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_15874.dir/CheckFunctionExists.c.o -x c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_15874</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15874.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_15874 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_15874.dir/CheckFunctionExists.c.o -lpthread -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>make</code>
+        <ul class="level-4">
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -H/tmp/airspy/src/host-1.0.7 -B/tmp/airspy/src/host-1.0.7/build --check-build-system CMakeFiles/Makefile.cmake 0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/airspy/src/host-1.0.7/build/CMakeFiles /tmp/airspy/src/host-1.0.7/build/CMakeFiles/progress.marks</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/Makefile2 all</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>make -f libairspy/src/CMakeFiles/airspy.dir/build.make libairspy/src/CMakeFiles/airspy.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/libairspy/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/libairspy/src /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/libairspy/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/libairspy/src /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f libairspy/src/CMakeFiles/airspy.dir/build.make libairspy/src/CMakeFiles/airspy.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=1 Building C object libairspy/src/CMakeFiles/airspy.dir/airspy.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/clang  -Dairspy_EXPORTS -I/usr/include/libusb-1.0  -std=gnu90 -O2 -fPIC   -Wall -o CMakeFiles/airspy.dir/airspy.c.o   -c /tmp/airspy/src/host-1.0.7/libairspy/src/airspy.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy.dir/airspy.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D airspy_EXPORTS -I /usr/include/libusb-1.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/libairspy/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy.dir/airspy.c.o -x c /tmp/airspy/src/host-1.0.7/libairspy/src/airspy.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=2 Building C object libairspy/src/CMakeFiles/airspy.dir/iqconverter_float.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/clang  -Dairspy_EXPORTS -I/usr/include/libusb-1.0  -std=gnu90 -O2 -fPIC   -Wall -o CMakeFiles/airspy.dir/iqconverter_float.c.o   -c /tmp/airspy/src/host-1.0.7/libairspy/src/iqconverter_float.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name iqconverter_float.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy.dir/iqconverter_float.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D airspy_EXPORTS -I /usr/include/libusb-1.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/libairspy/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy.dir/iqconverter_float.c.o -x c /tmp/airspy/src/host-1.0.7/libairspy/src/iqconverter_float.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=3 Building C object libairspy/src/CMakeFiles/airspy.dir/iqconverter_int16.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/clang  -Dairspy_EXPORTS -I/usr/include/libusb-1.0  -std=gnu90 -O2 -fPIC   -Wall -o CMakeFiles/airspy.dir/iqconverter_int16.c.o   -c /tmp/airspy/src/host-1.0.7/libairspy/src/iqconverter_int16.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name iqconverter_int16.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy.dir/iqconverter_int16.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D airspy_EXPORTS -I /usr/include/libusb-1.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/libairspy/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy.dir/iqconverter_int16.c.o -x c /tmp/airspy/src/host-1.0.7/libairspy/src/iqconverter_int16.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=4 Linking C shared library libairspy.so</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libairspy.so.1.0.7 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib -soname libairspy.so.0 CMakeFiles/airspy.dir/airspy.c.o CMakeFiles/airspy.dir/iqconverter_float.c.o CMakeFiles/airspy.dir/iqconverter_int16.c.o -lusb-1.0 -lpthread -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/cmake -E cmake_symlink_library libairspy.so.1.0.7 libairspy.so.0 libairspy.so</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_symlink_library libairspy.so.1.0.7 libairspy.so.0 libairspy.so</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E touch_nocreate libairspy/src/libairspy.so</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=1,2,3,4 Built target airspy</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f libairspy/src/CMakeFiles/airspy-static.dir/build.make libairspy/src/CMakeFiles/airspy-static.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/libairspy/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/libairspy/src /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy-static.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/libairspy/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/libairspy/src /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy-static.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f libairspy/src/CMakeFiles/airspy-static.dir/build.make libairspy/src/CMakeFiles/airspy-static.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=5 Building C object libairspy/src/CMakeFiles/airspy-static.dir/airspy.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/clang   -I/usr/include/libusb-1.0  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy-static.dir/airspy.c.o   -c /tmp/airspy/src/host-1.0.7/libairspy/src/airspy.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy-static.dir/airspy.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I /usr/include/libusb-1.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/libairspy/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy-static.dir/airspy.c.o -x c /tmp/airspy/src/host-1.0.7/libairspy/src/airspy.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=6 Building C object libairspy/src/CMakeFiles/airspy-static.dir/iqconverter_float.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/clang   -I/usr/include/libusb-1.0  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy-static.dir/iqconverter_float.c.o   -c /tmp/airspy/src/host-1.0.7/libairspy/src/iqconverter_float.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name iqconverter_float.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy-static.dir/iqconverter_float.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I /usr/include/libusb-1.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/libairspy/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy-static.dir/iqconverter_float.c.o -x c /tmp/airspy/src/host-1.0.7/libairspy/src/iqconverter_float.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=7 Building C object libairspy/src/CMakeFiles/airspy-static.dir/iqconverter_int16.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/clang   -I/usr/include/libusb-1.0  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy-static.dir/iqconverter_int16.c.o   -c /tmp/airspy/src/host-1.0.7/libairspy/src/iqconverter_int16.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name iqconverter_int16.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy-static.dir/iqconverter_int16.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I /usr/include/libusb-1.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/libairspy/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy-static.dir/iqconverter_int16.c.o -x c /tmp/airspy/src/host-1.0.7/libairspy/src/iqconverter_int16.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=8 Linking C static library libairspy.a</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/cmake -P CMakeFiles/airspy-static.dir/cmake_clean_target.cmake</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -P CMakeFiles/airspy-static.dir/cmake_clean_target.cmake</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/libairspy/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy-static.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy-static.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ar qc libairspy.a CMakeFiles/airspy-static.dir/airspy.c.o CMakeFiles/airspy-static.dir/iqconverter_float.c.o CMakeFiles/airspy-static.dir/iqconverter_int16.c.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ranlib libairspy.a</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=5,6,7,8 Built target airspy-static</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_lib_version.dir/build.make airspy-tools/src/CMakeFiles/airspy_lib_version.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_lib_version.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_lib_version.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_lib_version.dir/build.make airspy-tools/src/CMakeFiles/airspy_lib_version.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=15 Building C object airspy-tools/src/CMakeFiles/airspy_lib_version.dir/airspy_lib_version.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/clang  -D_FILE_OFFSET_BITS=64 -I/tmp/airspy/src/host-1.0.7/libairspy/src  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy_lib_version.dir/airspy_lib_version.c.o   -c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_lib_version.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy_lib_version.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_lib_version.dir/airspy_lib_version.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FILE_OFFSET_BITS=64 -I /tmp/airspy/src/host-1.0.7/libairspy/src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/airspy-tools/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy_lib_version.dir/airspy_lib_version.c.o -x c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_lib_version.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=16 Linking C executable airspy_lib_version</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_lib_version.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_lib_version.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o airspy_lib_version /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/airspy_lib_version.dir/airspy_lib_version.c.o ../../libairspy/src/libairspy.so.1.0.7 -lusb-1.0 -lpthread -rpath /tmp/airspy/src/host-1.0.7/build/libairspy/src: -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=15,16 Built target airspy_lib_version</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/build.make airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/build.make airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=11 Building C object airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/airspy_gpiodir.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/clang  -D_FILE_OFFSET_BITS=64 -I/tmp/airspy/src/host-1.0.7/libairspy/src  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy_gpiodir.dir/airspy_gpiodir.c.o   -c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_gpiodir.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy_gpiodir.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/airspy_gpiodir.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FILE_OFFSET_BITS=64 -I /tmp/airspy/src/host-1.0.7/libairspy/src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/airspy-tools/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy_gpiodir.dir/airspy_gpiodir.c.o -x c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_gpiodir.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=12 Linking C executable airspy_gpiodir</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_gpiodir.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_gpiodir.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o airspy_gpiodir /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/airspy_gpiodir.dir/airspy_gpiodir.c.o ../../libairspy/src/libairspy.so.1.0.7 -lusb-1.0 -lpthread -rpath /tmp/airspy/src/host-1.0.7/build/libairspy/src: -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=11,12 Built target airspy_gpiodir</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_r820t.dir/build.make airspy-tools/src/CMakeFiles/airspy_r820t.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_r820t.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_r820t.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_r820t.dir/build.make airspy-tools/src/CMakeFiles/airspy_r820t.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=17 Building C object airspy-tools/src/CMakeFiles/airspy_r820t.dir/airspy_r820t.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/clang  -D_FILE_OFFSET_BITS=64 -I/tmp/airspy/src/host-1.0.7/libairspy/src  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy_r820t.dir/airspy_r820t.c.o   -c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_r820t.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy_r820t.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_r820t.dir/airspy_r820t.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FILE_OFFSET_BITS=64 -I /tmp/airspy/src/host-1.0.7/libairspy/src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/airspy-tools/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy_r820t.dir/airspy_r820t.c.o -x c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_r820t.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=18 Linking C executable airspy_r820t</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_r820t.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_r820t.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o airspy_r820t /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/airspy_r820t.dir/airspy_r820t.c.o ../../libairspy/src/libairspy.so.1.0.7 -lusb-1.0 -lpthread -rpath /tmp/airspy/src/host-1.0.7/build/libairspy/src: -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=17,18 Built target airspy_r820t</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_spiflash.dir/build.make airspy-tools/src/CMakeFiles/airspy_spiflash.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_spiflash.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_spiflash.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_spiflash.dir/build.make airspy-tools/src/CMakeFiles/airspy_spiflash.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=23 Building C object airspy-tools/src/CMakeFiles/airspy_spiflash.dir/airspy_spiflash.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/clang  -D_FILE_OFFSET_BITS=64 -I/tmp/airspy/src/host-1.0.7/libairspy/src  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy_spiflash.dir/airspy_spiflash.c.o   -c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_spiflash.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy_spiflash.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_spiflash.dir/airspy_spiflash.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FILE_OFFSET_BITS=64 -I /tmp/airspy/src/host-1.0.7/libairspy/src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/airspy-tools/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy_spiflash.dir/airspy_spiflash.c.o -x c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_spiflash.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=24 Linking C executable airspy_spiflash</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_spiflash.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_spiflash.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o airspy_spiflash /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/airspy_spiflash.dir/airspy_spiflash.c.o ../../libairspy/src/libairspy.so.1.0.7 -lusb-1.0 -lpthread -rpath /tmp/airspy/src/host-1.0.7/build/libairspy/src: -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=23,24 Built target airspy_spiflash</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_si5351c.dir/build.make airspy-tools/src/CMakeFiles/airspy_si5351c.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_si5351c.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_si5351c.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_si5351c.dir/build.make airspy-tools/src/CMakeFiles/airspy_si5351c.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=21 Building C object airspy-tools/src/CMakeFiles/airspy_si5351c.dir/airspy_si5351c.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/clang  -D_FILE_OFFSET_BITS=64 -I/tmp/airspy/src/host-1.0.7/libairspy/src  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy_si5351c.dir/airspy_si5351c.c.o   -c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_si5351c.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy_si5351c.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_si5351c.dir/airspy_si5351c.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FILE_OFFSET_BITS=64 -I /tmp/airspy/src/host-1.0.7/libairspy/src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/airspy-tools/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy_si5351c.dir/airspy_si5351c.c.o -x c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_si5351c.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=22 Linking C executable airspy_si5351c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_si5351c.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_si5351c.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o airspy_si5351c /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/airspy_si5351c.dir/airspy_si5351c.c.o ../../libairspy/src/libairspy.so.1.0.7 -lusb-1.0 -lpthread -rpath /tmp/airspy/src/host-1.0.7/build/libairspy/src: -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=21,22 Built target airspy_si5351c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_rx.dir/build.make airspy-tools/src/CMakeFiles/airspy_rx.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_rx.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_rx.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_rx.dir/build.make airspy-tools/src/CMakeFiles/airspy_rx.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=19 Building C object airspy-tools/src/CMakeFiles/airspy_rx.dir/airspy_rx.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/clang  -D_FILE_OFFSET_BITS=64 -I/tmp/airspy/src/host-1.0.7/libairspy/src  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy_rx.dir/airspy_rx.c.o   -c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_rx.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy_rx.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_rx.dir/airspy_rx.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FILE_OFFSET_BITS=64 -I /tmp/airspy/src/host-1.0.7/libairspy/src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/airspy-tools/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy_rx.dir/airspy_rx.c.o -x c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_rx.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=20 Linking C executable airspy_rx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_rx.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_rx.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o airspy_rx /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/airspy_rx.dir/airspy_rx.c.o ../../libairspy/src/libairspy.so.1.0.7 -lusb-1.0 -lpthread -rpath /tmp/airspy/src/host-1.0.7/build/libairspy/src: -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=19,20 Built target airspy_rx</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_gpio.dir/build.make airspy-tools/src/CMakeFiles/airspy_gpio.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpio.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpio.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_gpio.dir/build.make airspy-tools/src/CMakeFiles/airspy_gpio.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=9 Building C object airspy-tools/src/CMakeFiles/airspy_gpio.dir/airspy_gpio.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/clang  -D_FILE_OFFSET_BITS=64 -I/tmp/airspy/src/host-1.0.7/libairspy/src  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy_gpio.dir/airspy_gpio.c.o   -c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_gpio.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy_gpio.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpio.dir/airspy_gpio.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FILE_OFFSET_BITS=64 -I /tmp/airspy/src/host-1.0.7/libairspy/src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/airspy-tools/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy_gpio.dir/airspy_gpio.c.o -x c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_gpio.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=10 Linking C executable airspy_gpio</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_gpio.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_gpio.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o airspy_gpio /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/airspy_gpio.dir/airspy_gpio.c.o ../../libairspy/src/libairspy.so.1.0.7 -lusb-1.0 -lpthread -rpath /tmp/airspy/src/host-1.0.7/build/libairspy/src: -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=9,10 Built target airspy_gpio</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_info.dir/build.make airspy-tools/src/CMakeFiles/airspy_info.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_info.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_info.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_info.dir/build.make airspy-tools/src/CMakeFiles/airspy_info.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=13 Building C object airspy-tools/src/CMakeFiles/airspy_info.dir/airspy_info.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/clang  -D_FILE_OFFSET_BITS=64 -I/tmp/airspy/src/host-1.0.7/libairspy/src  -std=gnu90 -O2   -Wall -o CMakeFiles/airspy_info.dir/airspy_info.c.o   -c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_info.c</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name airspy_info.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_info.dir/airspy_info.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FILE_OFFSET_BITS=64 -I /tmp/airspy/src/host-1.0.7/libairspy/src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -std=gnu90 -fdebug-compilation-dir /tmp/airspy/src/host-1.0.7/build/airspy-tools/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/airspy_info.dir/airspy_info.c.o -x c /tmp/airspy/src/host-1.0.7/airspy-tools/src/airspy_info.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=14 Linking C executable airspy_info</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build/airspy-tools/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_info.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/airspy_info.dir/link.txt --verbose=</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o airspy_info /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/airspy_info.dir/airspy_info.c.o ../../libairspy/src/libairspy.so.1.0.7 -lusb-1.0 -lpthread -rpath /tmp/airspy/src/host-1.0.7/build/libairspy/src: -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=13,14 Built target airspy_info</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/airspy/src/host-1.0.7/build/CMakeFiles 0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>fakeroot -- /usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/faked</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/pacman --noconfirm --color never --noprogressbar -Q</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make DESTDIR=/tmp/airspy/pkg/airspy install</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -H/tmp/airspy/src/host-1.0.7 -B/tmp/airspy/src/host-1.0.7/build --check-build-system CMakeFiles/Makefile.cmake 0</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/airspy/src/host-1.0.7/build/CMakeFiles /tmp/airspy/src/host-1.0.7/build/CMakeFiles/progress.marks</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/Makefile2 all</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f libairspy/src/CMakeFiles/airspy.dir/build.make libairspy/src/CMakeFiles/airspy.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/libairspy/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/libairspy/src /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/libairspy/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/libairspy/src /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f libairspy/src/CMakeFiles/airspy.dir/build.make libairspy/src/CMakeFiles/airspy.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=1,2,3,4 Built target airspy</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f libairspy/src/CMakeFiles/airspy-static.dir/build.make libairspy/src/CMakeFiles/airspy-static.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/libairspy/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/libairspy/src /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy-static.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/libairspy/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/libairspy/src /tmp/airspy/src/host-1.0.7/build/libairspy/src/CMakeFiles/airspy-static.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f libairspy/src/CMakeFiles/airspy-static.dir/build.make libairspy/src/CMakeFiles/airspy-static.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=5,6,7,8 Built target airspy-static</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_lib_version.dir/build.make airspy-tools/src/CMakeFiles/airspy_lib_version.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_lib_version.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_lib_version.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_lib_version.dir/build.make airspy-tools/src/CMakeFiles/airspy_lib_version.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=15,16 Built target airspy_lib_version</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/build.make airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/build.make airspy-tools/src/CMakeFiles/airspy_gpiodir.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=11,12 Built target airspy_gpiodir</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_r820t.dir/build.make airspy-tools/src/CMakeFiles/airspy_r820t.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_r820t.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_r820t.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_r820t.dir/build.make airspy-tools/src/CMakeFiles/airspy_r820t.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=17,18 Built target airspy_r820t</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_spiflash.dir/build.make airspy-tools/src/CMakeFiles/airspy_spiflash.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_spiflash.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_spiflash.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_spiflash.dir/build.make airspy-tools/src/CMakeFiles/airspy_spiflash.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=23,24 Built target airspy_spiflash</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_si5351c.dir/build.make airspy-tools/src/CMakeFiles/airspy_si5351c.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_si5351c.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_si5351c.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_si5351c.dir/build.make airspy-tools/src/CMakeFiles/airspy_si5351c.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=21,22 Built target airspy_si5351c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_rx.dir/build.make airspy-tools/src/CMakeFiles/airspy_rx.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_rx.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_rx.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_rx.dir/build.make airspy-tools/src/CMakeFiles/airspy_rx.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=19,20 Built target airspy_rx</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_gpio.dir/build.make airspy-tools/src/CMakeFiles/airspy_gpio.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpio.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_gpio.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_gpio.dir/build.make airspy-tools/src/CMakeFiles/airspy_gpio.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=9,10 Built target airspy_gpio</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_info.dir/build.make airspy-tools/src/CMakeFiles/airspy_info.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/airspy/src/host-1.0.7/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_info.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/airspy/src/host-1.0.7 /tmp/airspy/src/host-1.0.7/airspy-tools/src /tmp/airspy/src/host-1.0.7/build /tmp/airspy/src/host-1.0.7/build/airspy-tools/src /tmp/airspy/src/host-1.0.7/build/airspy-tools/src/CMakeFiles/airspy_info.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f airspy-tools/src/CMakeFiles/airspy_info.dir/build.make airspy-tools/src/CMakeFiles/airspy_info.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/airspy/src/host-1.0.7/build/CMakeFiles --progress-num=13,14 Built target airspy_info</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/airspy/src/host-1.0.7/build/CMakeFiles 0</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/Makefile2 preinstall</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --cyan Install the project...</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -P cmake_install.cmake</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>install -Dm644 ../airspy-tools/52-airspy.rules /tmp/airspy/pkg/airspy/usr/lib/udev/rules.d/52-airspy.rules</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>install -Dm644 /tmp/airspy/src/airspy.conf /tmp/airspy/pkg/airspy/etc/modprobe.d/airspy.conf</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/airspy/src</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/airspy/pkg</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>fakeroot -v</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>openssl dgst -sha256 /tmp/airspy/PKGBUILD</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -czf .MTREE --format=mtree --options=!all,use-set,type,uid,gid,mode,time,size,md5,sha256,link .PKGINFO .BUILDINFO etc usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -cf - .PKGINFO .BUILDINFO .MTREE etc usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>xz -c -z -</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T cmake</code>
+    <ul class="level-2">
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

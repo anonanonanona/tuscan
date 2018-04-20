@@ -1,0 +1,1034 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/sthttpd</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="sthttpd.html">sthttpd</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="bad-return">2</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>./configure --host=x86_64-unknown-linux --prefix=/usr --sbindir=/usr/bin --mandir=/usr/share/man</code>
+        <ul class="level-4">
+          <li><span class="no-return">?</span>&nbsp;<code>cat</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">127</span>&nbsp;<code>/usr/convex/getsysinfo</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/install -c conftest.one conftest.two /tmp/sthttpd/src/sthttpd-2.27.0/conftest.dir</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh /tmp/sthttpd/src/sthttpd-2.27.0/missing --is-lightweight</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -f conftest.make</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -f -</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>clang --version</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>clang -v</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>clang -V</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>clang -qversion</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-fcc514.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-d7c977.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-05518d.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -s -f confmf</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./depcomp clang -c -o sub/conftest.o sub/conftest.c</code>
+            <ul class="level-6">
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.dir/sub/conftest.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file sub/conftest.TPo -sys-header-deps -MP -MT sub/conftest.o -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/conftest.dir -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o sub/conftest.o -x c sub/conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -s -f confmf</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-536d15.o -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-d35587.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-9c9a2b.o -lhstrerror -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-e8b137.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-33342c.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-64eb89.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-5b2a9e.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-58046b.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-4c73db.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-d8bdb6.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-149d32.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-c40c7d.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-2b3c33.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-20c1ef.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-c0236e.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-76d5d0.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-6bc98d.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-b6ea15.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-4b5925.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-2c8965.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-052b62.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-dd123b.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-41a273.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-4cb297.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-546b6a.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-c4dc6d.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-a5ccf8.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-67f138.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-a3a19b.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-0329b2.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-6e1adc.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-d8987e.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-61cefb.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-12e2cb.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-1c7bd2.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-53d1fe.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o /tmp/conftest-f22052.o -x c conftest.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-a1bcaf.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-9db242.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-897192.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-a20419.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-1a91e2.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-26a895.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-6bb5a1.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-f634a4.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-b965d8.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-d794d3.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-342338.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-03775f.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-814be5.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-a02ed8.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-7b31df.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-a36bdf.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config.status</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>make</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if test ! -f config.h; then rm -f stamp-h1; else :; fi</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if test ! -f config.h; then make  stamp-h1; else :; fi</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make all-recursive</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c fail=; \
+if (target_option=k; case ${target_option-} in ?) ;; *) echo "am__make_running_with_option: internal error: invalid" "target option '${target_option-}' specified" >&2; exit 1;; esac; has_opt=no; sane_makeflags=$MAKEFLAGS; if test -n ' Makefile' && test -n '1'; then sane_makeflags=$MFLAGS; else case $MAKEFLAGS in *\\[\ \	]*) bs=\\; sane_makeflags=`printf '%s\n' "$MAKEFLAGS" | sed "s/$bs$bs[$bs $bs	]*//g"`;; esac; fi; skip_next=no; strip_trailopt () { flg=`printf '%s\n' "$flg" | sed "s/$1.*$//"`; }; for flg in $sane_makeflags; do test $skip_next = yes && { skip_next=no; continue; }; case $flg in *=*|--*) continue;; -*I) strip_trailopt 'I'; skip_next=yes;; -*I?*) strip_trailopt 'I';; -*O) strip_trailopt 'O'; skip_next=yes;; -*O?*) strip_trailopt 'O';; -*l) strip_trailopt 'l'; skip_next=yes;; -*l?*) strip_trailopt 'l';; -[dEDm]) skip_next=yes;; -[JT]) skip_next=yes;; esac; case $flg in *$target_option*) has_opt=yes; break;; esac; done; test $has_opt = yes); then \
+  failcom='fail=yes'; \
+else \
+  failcom='exit 1'; \
+fi; \
+dot_seen=no; \
+target=`echo all-recursive | sed s/-recursive//`; \
+case "all-recursive" in \
+  distclean-* | maintainer-clean-*) list='src extras docs scripts www' ;; \
+  *) list='src extras docs scripts www' ;; \
+esac; \
+for subdir in $list; do \
+  echo "Making $target in $subdir"; \
+  if test "$subdir" = "."; then \
+    dot_seen=yes; \
+    local_target="$target-am"; \
+  else \
+    local_target="$target"; \
+  fi; \
+  (CDPATH="${ZSH_VERSION+.}:" && cd $subdir && make  $local_target) \
+  || eval $failcom; \
+done; \
+if test "$dot_seen" = "no"; then \
+  make  "$target-am" || exit 1; \
+fi; test -z "$fail"</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>make all</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name match.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/src/match.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/match.Tpo -sys-header-deps -MP -MT match.o -D HAVE_CONFIG_H -I . -I .. -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o match.o -x c match.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>ar cru libmatch.a match.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>ranlib libmatch.a</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name thttpd.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/src/thttpd.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/thttpd.Tpo -sys-header-deps -MP -MT thttpd.o -D HAVE_CONFIG_H -I . -I .. -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o thttpd.o -x c thttpd.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name fdwatch.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/src/fdwatch.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/fdwatch.Tpo -sys-header-deps -MP -MT fdwatch.o -D HAVE_CONFIG_H -I . -I .. -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o fdwatch.o -x c fdwatch.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name libhttpd.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/src/libhttpd.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/libhttpd.Tpo -sys-header-deps -MP -MT libhttpd.o -D HAVE_CONFIG_H -I . -I .. -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o libhttpd.o -x c libhttpd.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name mmc.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/src/mmc.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/mmc.Tpo -sys-header-deps -MP -MT mmc.o -D HAVE_CONFIG_H -I . -I .. -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o mmc.o -x c mmc.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name timers.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/src/timers.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/timers.Tpo -sys-header-deps -MP -MT timers.o -D HAVE_CONFIG_H -I . -I .. -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o timers.o -x c timers.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name tdate_parse.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/src/tdate_parse.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/tdate_parse.Tpo -sys-header-deps -MP -MT tdate_parse.o -D HAVE_CONFIG_H -I . -I .. -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o tdate_parse.o -x c tdate_parse.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o thttpd /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib thttpd.o fdwatch.o libhttpd.o mmc.o timers.o tdate_parse.o libmatch.a -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make all</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name makeweb.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/extras/makeweb.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/makeweb.Tpo -sys-header-deps -MP -MT makeweb.o -D HAVE_CONFIG_H -I . -I .. -D WEBDIR="/srv/http" -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/extras -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o makeweb.o -x c makeweb.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o makeweb /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib makeweb.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name htpasswd.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/extras/htpasswd.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/htpasswd.Tpo -sys-header-deps -MP -MT htpasswd.o -D HAVE_CONFIG_H -I . -I .. -D WEBDIR="/srv/http" -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/extras -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o htpasswd.o -x c htpasswd.c</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o htpasswd /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib htpasswd.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make all</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make all</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make all</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c fail=; \
+if (target_option=k; case ${target_option-} in ?) ;; *) echo "am__make_running_with_option: internal error: invalid" "target option '${target_option-}' specified" >&2; exit 1;; esac; has_opt=no; sane_makeflags=$MAKEFLAGS; if test -n ' Makefile' && test -n '2'; then sane_makeflags=$MFLAGS; else case $MAKEFLAGS in *\\[\ \	]*) bs=\\; sane_makeflags=`printf '%s\n' "$MAKEFLAGS" | sed "s/$bs$bs[$bs $bs	]*//g"`;; esac; fi; skip_next=no; strip_trailopt () { flg=`printf '%s\n' "$flg" | sed "s/$1.*$//"`; }; for flg in $sane_makeflags; do test $skip_next = yes && { skip_next=no; continue; }; case $flg in *=*|--*) continue;; -*I) strip_trailopt 'I'; skip_next=yes;; -*I?*) strip_trailopt 'I';; -*O) strip_trailopt 'O'; skip_next=yes;; -*O?*) strip_trailopt 'O';; -*l) strip_trailopt 'l'; skip_next=yes;; -*l?*) strip_trailopt 'l';; -[dEDm]) skip_next=yes;; -[JT]) skip_next=yes;; esac; case $flg in *$target_option*) has_opt=yes; break;; esac; done; test $has_opt = yes); then \
+  failcom='fail=yes'; \
+else \
+  failcom='exit 1'; \
+fi; \
+dot_seen=no; \
+target=`echo all-recursive | sed s/-recursive//`; \
+case "all-recursive" in \
+  distclean-* | maintainer-clean-*) list='cgi-bin' ;; \
+  *) list='cgi-bin' ;; \
+esac; \
+for subdir in $list; do \
+  echo "Making $target in $subdir"; \
+  if test "$subdir" = "."; then \
+    dot_seen=yes; \
+    local_target="$target-am"; \
+  else \
+    local_target="$target"; \
+  fi; \
+  (CDPATH="${ZSH_VERSION+.}:" && cd $subdir && make  $local_target) \
+  || eval $failcom; \
+done; \
+if test "$dot_seen" = "no"; then \
+  make  "$target-am" || exit 1; \
+fi; test -z "$fail"</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>make all</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name redirect.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/www/cgi-bin/redirect-redirect.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/redirect-redirect.Tpo -sys-header-deps -MP -MT redirect-redirect.o -D HAVE_CONFIG_H -I . -I ../.. -I ../../src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/www/cgi-bin -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o redirect-redirect.o -x c redirect.c</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o redirect /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib redirect-redirect.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name ssi.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/www/cgi-bin/ssi-ssi.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/ssi-ssi.Tpo -sys-header-deps -MP -MT ssi-ssi.o -D HAVE_CONFIG_H -I . -I ../.. -I ../../src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/www/cgi-bin -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o ssi-ssi.o -x c ssi.c</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o ssi /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib ssi-ssi.o ../../src/libmatch.a -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name phf.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/sthttpd/src/sthttpd-2.27.0/www/cgi-bin/phf-phf.o -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file .deps/phf-phf.Tpo -sys-header-deps -MP -MT phf-phf.o -D HAVE_CONFIG_H -I . -I ../.. -I ../../src -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/sthttpd/src/sthttpd-2.27.0/www/cgi-bin -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o phf-phf.o -x c phf.c</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o phf /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib phf-phf.o -lrt -lcrypt -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>make all-am</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make all-am</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if test ! -f config.h; then rm -f stamp-h1; else :; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if test ! -f config.h; then make  stamp-h1; else :; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="bad-return">2</span>&nbsp;<code>fakeroot -- /usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/faked</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">2</span>&nbsp;<code>/usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+            <ul class="level-6">
+              <li><span class="bad-return">2</span>&nbsp;<code>make DESTDIR=/tmp/sthttpd/pkg/sthttpd install</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c fail=; \
+if (target_option=k; case ${target_option-} in ?) ;; *) echo "am__make_running_with_option: internal error: invalid" "target option '${target_option-}' specified" >&2; exit 1;; esac; has_opt=no; sane_makeflags=$MAKEFLAGS; if test -n ' Makefile' && test -n '0'; then sane_makeflags=$MFLAGS; else case $MAKEFLAGS in *\\[\ \	]*) bs=\\; sane_makeflags=`printf '%s\n' "$MAKEFLAGS" | sed "s/$bs$bs[$bs $bs	]*//g"`;; esac; fi; skip_next=no; strip_trailopt () { flg=`printf '%s\n' "$flg" | sed "s/$1.*$//"`; }; for flg in $sane_makeflags; do test $skip_next = yes && { skip_next=no; continue; }; case $flg in *=*|--*) continue;; -*I) strip_trailopt 'I'; skip_next=yes;; -*I?*) strip_trailopt 'I';; -*O) strip_trailopt 'O'; skip_next=yes;; -*O?*) strip_trailopt 'O';; -*l) strip_trailopt 'l'; skip_next=yes;; -*l?*) strip_trailopt 'l';; -[dEDm]) skip_next=yes;; -[JT]) skip_next=yes;; esac; case $flg in *$target_option*) has_opt=yes; break;; esac; done; test $has_opt = yes); then \
+  failcom='fail=yes'; \
+else \
+  failcom='exit 1'; \
+fi; \
+dot_seen=no; \
+target=`echo install-recursive | sed s/-recursive//`; \
+case "install-recursive" in \
+  distclean-* | maintainer-clean-*) list='src extras docs scripts www' ;; \
+  *) list='src extras docs scripts www' ;; \
+esac; \
+for subdir in $list; do \
+  echo "Making $target in $subdir"; \
+  if test "$subdir" = "."; then \
+    dot_seen=yes; \
+    local_target="$target-am"; \
+  else \
+    local_target="$target"; \
+  fi; \
+  (CDPATH="${ZSH_VERSION+.}:" && cd $subdir && make  $local_target) \
+  || eval $failcom; \
+done; \
+if test "$dot_seen" = "no"; then \
+  make  "$target-am" || exit 1; \
+fi; test -z "$fail"</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>make install</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>make install-exec-am install-data-am</code>
+                            <ul class="level-14">
+                              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c list='thttpd'; test -n "/usr/bin" || list=; \
+if test -n "$list"; then \
+  echo " /usr/bin/mkdir -p '/tmp/sthttpd/pkg/sthttpd/usr/bin'"; \
+  /usr/bin/mkdir -p "/tmp/sthttpd/pkg/sthttpd/usr/bin" || exit 1; \
+fi; \
+for p in $list; do echo "$p $p"; done | \
+sed 's/$//' | \
+while read p p1; do if test -f $p \
+  ; then echo "$p"; echo "$p"; else :; fi; \
+done | \
+sed -e 'p;s,.*/,,;n;h' \
+    -e 's|.*|.|' \
+    -e 'p;x;s,.*/,,;s/$//;s,x,x,;s/$//' | \
+sed 'N;N;N;s,\n, ,g' | \
+gawk 'BEGIN { files["."] = ""; dirs["."] = 1 } \
+  { d=$3; if (dirs[d] != 1) { print "d", d; dirs[d] = 1 } \
+    if ($2 == $4) files[d] = files[d] " " $1; \
+    else { print "f", $3 "/" $4, $1; } } \
+  END { for (d in files) print "f", d, files[d] }' | \
+while read type dir files; do \
+    if test "$dir" = .; then dir=; else dir=/$dir; fi; \
+    test -z "$files" || { \
+      echo "  /usr/bin/install -c $files '/tmp/sthttpd/pkg/sthttpd/usr/bin$dir'"; \
+       /usr/bin/install -c $files "/tmp/sthttpd/pkg/sthttpd/usr/bin$dir" || exit $?; \
+    } \
+; done</code>
+                                <ul class="level-16">
+                                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/install -c thttpd /tmp/sthttpd/pkg/sthttpd/usr/bin</code>
+                                    <ul class="level-18">
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="bad-return">2</span>&nbsp;<code>make install</code>
+                        <ul class="level-12">
+                          <li><span class="bad-return">2</span>&nbsp;<code>make install-exec-am install-data-am</code>
+                            <ul class="level-14">
+                              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c list='syslogtocern'; test -n "/usr/bin" || list=; \
+if test -n "$list"; then \
+  echo " /usr/bin/mkdir -p '/tmp/sthttpd/pkg/sthttpd/usr/bin'"; \
+  /usr/bin/mkdir -p "/tmp/sthttpd/pkg/sthttpd/usr/bin" || exit 1; \
+fi; \
+for p in $list; do \
+  if test -f "$p"; then d=; else d="./"; fi; \
+  if test -f "$d$p"; then echo "$d$p"; echo "$p"; else :; fi; \
+done | \
+sed -e 'p;s,.*/,,;n' \
+    -e 'h;s|.*|.|' \
+    -e 'p;x;s,.*/,,;s,x,x,' | sed 'N;N;N;s,\n, ,g' | \
+gawk 'BEGIN { files["."] = ""; dirs["."] = 1; } \
+  { d=$3; if (dirs[d] != 1) { print "d", d; dirs[d] = 1 } \
+    if ($2 == $4) { files[d] = files[d] " " $1; \
+      if (++n[d] == 40) { \
+	print "f", d, files[d]; n[d] = 0; files[d] = "" } } \
+    else { print "f", d "/" $4, $1 } } \
+  END { for (d in files) print "f", d, files[d] }' | \
+while read type dir files; do \
+     if test "$dir" = .; then dir=; else dir=/$dir; fi; \
+     test -z "$files" || { \
+       echo " /usr/bin/install -c $files '/tmp/sthttpd/pkg/sthttpd/usr/bin$dir'"; \
+       /usr/bin/install -c $files "/tmp/sthttpd/pkg/sthttpd/usr/bin$dir" || exit $?; \
+     } \
+; done</code>
+                                <ul class="level-16">
+                                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/install -c syslogtocern /tmp/sthttpd/pkg/sthttpd/usr/bin</code>
+                                    <ul class="level-18">
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c list='makeweb htpasswd'; test -n "/usr/bin" || list=; \
+if test -n "$list"; then \
+  echo " /usr/bin/mkdir -p '/tmp/sthttpd/pkg/sthttpd/usr/bin'"; \
+  /usr/bin/mkdir -p "/tmp/sthttpd/pkg/sthttpd/usr/bin" || exit 1; \
+fi; \
+for p in $list; do echo "$p $p"; done | \
+sed 's/$//' | \
+while read p p1; do if test -f $p \
+  ; then echo "$p"; echo "$p"; else :; fi; \
+done | \
+sed -e 'p;s,.*/,,;n;h' \
+    -e 's|.*|.|' \
+    -e 'p;x;s,.*/,,;s/$//;s,x,x,;s/$//' | \
+sed 'N;N;N;s,\n, ,g' | \
+gawk 'BEGIN { files["."] = ""; dirs["."] = 1 } \
+  { d=$3; if (dirs[d] != 1) { print "d", d; dirs[d] = 1 } \
+    if ($2 == $4) files[d] = files[d] " " $1; \
+    else { print "f", $3 "/" $4, $1; } } \
+  END { for (d in files) print "f", d, files[d] }' | \
+while read type dir files; do \
+    if test "$dir" = .; then dir=; else dir=/$dir; fi; \
+    test -z "$files" || { \
+      echo "  /usr/bin/install -c $files '/tmp/sthttpd/pkg/sthttpd/usr/bin$dir'"; \
+       /usr/bin/install -c $files "/tmp/sthttpd/pkg/sthttpd/usr/bin$dir" || exit $?; \
+    } \
+; done</code>
+                                <ul class="level-16">
+                                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/install -c makeweb htpasswd /tmp/sthttpd/pkg/sthttpd/usr/bin</code>
+                                    <ul class="level-18">
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><span class="bad-return">2</span>&nbsp;<code>make install-exec-hook</code>
+                                <ul class="level-16">
+                                  <li><span class="no-return">?</span>&nbsp;<code>chgrp http /tmp/sthttpd/pkg/sthttpd/usr/bin/makeweb</code>
+                                    <ul class="level-18">
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

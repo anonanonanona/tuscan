@@ -1,0 +1,1235 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/dd_rescue</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="dd_rescue.html">dd_rescue</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="bad-return">2</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T glibc</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>./autogen.sh</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>autoheader</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c (umask 077 &&
+	   mktemp -d /tmp/"ahXXXXXX") 2>/dev/null</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c '/usr/bin/autom4te' --language=autoconf  --trace AC_CONFIG_HEADERS:'$$config_h ||= '"'"'$1'"'"';' --trace AH_OUTPUT:'$$verbatim{'"'"'$1'"'"'} = '"'"'$2'"'"';' --trace AC_DEFINE_TRACE_LITERAL:'$$symbol{'"'"'$1'"'"'} = 1;' configure.in >/tmp/ahmt78LP/traces.pl</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/autom4te --language=autoconf --trace AC_CONFIG_HEADERS:$$config_h ||= '$1'; --trace AH_OUTPUT:$$verbatim{'$1'} = '$2'; --trace AC_DEFINE_TRACE_LITERAL:$$symbol{'$1'} = 1; configure.in</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c /usr/bin/m4 --help </dev/null 2>&1 | grep reload-state >/dev/null</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --help</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c echo dumpdef | /usr/bin/m4 --nesting-limit=1024 2>&1 >/dev/null</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c (umask 077 &&
+	   mktemp -d /tmp/"am4tXXXXXX") 2>/dev/null</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>sh -c /usr/bin/m4 --nesting-limit=1024 --gnu --include=/usr/share/autoconf --debug=aflq --fatal-warning --debugfile=autom4te.cache/traces.0t --trace=AC_CANONICAL_BUILD --trace=AC_CANONICAL_HOST --trace=AC_CANONICAL_SYSTEM --trace=AC_CANONICAL_TARGET --trace=AC_CONFIG_AUX_DIR --trace=AC_CONFIG_FILES --trace=AC_CONFIG_HEADERS --trace=AC_CONFIG_LIBOBJ_DIR --trace=AC_CONFIG_LINKS --trace=AC_CONFIG_SUBDIRS --trace=AC_DEFINE_TRACE_LITERAL --trace=AC_FC_FREEFORM --trace=AC_FC_PP_DEFINE --trace=AC_FC_PP_SRCEXT --trace=AC_FC_SRCEXT --trace=AC_INIT --trace=AC_LIBSOURCE --trace=AC_PROG_LIBTOOL --trace=AC_REQUIRE_AUX_FILE --trace=AC_SUBST --trace=AC_SUBST_TRACE --trace=AH_OUTPUT --trace=AM_AUTOMAKE_VERSION --trace=AM_CONDITIONAL --trace=AM_ENABLE_MULTILIB --trace=AM_GNU_GETTEXT --trace=AM_GNU_GETTEXT_INTL_SUBDIR --trace=AM_INIT_AUTOMAKE --trace=AM_MAINTAINER_MODE --trace=AM_MAKEFILE_INCLUDE --trace=AM_NLS --trace=AM_PATH_GUILE --trace=AM_POT_TOOLS --trace=AM_PROG_AR --trace=AM_PROG_CC_C_O --trace=AM_PROG_CXX_C_O --trace=AM_PROG_F77_C_O --trace=AM_PROG_FC_C_O --trace=AM_PROG_MOC --trace=AM_SILENT_RULES --trace=AM_XGETTEXT_OPTION --trace=LT_CONFIG_LTDL_DIR --trace=LT_INIT --trace=LT_SUPPORTED_TAG --trace=_AM_COND_ELSE --trace=_AM_COND_ENDIF --trace=_AM_COND_IF --trace=_AM_MAKEFILE_INCLUDE --trace=_AM_SUBST_NOTMAKE --trace=_LT_AC_TAGCONFIG --trace=_m4_warn --trace=include --trace=m4_include --trace=m4_pattern_allow --trace=m4_pattern_forbid --trace=m4_sinclude --trace=sinclude --reload-state=/usr/share/autoconf/autoconf/autoconf.m4f --undefine=__m4_version__ configure.in > autom4te.cache/output.0t</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 --gnu --include=/usr/share/autoconf --debug=aflq --fatal-warning --debugfile=autom4te.cache/traces.0t --trace=AC_CANONICAL_BUILD --trace=AC_CANONICAL_HOST --trace=AC_CANONICAL_SYSTEM --trace=AC_CANONICAL_TARGET --trace=AC_CONFIG_AUX_DIR --trace=AC_CONFIG_FILES --trace=AC_CONFIG_HEADERS --trace=AC_CONFIG_LIBOBJ_DIR --trace=AC_CONFIG_LINKS --trace=AC_CONFIG_SUBDIRS --trace=AC_DEFINE_TRACE_LITERAL --trace=AC_FC_FREEFORM --trace=AC_FC_PP_DEFINE --trace=AC_FC_PP_SRCEXT --trace=AC_FC_SRCEXT --trace=AC_INIT --trace=AC_LIBSOURCE --trace=AC_PROG_LIBTOOL --trace=AC_REQUIRE_AUX_FILE --trace=AC_SUBST --trace=AC_SUBST_TRACE --trace=AH_OUTPUT --trace=AM_AUTOMAKE_VERSION --trace=AM_CONDITIONAL --trace=AM_ENABLE_MULTILIB --trace=AM_GNU_GETTEXT --trace=AM_GNU_GETTEXT_INTL_SUBDIR --trace=AM_INIT_AUTOMAKE --trace=AM_MAINTAINER_MODE --trace=AM_MAKEFILE_INCLUDE --trace=AM_NLS --trace=AM_PATH_GUILE --trace=AM_POT_TOOLS --trace=AM_PROG_AR --trace=AM_PROG_CC_C_O --trace=AM_PROG_CXX_C_O --trace=AM_PROG_F77_C_O --trace=AM_PROG_FC_C_O --trace=AM_PROG_MOC --trace=AM_SILENT_RULES --trace=AM_XGETTEXT_OPTION --trace=LT_CONFIG_LTDL_DIR --trace=LT_INIT --trace=LT_SUPPORTED_TAG --trace=_AM_COND_ELSE --trace=_AM_COND_ENDIF --trace=_AM_COND_IF --trace=_AM_MAKEFILE_INCLUDE --trace=_AM_SUBST_NOTMAKE --trace=_LT_AC_TAGCONFIG --trace=_m4_warn --trace=include --trace=m4_include --trace=m4_pattern_allow --trace=m4_pattern_forbid --trace=m4_sinclude --trace=sinclude --reload-state=/usr/share/autoconf/autoconf/autoconf.m4f --undefine=__m4_version__ configure.in</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tBjQNcY/traces.m4</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tBjQNcY/traces.m4</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/autom4te --language=autoconf --output=configure configure.in</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c /usr/bin/m4 --help </dev/null 2>&1 | grep reload-state >/dev/null</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --help</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c echo dumpdef | /usr/bin/m4 --nesting-limit=1024 2>&1 >/dev/null</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>sh -c (umask 077 &&
+	   mktemp -d /tmp/"am4tXXXXXX") 2>/dev/null</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tLi2rp7/traces.m4</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tLi2rp7/traces.m4</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/m4 --nesting-limit=1024 /tmp/am4tLi2rp7/traces.m4</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>./configure</code>
+            <ul class="level-6">
+              <li><span class="no-return">?</span>&nbsp;<code>cat</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                    <ul class="level-10">
+                      <li><span class="bad-return">127</span>&nbsp;<code>/usr/convex/getsysinfo</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>clang --version</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>clang -v</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>clang -V</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>clang -qversion</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-adbe54.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-493a1e.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-5c6c66.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-8cf1cc.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>./conftest</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -E -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o - -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-390bd7.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-708f5c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-881250.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-76750e.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-600131.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-2b667f.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-7388e2.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-90d070.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-424edb.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-e661ec.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-9895cf.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-5396d9.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-55fab2.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o /tmp/conftest-db5107.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-d302d2.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-fefbf8.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-e72e88.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-9b8d6c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-68e92a.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-956b7f.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-defd4f.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-8a9ed8.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-8cdd40.o -ldl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-543228.o -lfallocate -ldl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-c1536b.o -llzo2 -ldl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o conftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/conftest-220e62.o -lcrypto -llzo2 -ldl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +sse4.2 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Werror -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +avx2 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Werror -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +rdrnd -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Werror -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name conftest.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +aes -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/conftest.c -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Werror -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o conftest.o -x c conftest.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh ./config.status</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>make</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c grep 'HAVE_LZO_LZO1X_H 1' config.h >/dev/null 2>&1 && echo 1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c grep 'HAVE_LIBCRYPTO 1' config.h >/dev/null 2>&1 && echo 1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -mavx2 -xc - 2>&1 | grep unrecognized || echo 1</code>
+            <ul class="level-6">
+              <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--de8716.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -msse4.2 -xc - 2>&1 | grep unrecognized || echo 1</code>
+            <ul class="level-6">
+              <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--a39e92.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -mrdrnd -maes -xc - 2>&1 | grep unrecognized || echo 1</code>
+            <ul class="level-6">
+              <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--c4be25.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m | tr A-Z a-z | sed 's/i[3456]86/i386/'</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m |sed 's/armv[0-9a-z]*/arm/'</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c #gcc -Os -Wall -g -D_FORTIFY_SOURCE=2  -DHAVE_CONFIG_H -DHAVE_AESNI -DGEN_DEP -msse4.2 -mavx2 -maes -mrdrnd -MM *.c >.dep</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c gcc -Os -Wall -g -D_FORTIFY_SOURCE=2  -DHAVE_CONFIG_H -DHAVE_AESNI -DGEN_DEP -D__AES__ -D__SSE4_1__ -D__SSSE3__ -D__SSE3__ -D__SSE2__ -D__SSE__ -D__MMX__ -MM *.c >.dep</code>
+            <ul class="level-6">
+              <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -Eonly -disable-free -disable-llvm-verifier -main-file-name test_ossl.c -mrelocation-model static -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -resource-dir /usr/bin/../lib/clang/3.8.0 -dependency-file - -MT test_ossl.o -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -D GEN_DEP -D __AES__ -D __SSE4_1__ -D __SSSE3__ -D __SSE3__ -D __SSE2__ -D __SSE__ -D __MMX__ -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -x c test_ossl.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c sed 's/\.o:/\.po:/' <.dep >.dep2</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cat .dep2 >> .dep</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c grep 'HAVE_LZO_LZO1X_H 1' config.h >/dev/null 2>&1 && echo 1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c grep 'HAVE_LIBCRYPTO 1' config.h >/dev/null 2>&1 && echo 1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -mavx2 -xc - 2>&1 | grep unrecognized || echo 1</code>
+            <ul class="level-6">
+              <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--c2a8ac.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -msse4.2 -xc - 2>&1 | grep unrecognized || echo 1</code>
+            <ul class="level-6">
+              <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--808559.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -mrdrnd -maes -xc - 2>&1 | grep unrecognized || echo 1</code>
+            <ul class="level-6">
+              <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--3eadf5.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m | tr A-Z a-z | sed 's/i[3456]86/i386/'</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m |sed 's/armv[0-9a-z]*/arm/'</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name random.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/random.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o random.o -x c random.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name frandom.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/frandom.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o frandom.o -x c frandom.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name fmt_no.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/fmt_no.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o fmt_no.o -x c fmt_no.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name find_nonzero.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/find_nonzero.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o find_nonzero.o -x c find_nonzero.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name fstrim.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/fstrim.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o fstrim.o -x c fstrim.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name find_nonzero_sse2.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +sse2 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/find_nonzero_sse2.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o find_nonzero_sse2.o -x c find_nonzero_sse2.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name ffs_sse42.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +sse4.2 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/ffs_sse42.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o ffs_sse42.o -x c ffs_sse42.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name find_nonzero_avx.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +avx2 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/find_nonzero_avx.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o find_nonzero_avx.o -x c find_nonzero_avx.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name rdrand.c -mrelocation-model pic -pic-level 2 -pie-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +rdrnd -target-feature +aes -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/rdrand.c -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o rdrand.o -x c rdrand.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c gcc --version | head -n1</code>
+            <ul class="level-6">
+              <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>gcc --version</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>head -n1</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c git describe --tags || cat REL-ID</code>
+            <ul class="level-6">
+              <li><span class="bad-return">128</span>&nbsp;<code>git describe --tags</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -pie --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o dd_rescue //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/Scrt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/dd_rescue-dd993f.o random.o frandom.o fmt_no.o find_nonzero.o fstrim.o find_nonzero_sse2.o ffs_sse42.o find_nonzero_avx.o rdrand.o -ldl -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name libddr_hash.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/libddr_hash.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o libddr_hash.po -x c libddr_hash.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name md5.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/md5.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o md5.po -x c md5.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name sha256.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/sha256.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o sha256.po -x c sha256.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name sha512.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/sha512.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o sha512.po -x c sha512.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name sha1.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/sha1.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o sha1.po -x c sha1.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name pbkdf2.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/pbkdf2.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o pbkdf2.po -x c pbkdf2.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name checksum_file.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/checksum_file.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o checksum_file.po -x c checksum_file.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libddr_hash.so //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib libddr_hash.po md5.po sha256.po sha512.po sha1.po pbkdf2.po checksum_file.po -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name libddr_null.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/libddr_null.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o libddr_null.po -x c libddr_null.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libddr_null.so //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib libddr_null.po -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name libddr_crypt.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/libddr_crypt.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o libddr_crypt.po -x c libddr_crypt.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name aes.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/aes.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o aes.po -x c aes.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name aes_c.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/aes_c.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o aes_c.po -x c aes_c.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name aesni.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +aes -target-feature +sse4.1 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/aesni.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O3 -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o aesni.po -x c aesni.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name aes_ossl.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/aes_ossl.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o aes_ossl.po -x c aes_ossl.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name pbkdf_ossl.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/pbkdf_ossl.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o pbkdf_ossl.po -x c pbkdf_ossl.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name secmem.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/secmem.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o secmem.po -x c secmem.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name random.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/random.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o random.po -x c random.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name find_nonzero.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/find_nonzero.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o find_nonzero.po -x c find_nonzero.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name rdrand.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -target-feature +rdrnd -target-feature +aes -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/rdrand.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o rdrand.po -x c rdrand.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libddr_crypt.so //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib libddr_crypt.po aes.po aes_c.po aesni.po aes_ossl.po pbkdf2.po sha256.po pbkdf_ossl.po md5.po checksum_file.po secmem.po random.po find_nonzero.po rdrand.po -lcrypto -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name libddr_lzo.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/dd_rescue/src/dd_rescue-1.99/libddr_lzo.po -resource-dir /usr/bin/../lib/clang/3.8.0 -D _FORTIFY_SOURCE=2 -D HAVE_CONFIG_H -D HAVE_AESNI -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Os -Wall -fdebug-compilation-dir /tmp/dd_rescue/src/dd_rescue-1.99 -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o libddr_lzo.po -x c libddr_lzo.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libddr_lzo.so //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib libddr_lzo.po -llzo2 -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="bad-return">2</span>&nbsp;<code>fakeroot -- /usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/faked</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="bad-return">2</span>&nbsp;<code>/usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+            <ul class="level-6">
+              <li><span class="bad-return">2</span>&nbsp;<code>make DESTDIR=/tmp/dd_rescue/pkg/dd_rescue INSTALLDIR=/tmp/dd_rescue/pkg/dd_rescue/usr/bin install</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c grep 'HAVE_LZO_LZO1X_H 1' config.h >/dev/null 2>&1 && echo 1</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c grep 'HAVE_LIBCRYPTO 1' config.h >/dev/null 2>&1 && echo 1</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -mavx2 -xc - 2>&1 | grep unrecognized || echo 1</code>
+                    <ul class="level-10">
+                      <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--5e8ff4.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -msse4.2 -xc - 2>&1 | grep unrecognized || echo 1</code>
+                    <ul class="level-10">
+                      <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--8ad4da.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "" | gcc -mrdrnd -maes -xc - 2>&1 | grep unrecognized || echo 1</code>
+                    <ul class="level-10">
+                      <li><span class="red-error">hardcoded invocation: abs</span><span class="red-error-info"> (/usr/bin/gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/--121be9.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m | tr A-Z a-z | sed 's/i[3456]86/i386/'</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m |sed 's/armv[0-9a-z]*/arm/'</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>install -s -o root -g root -m 755 dd_rescue /tmp/dd_rescue/pkg/dd_rescue/usr/bin</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>strip /tmp/dd_rescue/pkg/dd_rescue/usr/bin/dd_rescue</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T openssl</code>
+    <ul class="level-2">
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

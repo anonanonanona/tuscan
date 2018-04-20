@@ -1,0 +1,940 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/libgooglepinyin</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="libgooglepinyin.html">libgooglepinyin</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="good-return">0</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T gcc-libs</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T cmake</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="no-return">?</span>&nbsp;<code>cmake -DCMAKE_INSTALL_PREFIX=/usr . -DENABLE_STATIC=Off ../libgooglepinyin-0.1.2</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -s  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -r  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/CMakeCCompilerId-c8237a.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/CMakeCXXCompilerId-22b304.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_f8be3/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_f8be3.dir/build.make CMakeFiles/cmTC_f8be3.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_f8be3.dir/testCCompiler.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name testCCompiler.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_f8be3.dir/testCCompiler.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_f8be3.dir/testCCompiler.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/testCCompiler.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_f8be3</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8be3.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f8be3 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_f8be3.dir/testCCompiler.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_d2d0a/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_d2d0a.dir/build.make CMakeFiles/cmTC_d2d0a.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_d2d0a.dir/CMakeCCompilerABI.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_d2d0a.dir/CMakeCCompilerABI.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_d2d0a.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_d2d0a</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2d0a.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d2d0a /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_d2d0a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_728e3/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_728e3.dir/build.make CMakeFiles/cmTC_728e3.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_728e3.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_728e3.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c11 -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_728e3.dir/feature_tests.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_728e3</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_728e3.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_728e3 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_728e3.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_02bae/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_02bae.dir/build.make CMakeFiles/cmTC_02bae.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_02bae.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_02bae.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c99 -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_02bae.dir/feature_tests.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_02bae</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02bae.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_02bae /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_02bae.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_7eea9/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_7eea9.dir/build.make CMakeFiles/cmTC_7eea9.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_7eea9.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_7eea9.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c90 -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_7eea9.dir/feature_tests.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_7eea9</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7eea9.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7eea9 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_7eea9.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_a219b/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_a219b.dir/build.make CMakeFiles/cmTC_a219b.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_a219b.dir/testCXXCompiler.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name testCXXCompiler.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_a219b.dir/testCXXCompiler.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_a219b.dir/testCXXCompiler.cxx.o -x c++ /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_a219b</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a219b.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a219b /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_a219b.dir/testCXXCompiler.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_6b665/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_6b665.dir/build.make CMakeFiles/cmTC_6b665.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_6b665.dir/CMakeCXXCompilerABI.cpp.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_6b665.dir/CMakeCXXCompilerABI.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_6b665.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_6b665</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b665.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6b665 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_6b665.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_43be7/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_43be7.dir/build.make CMakeFiles/cmTC_43be7.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_43be7.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_43be7.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++14 -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_43be7.dir/feature_tests.cxx.o -x c++ /tmp/libgooglepinyin/src/build/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_43be7</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43be7.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_43be7 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_43be7.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_e24ee/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_e24ee.dir/build.make CMakeFiles/cmTC_e24ee.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_e24ee.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e24ee.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++11 -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_e24ee.dir/feature_tests.cxx.o -x c++ /tmp/libgooglepinyin/src/build/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_e24ee</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e24ee.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e24ee /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_e24ee.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_be43e/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_be43e.dir/build.make CMakeFiles/cmTC_be43e.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_be43e.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_be43e.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_be43e.dir/feature_tests.cxx.o -x c++ /tmp/libgooglepinyin/src/build/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_be43e</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be43e.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_be43e /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_be43e.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_3d957/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_3d957.dir/build.make CMakeFiles/cmTC_3d957.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_3d957.dir/CheckIncludeFile.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckIncludeFile.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_3d957.dir/CheckIncludeFile.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_3d957.dir/CheckIncludeFile.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_3d957</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d957.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3d957 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_3d957.dir/CheckIncludeFile.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_5682c/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_5682c.dir/build.make CMakeFiles/cmTC_5682c.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_5682c.dir/CheckIncludeFile.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckIncludeFile.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_5682c.dir/CheckIncludeFile.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_5682c.dir/CheckIncludeFile.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_5682c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5682c.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5682c /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_5682c.dir/CheckIncludeFile.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_a9002/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_a9002.dir/build.make CMakeFiles/cmTC_a9002.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_a9002.dir/CheckIncludeFile.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CheckIncludeFile.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_a9002.dir/CheckIncludeFile.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_a9002.dir/CheckIncludeFile.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_a9002</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9002.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a9002 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_a9002.dir/CheckIncludeFile.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_0d9ec/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_0d9ec.dir/build.make CMakeFiles/cmTC_0d9ec.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_0d9ec.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CMAKE_SIZEOF_UNSIGNED_SHORT.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_0d9ec.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_0d9ec.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_0d9ec</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d9ec.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0d9ec /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_0d9ec.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_66e61/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_66e61.dir/build.make CMakeFiles/cmTC_66e61.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_66e61.dir/TestEndianess.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name TestEndianess.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_66e61.dir/TestEndianess.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -Wall -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_66e61.dir/TestEndianess.c.o -x c /tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/TestEndianess.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_66e61</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66e61.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_66e61 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_66e61.dir/TestEndianess.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>fakeroot -- /usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/faked</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/pacman --noconfirm --color never --noprogressbar -Q</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make DESTDIR=/tmp/libgooglepinyin/pkg/libgooglepinyin install</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -H/tmp/libgooglepinyin/src/libgooglepinyin-0.1.2 -B/tmp/libgooglepinyin/src/build --check-build-system CMakeFiles/Makefile.cmake 0</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/libgooglepinyin/src/build/CMakeFiles /tmp/libgooglepinyin/src/build/CMakeFiles/progress.marks</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/Makefile2 all</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f src/CMakeFiles/googlepinyin.dir/build.make src/CMakeFiles/googlepinyin.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2 /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src /tmp/libgooglepinyin/src/build /tmp/libgooglepinyin/src/build/src /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2 /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src /tmp/libgooglepinyin/src/build /tmp/libgooglepinyin/src/build/src /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f src/CMakeFiles/googlepinyin.dir/build.make src/CMakeFiles/googlepinyin.dir/build</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=4 Building CXX object src/CMakeFiles/googlepinyin.dir/dictbuilder.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/dictbuilder.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/dictbuilder.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name dictbuilder.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/dictbuilder.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/dictbuilder.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/dictbuilder.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=5 Building CXX object src/CMakeFiles/googlepinyin.dir/dictlist.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/dictlist.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/dictlist.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name dictlist.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/dictlist.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/dictlist.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/dictlist.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=6 Building CXX object src/CMakeFiles/googlepinyin.dir/dicttrie.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/dicttrie.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/dicttrie.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name dicttrie.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/dicttrie.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/dicttrie.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/dicttrie.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=7 Building CXX object src/CMakeFiles/googlepinyin.dir/lpicache.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/lpicache.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/lpicache.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name lpicache.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/lpicache.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/lpicache.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/lpicache.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=8 Building CXX object src/CMakeFiles/googlepinyin.dir/matrixsearch.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/matrixsearch.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/matrixsearch.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name matrixsearch.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/matrixsearch.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/matrixsearch.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/matrixsearch.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=9 Building CXX object src/CMakeFiles/googlepinyin.dir/mystdlib.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/mystdlib.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/mystdlib.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name mystdlib.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/mystdlib.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/mystdlib.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/mystdlib.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=10 Building CXX object src/CMakeFiles/googlepinyin.dir/ngram.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/ngram.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/ngram.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name ngram.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/ngram.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/ngram.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/ngram.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=11 Building CXX object src/CMakeFiles/googlepinyin.dir/pinyinime.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/pinyinime.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/pinyinime.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name pinyinime.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/pinyinime.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/pinyinime.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/pinyinime.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=12 Building CXX object src/CMakeFiles/googlepinyin.dir/searchutility.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/searchutility.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/searchutility.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name searchutility.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/searchutility.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/searchutility.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/searchutility.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=13 Building CXX object src/CMakeFiles/googlepinyin.dir/spellingtable.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/spellingtable.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/spellingtable.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name spellingtable.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/spellingtable.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/spellingtable.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/spellingtable.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=14 Building CXX object src/CMakeFiles/googlepinyin.dir/spellingtrie.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/spellingtrie.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/spellingtrie.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name spellingtrie.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/spellingtrie.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/spellingtrie.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/spellingtrie.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=15 Building CXX object src/CMakeFiles/googlepinyin.dir/splparser.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/splparser.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/splparser.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name splparser.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/splparser.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/splparser.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/splparser.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=16 Building CXX object src/CMakeFiles/googlepinyin.dir/sync.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/sync.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/sync.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name sync.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/sync.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/sync.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/sync.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=17 Building CXX object src/CMakeFiles/googlepinyin.dir/userdict.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/userdict.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/userdict.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name userdict.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/userdict.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/userdict.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/userdict.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=18 Building CXX object src/CMakeFiles/googlepinyin.dir/utf16char.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/utf16char.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/utf16char.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name utf16char.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/utf16char.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/utf16char.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/utf16char.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=19 Building CXX object src/CMakeFiles/googlepinyin.dir/utf16reader.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/clang++   -Dgooglepinyin_EXPORTS  -fPIC   -o CMakeFiles/googlepinyin.dir/utf16reader.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/utf16reader.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name utf16reader.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/src/CMakeFiles/googlepinyin.dir/utf16reader.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D googlepinyin_EXPORTS -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/src -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/googlepinyin.dir/utf16reader.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/src/utf16reader.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=20 Linking CXX shared library libgooglepinyin.so</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/googlepinyin.dir/link.txt --verbose=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/googlepinyin.dir/link.txt --verbose=</code>
+                                <ul class="level-16">
+                                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libgooglepinyin.so.0.1.0 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib --no-undefined --no-undefined -soname libgooglepinyin.so.0 CMakeFiles/googlepinyin.dir/dictbuilder.cpp.o CMakeFiles/googlepinyin.dir/dictlist.cpp.o CMakeFiles/googlepinyin.dir/dicttrie.cpp.o CMakeFiles/googlepinyin.dir/lpicache.cpp.o CMakeFiles/googlepinyin.dir/matrixsearch.cpp.o CMakeFiles/googlepinyin.dir/mystdlib.cpp.o CMakeFiles/googlepinyin.dir/ngram.cpp.o CMakeFiles/googlepinyin.dir/pinyinime.cpp.o CMakeFiles/googlepinyin.dir/searchutility.cpp.o CMakeFiles/googlepinyin.dir/spellingtable.cpp.o CMakeFiles/googlepinyin.dir/spellingtrie.cpp.o CMakeFiles/googlepinyin.dir/splparser.cpp.o CMakeFiles/googlepinyin.dir/sync.cpp.o CMakeFiles/googlepinyin.dir/userdict.cpp.o CMakeFiles/googlepinyin.dir/utf16char.cpp.o CMakeFiles/googlepinyin.dir/utf16reader.cpp.o -lpthread -lstdc++ -lm -lgcc_s -lc -lgcc_s /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                                    <ul class="level-18">
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/src && /usr/bin/cmake -E cmake_symlink_library libgooglepinyin.so.0.1.0 libgooglepinyin.so.0 libgooglepinyin.so</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_symlink_library libgooglepinyin.so.0.1.0 libgooglepinyin.so.0 libgooglepinyin.so</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E touch_nocreate src/libgooglepinyin.so</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 Built target googlepinyin</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f tools/CMakeFiles/dictbuilder.dir/build.make tools/CMakeFiles/dictbuilder.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2 /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/tools /tmp/libgooglepinyin/src/build /tmp/libgooglepinyin/src/build/tools /tmp/libgooglepinyin/src/build/tools/CMakeFiles/dictbuilder.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2 /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/tools /tmp/libgooglepinyin/src/build /tmp/libgooglepinyin/src/build/tools /tmp/libgooglepinyin/src/build/tools/CMakeFiles/dictbuilder.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f tools/CMakeFiles/dictbuilder.dir/build.make tools/CMakeFiles/dictbuilder.dir/build</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=2 Building CXX object tools/CMakeFiles/dictbuilder.dir/pinyinime_dictbuilder.cpp.o</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/tools && /usr/bin/clang++      -o CMakeFiles/dictbuilder.dir/pinyinime_dictbuilder.cpp.o -c /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/tools/pinyinime_dictbuilder.cpp</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name pinyinime_dictbuilder.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/libgooglepinyin/src/build/tools/CMakeFiles/dictbuilder.dir/pinyinime_dictbuilder.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/libgooglepinyin/src/build/tools -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/dictbuilder.dir/pinyinime_dictbuilder.cpp.o -x c++ /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/tools/pinyinime_dictbuilder.cpp</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=3 Linking CXX executable dictbuilder</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/tools && /usr/bin/cmake -E cmake_link_script CMakeFiles/dictbuilder.dir/link.txt --verbose=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/dictbuilder.dir/link.txt --verbose=</code>
+                                <ul class="level-16">
+                                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o dictbuilder /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/dictbuilder.dir/pinyinime_dictbuilder.cpp.o ../src/libgooglepinyin.so.0.1.0 -lpthread -rpath /tmp/libgooglepinyin/src/build/src -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                                    <ul class="level-18">
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=2,3 Built target dictbuilder</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f data/CMakeFiles/datafile.dir/build.make data/CMakeFiles/datafile.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2 /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/data /tmp/libgooglepinyin/src/build /tmp/libgooglepinyin/src/build/data /tmp/libgooglepinyin/src/build/data/CMakeFiles/datafile.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2 /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/data /tmp/libgooglepinyin/src/build /tmp/libgooglepinyin/src/build/data /tmp/libgooglepinyin/src/build/data/CMakeFiles/datafile.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f data/CMakeFiles/datafile.dir/build.make data/CMakeFiles/datafile.dir/build</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --blue --bold --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=1 Generating dict_pinyin.dat</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/libgooglepinyin/src/build/data && ../tools/dictbuilder /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/data/rawdict_utf16_65105_freq.txt /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/data/valid_utf16.txt</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>../tools/dictbuilder /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/data/rawdict_utf16_65105_freq.txt /tmp/libgooglepinyin/src/libgooglepinyin-0.1.2/data/valid_utf16.txt</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/libgooglepinyin/src/build/CMakeFiles --progress-num=1 Built target datafile</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/libgooglepinyin/src/build/CMakeFiles 0</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/Makefile2 preinstall</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --cyan Install the project...</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -P cmake_install.cmake</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/libgooglepinyin/src</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/libgooglepinyin/pkg</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>fakeroot -v</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>openssl dgst -sha256 /tmp/libgooglepinyin/PKGBUILD</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -czf .MTREE --format=mtree --options=!all,use-set,type,uid,gid,mode,time,size,md5,sha256,link .PKGINFO .BUILDINFO usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -cf - .PKGINFO .BUILDINFO .MTREE usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>xz -c -z -</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

@@ -1,0 +1,610 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/unzip</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="unzip.html">unzip</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="good-return">0</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>make -f unix/Makefile prefix=/usr D_USE_BZ2=-DUSE_BZIP2 L_BZ2=-lbz2 LF2= CF=  -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT \
+		-DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD \
+		-DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DNOMEMCPY -DNO_WORKING_ISPRINT unzips</code>
+        <ul class="level-4">
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name unzip.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/unzip.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o unzip.o -x c unzip.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name crc32.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/crc32.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o crc32.o -x c crc32.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name crypt.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/crypt.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o crypt.o -x c crypt.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name envargs.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/envargs.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o envargs.o -x c envargs.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name explode.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/explode.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o explode.o -x c explode.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name extract.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/extract.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o extract.o -x c extract.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name fileio.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/fileio.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o fileio.o -x c fileio.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name globals.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/globals.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o globals.o -x c globals.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name inflate.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/inflate.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o inflate.o -x c inflate.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name list.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/list.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o list.o -x c list.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name match.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/match.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o match.o -x c match.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name process.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/process.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o process.o -x c process.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name ttyio.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/ttyio.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o ttyio.o -x c ttyio.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name ubz2err.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/ubz2err.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o ubz2err.o -x c ubz2err.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name unreduce.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/unreduce.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o unreduce.o -x c unreduce.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name unshrink.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/unshrink.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o unshrink.o -x c unshrink.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name zipinfo.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/zipinfo.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o zipinfo.o -x c zipinfo.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name unix.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/unix.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o unix.o -x c unix/unix.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o unzip //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -Lbzip2 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib unzip.o crc32.o crypt.o envargs.o explode.o extract.o fileio.o globals.o inflate.o list.o match.o process.o ttyio.o ubz2err.o unreduce.o unshrink.o zipinfo.o unix.o -lbz2 -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name funzip.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/funzip.c -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o funzip.o -x c funzip.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name crypt.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/cryptf.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D FUNZIP -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o cryptf.o -x c crypt.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name globals.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/globalsf.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D FUNZIP -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o globalsf.o -x c globals.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name inflate.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/inflatef.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D FUNZIP -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o inflatef.o -x c inflate.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name ttyio.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/ttyiof.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D FUNZIP -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o ttyiof.o -x c ttyio.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o funzip //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib funzip.o crc32.o cryptf.o globalsf.o inflatef.o ttyiof.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name unzip.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/unzipsfx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o unzipsfx.o -x c unzip.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name crc32.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/crc32_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o crc32_.o -x c crc32.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name crypt.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/crypt_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o crypt_.o -x c crypt.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name extract.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/extract_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o extract_.o -x c extract.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name fileio.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/fileio_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o fileio_.o -x c fileio.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name globals.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/globals_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o globals_.o -x c globals.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name inflate.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/inflate_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o inflate_.o -x c inflate.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name match.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/match_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o match_.o -x c match.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name process.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/process_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o process_.o -x c process.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name ttyio.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/ttyio_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o ttyio_.o -x c ttyio.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name ubz2err.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/ubz2err_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o ubz2err_.o -x c ubz2err.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name unix.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/unzip/src/unzip60/unix_.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I . -D ACORN_FTYPE_NFS -D WILD_STOP_AT_DIR -D LARGE_FILE_SUPPORT -D UNICODE_SUPPORT -D UNICODE_WCHAR -D UTF8_MAYBE_NATIVE -D NO_LCHMOD -D DATE_FORMAT=DF_YMD -D USE_BZIP2 -D NOMEMCPY -D NO_WORKING_ISPRINT -D SFX -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/unzip/src/unzip60 -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o unix_.o -x c unix/unix.c</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (cc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o unzipsfx //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib unzipsfx.o crc32_.o crypt_.o extract_.o fileio_.o globals_.o inflate_.o match_.o process_.o ttyio_.o ubz2err_.o unix_.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>fakeroot -- /usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/faked</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/pacman --noconfirm --color never --noprogressbar -Q</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f unix/Makefile prefix=/tmp/unzip/pkg/unzip/usr install</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>install -Dm644 LICENSE /tmp/unzip/pkg/unzip/usr/share/licenses/unzip/LICENSE</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/unzip/src</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/unzip/pkg</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>fakeroot -v</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>openssl dgst -sha256 /tmp/unzip/PKGBUILD</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -czf .MTREE --format=mtree --options=!all,use-set,type,uid,gid,mode,time,size,md5,sha256,link .PKGINFO .BUILDINFO usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -cf - .PKGINFO .BUILDINFO .MTREE usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>xz -c -z -</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T bzip2 bash</code>
+    <ul class="level-2">
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

@@ -1,0 +1,3189 @@
+<!DOCTYPE html>
+<html>
+<!-- Jinja template for reports of individual builds
+
+  Copyright 2016 Kareem Khazem. All Rights Reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+ 		 http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+  implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+  <head>
+    <meta charset="UTF-8">
+    <title>android/palp</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+          rel='stylesheet' type='text/css'>
+    <link
+    href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+          rel='stylesheet' type='text/css'>
+    <link href="../style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Build of palp
+        with <a href="../index.html">android</a>
+        toolchain</h1>
+    <p>The build took 00h 01m 01s and was
+    NOT successful.</p>
+    <p>
+    The program in this build is written in the following languages,
+    according to <a
+    href="http://www.dwheeler.com/sloccount/">sloccount</a>:
+    </p>
+    <table>
+      <tr><th>SLOC</th><th>Language</th></tr>
+      
+      <tr><td class="loc"><code>16,692</code></td>
+          <td class="lang">ansic</td></tr>
+      <tr><td class="loc"><code>37</code></td>
+          <td class="lang">makefile</td></tr>
+      <tr><td><code>16,729</code></td>
+          <td><em>total</em></td></tr>
+    </table>
+    <p>
+      The process tree of the build process is <a
+      href="palp-tree.html">here</a>.
+    </p>
+    
+    
+      <p>
+      Several sub-process invocations were improper; see the process tree
+      for details. Summary:
+      </p>
+      <ul>
+        <li>hardcoded invocation:<ul>
+            <li>&times;8: gcc
+
+/sysroot/bin/arm-linux-androideabi-gcc
+</li>
+        </ul></li>
+      </ul>
+    
+    
+    
+    
+    <h2>List of Errors</h2>
+    <ul>
+      
+      <li>unknown_type
+        <ul>
+          
+          <li><a href="#45">Global.h:96:1: error: unknown type name 'FILE'</a></li>
+          
+          <li><a href="#48">poly.c:21:1: error: unknown type name 'FILE'</a></li>
+          
+          <li><a href="#173">Global.h:96:1: error: unknown type name 'FILE'</a></li>
+          
+          <li><a href="#208">Global.h:96:1: error: unknown type name 'FILE'</a></li>
+          
+          <li><a href="#211">Global.h:96:1: error: unknown type name 'FILE'</a></li>
+          
+          <li><a href="#289">Coord.c:79:21: error: unknown type name 'FILE'</a></li>
+          
+        </ul>
+      </li>
+      
+    </ul>
+    
+    
+    <h2>Log</h2>
+    <p>
+    To avoid scrolling, you may jump to the <a
+    href="#607">last line</a> of the
+    invocation of <code>makepkg</code> that was used to build this
+    package.
+    </p>
+    
+    
+      <div class="block">
+        <div class="info">
+          <code>Removed vanilla repositories from pacman.conf and added:</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#1">#</a>
+						
+              <code id="1">[tuscan]</code><br />
+						
+            
+            <a class="navhash" href="#2">#</a>
+						
+              <code id="2">Server = file:///var/cache/pacman/pkg/</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+      <div class="block">
+        <div class="command">
+          <code><span class="prompt">CMD: </span>pacman -Syy --noconfirm</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#3">#</a>
+						
+              <code id="3">:: Synchronizing package databases...</code><br />
+						
+            
+            <a class="navhash" href="#4">#</a>
+						
+              <code id="4">downloading tuscan.db...</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+      <div class="block">
+        <div class="info">
+          <code>Copied permanent toolchain into container-local sysroot</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#5">#</a>
+						
+              <code id="5">/toolchain_root/arm-linux-androideabi  -->  /sysroot/arm-linux-androideabi</code><br />
+						
+            
+            <a class="navhash" href="#6">#</a>
+						
+              <code id="6">/toolchain_root/COPYING3.LIB  -->  /sysroot/COPYING3.LIB</code><br />
+						
+            
+            <a class="navhash" href="#7">#</a>
+						
+              <code id="7">/toolchain_root/sysroot  -->  /sysroot/sysroot</code><br />
+						
+            
+            <a class="navhash" href="#8">#</a>
+						
+              <code id="8">/toolchain_root/COPYING.RUNTIME  -->  /sysroot/COPYING.RUNTIME</code><br />
+						
+            
+            <a class="navhash" href="#9">#</a>
+						
+              <code id="9">/toolchain_root/lib  -->  /sysroot/lib</code><br />
+						
+            
+            <a class="navhash" href="#10">#</a>
+						
+              <code id="10">/toolchain_root/SOURCES  -->  /sysroot/SOURCES</code><br />
+						
+            
+            <a class="navhash" href="#11">#</a>
+						
+              <code id="11">/toolchain_root/lib64  -->  /sysroot/lib64</code><br />
+						
+            
+            <a class="navhash" href="#12">#</a>
+						
+              <code id="12">/toolchain_root/share  -->  /sysroot/share</code><br />
+						
+            
+            <a class="navhash" href="#13">#</a>
+						
+              <code id="13">/toolchain_root/bin  -->  /sysroot/bin</code><br />
+						
+            
+            <a class="navhash" href="#14">#</a>
+						
+              <code id="14">/toolchain_root/COPYING  -->  /sysroot/COPYING</code><br />
+						
+            
+            <a class="navhash" href="#15">#</a>
+						
+              <code id="15">/toolchain_root/COPYING3  -->  /sysroot/COPYING3</code><br />
+						
+            
+            <a class="navhash" href="#16">#</a>
+						
+              <code id="16">/toolchain_root/COPYING.LIB  -->  /sysroot/COPYING.LIB</code><br />
+						
+            
+            <a class="navhash" href="#17">#</a>
+						
+              <code id="17">/toolchain_root/include  -->  /sysroot/include</code><br />
+						
+            
+            <a class="navhash" href="#18">#</a>
+						
+              <code id="18">/toolchain_root/libexec  -->  /sysroot/libexec</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+      <div class="block">
+        <div class="command">
+          <code><span class="prompt">CMD: </span>sudo -u tuscan PATH=/sysroot/bin:/sysroot/libexec/gcc/arm-linux-androideabi/4.8:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin CC=arm-linux-androideabi-gcc CXX=arm-linux-androideabi-g++ red makepkg --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#19">#</a>
+						
+              <code id="19">==> Making package: palp 2.1-1 (Tue Apr  4 20:28:10 UTC 2017)</code><br />
+						
+            
+            <a class="navhash" href="#20">#</a>
+						
+              <code id="20">==> Checking runtime dependencies...</code><br />
+						
+            
+            <a class="navhash" href="#21">#</a>
+						
+              <code id="21">==> Checking buildtime dependencies...</code><br />
+						
+            
+            <a class="navhash" href="#22">#</a>
+						
+              <code id="22">==> WARNING: Using existing $srcdir/ tree</code><br />
+						
+            
+            <a class="navhash" href="#23">#</a>
+						
+              <code id="23">==> Starting build()...</code><br />
+						
+            
+            <a class="navhash" href="#24">#</a>
+						
+              <code id="24">gcc -O3 -g -W -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE   -c -o poly.o poly.c</code><br />
+						
+            
+            <a class="navhash" href="#25">#</a>
+						
+              <code id="25">gcc -O3 -g -W -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE   -c -o Coord.o Coord.c</code><br />
+						
+            
+            <a class="navhash" href="#26">#</a>
+						
+              <code id="26">gcc -O3 -g -W -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE   -c -o Rat.o Rat.c</code><br />
+						
+            
+            <a class="navhash" href="#27">#</a>
+						
+              <code id="27">gcc -O3 -g -W -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE   -c -o Vertex.o Vertex.c</code><br />
+						
+            
+            <a class="navhash" href="#28">#</a>
+						
+              <code id="28">cc1: error: no include path in which to search for stdc-predef.h</code><br />
+						
+            
+            <a class="navhash" href="#29">#</a>
+						
+              <code id="29">In file included from poly.c:17:0:</code><br />
+						
+            
+            <a class="navhash" href="#30">#</a>
+						
+              <code id="30">Global.h:1:19: error: no include path in which to search for stdio.h</code><br />
+						
+            
+            <a class="navhash" href="#31">#</a>
+						
+              <code id="31"> #include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#32">#</a>
+						
+              <code id="32">                   ^</code><br />
+						
+            
+            <a class="navhash" href="#33">#</a>
+						
+              <code id="33">Global.h:2:20: error: no include path in which to search for stdlib.h</code><br />
+						
+            
+            <a class="navhash" href="#34">#</a>
+						
+              <code id="34"> #include <stdlib.h></code><br />
+						
+            
+            <a class="navhash" href="#35">#</a>
+						
+              <code id="35">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#36">#</a>
+						
+              <code id="36">Global.h:3:20: error: no include path in which to search for string.h</code><br />
+						
+            
+            <a class="navhash" href="#37">#</a>
+						
+              <code id="37"> #include <string.h></code><br />
+						
+            
+            <a class="navhash" href="#38">#</a>
+						
+              <code id="38">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#39">#</a>
+						
+              <code id="39">Global.h:4:18: error: no include path in which to search for time.h</code><br />
+						
+            
+            <a class="navhash" href="#40">#</a>
+						
+              <code id="40"> #include <time.h></code><br />
+						
+            
+            <a class="navhash" href="#41">#</a>
+						
+              <code id="41">                  ^</code><br />
+						
+            
+            <a class="navhash" href="#42">#</a>
+						
+              <code id="42">Global.h:5:20: error: no include path in which to search for assert.h</code><br />
+						
+            
+            <a class="navhash" href="#43">#</a>
+						
+              <code id="43"> #include <assert.h></code><br />
+						
+            
+            <a class="navhash" href="#44">#</a>
+						
+              <code id="44">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#45">#</a>
+						<span class="error">
+              <code id="45">Global.h:96:1: error: unknown type name 'FILE'</code><br />
+						</span>
+            
+            <a class="navhash" href="#46">#</a>
+						
+              <code id="46"> extern FILE *inFILE, *outFILE;</code><br />
+						
+            
+            <a class="navhash" href="#47">#</a>
+						
+              <code id="47"> ^</code><br />
+						
+            
+            <a class="navhash" href="#48">#</a>
+						<span class="error">
+              <code id="48">poly.c:21:1: error: unknown type name 'FILE'</code><br />
+						</span>
+            
+            <a class="navhash" href="#49">#</a>
+						
+              <code id="49"> FILE *inFILE, *outFILE;</code><br />
+						
+            
+            <a class="navhash" href="#50">#</a>
+						
+              <code id="50"> ^</code><br />
+						
+            
+            <a class="navhash" href="#51">#</a>
+						
+              <code id="51">poly.c: In function 'PrintUsage':</code><br />
+						
+            
+            <a class="navhash" href="#52">#</a>
+						
+              <code id="52">poly.c:66:3: warning: implicit declaration of function 'puts' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#53">#</a>
+						
+              <code id="53">   puts("");</code><br />
+						
+            
+            <a class="navhash" href="#54">#</a>
+						
+              <code id="54">   ^</code><br />
+						
+            
+            <a class="navhash" href="#55">#</a>
+						
+              <code id="55">poly.c:67:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#56">#</a>
+						
+              <code id="56">   printf("This is '%s':  computing data of a polytope P\n",c);</code><br />
+						
+            
+            <a class="navhash" href="#57">#</a>
+						
+              <code id="57">   ^</code><br />
+						
+            
+            <a class="navhash" href="#58">#</a>
+						
+              <code id="58">poly.c:67:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#59">#</a>
+						
+              <code id="59">poly.c: In function 'main':</code><br />
+						
+            
+            <a class="navhash" href="#60">#</a>
+						
+              <code id="60">poly.c:86:3: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#61">#</a>
+						
+              <code id="61">   CWS *CW=(CWS *) malloc(sizeof(CWS));</code><br />
+						
+            
+            <a class="navhash" href="#62">#</a>
+						
+              <code id="62">   ^</code><br />
+						
+            
+            <a class="navhash" href="#63">#</a>
+						
+              <code id="63">poly.c:86:19: warning: incompatible implicit declaration of built-in function 'malloc' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#64">#</a>
+						
+              <code id="64">   CWS *CW=(CWS *) malloc(sizeof(CWS));</code><br />
+						
+            
+            <a class="navhash" href="#65">#</a>
+						
+              <code id="65">                   ^</code><br />
+						
+            
+            <a class="navhash" href="#66">#</a>
+						
+              <code id="66">poly.c:95:16: error: 'NULL' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#67">#</a>
+						
+              <code id="67">   FaceInfo *FI=NULL;</code><br />
+						
+            
+            <a class="navhash" href="#68">#</a>
+						
+              <code id="68">                ^</code><br />
+						
+            
+            <a class="navhash" href="#69">#</a>
+						
+              <code id="69">poly.c:95:16: note: each undeclared identifier is reported only once for each function it appears in</code><br />
+						
+            
+            <a class="navhash" href="#70">#</a>
+						
+              <code id="70">poly.c:101:5: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#71">#</a>
+						
+              <code id="71">     puts("Allocation failure: Reduce dimensions!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#72">#</a>
+						
+              <code id="72">     ^</code><br />
+						
+            
+            <a class="navhash" href="#73">#</a>
+						
+              <code id="73">poly.c:101:53: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#74">#</a>
+						
+              <code id="74">     puts("Allocation failure: Reduce dimensions!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#75">#</a>
+						
+              <code id="75">                                                     ^</code><br />
+						
+            
+            <a class="navhash" href="#76">#</a>
+						
+              <code id="76">poly.c:116:44: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#77">#</a>
+						
+              <code id="77">       else if(c=='h') { PrintUsage(fn[0]); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#78">#</a>
+						
+              <code id="78">                                            ^</code><br />
+						
+            
+            <a class="navhash" href="#79">#</a>
+						
+              <code id="79">poly.c:141:13: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#80">#</a>
+						
+              <code id="80">       else {printf("Unknown option '-%c'; use -h for help\n",c); exit(0);}}}</code><br />
+						
+            
+            <a class="navhash" href="#81">#</a>
+						
+              <code id="81">             ^</code><br />
+						
+            
+            <a class="navhash" href="#82">#</a>
+						
+              <code id="82">poly.c:141:66: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#83">#</a>
+						
+              <code id="83">       else {printf("Unknown option '-%c'; use -h for help\n",c); exit(0);}}}</code><br />
+						
+            
+            <a class="navhash" href="#84">#</a>
+						
+              <code id="84">                                                                  ^</code><br />
+						
+            
+            <a class="navhash" href="#85">#</a>
+						
+              <code id="85">poly.c:148:66: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#86">#</a>
+						
+              <code id="86">     "\n-T: Please specify desired output, e.g. via -v or -p \n");exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#87">#</a>
+						
+              <code id="87">                                                                  ^</code><br />
+						
+            
+            <a class="navhash" href="#88">#</a>
+						
+              <code id="88">poly.c:149:40: error: 'stdout' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#89">#</a>
+						
+              <code id="89">   if(FilterFlag) {inFILE=NULL; outFILE=stdout;}</code><br />
+						
+            
+            <a class="navhash" href="#90">#</a>
+						
+              <code id="90">                                        ^</code><br />
+						
+            
+            <a class="navhash" href="#91">#</a>
+						
+              <code id="91">poly.c:151:5: warning: implicit declaration of function 'fopen' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#92">#</a>
+						
+              <code id="92">     if (narg > ++n)  inFILE=fopen(fn[n],"r");</code><br />
+						
+            
+            <a class="navhash" href="#93">#</a>
+						
+              <code id="93">     ^</code><br />
+						
+            
+            <a class="navhash" href="#94">#</a>
+						
+              <code id="94">poly.c:151:28: warning: assignment makes pointer from integer without a cast [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#95">#</a>
+						
+              <code id="95">     if (narg > ++n)  inFILE=fopen(fn[n],"r");</code><br />
+						
+            
+            <a class="navhash" href="#96">#</a>
+						
+              <code id="96">                            ^</code><br />
+						
+            
+            <a class="navhash" href="#97">#</a>
+						
+              <code id="97">poly.c:152:17: error: 'stdin' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#98">#</a>
+						
+              <code id="98">     else inFILE=stdin;</code><br />
+						
+            
+            <a class="navhash" href="#99">#</a>
+						
+              <code id="99">                 ^</code><br />
+						
+            
+            <a class="navhash" href="#100">#</a>
+						
+              <code id="100">poly.c:153:23: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#101">#</a>
+						
+              <code id="101">     if (inFILE==NULL){printf("Input file %s not found!\n",fn[n]);exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#102">#</a>
+						
+              <code id="102">                       ^</code><br />
+						
+            
+            <a class="navhash" href="#103">#</a>
+						
+              <code id="103">poly.c:153:66: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#104">#</a>
+						
+              <code id="104">     if (inFILE==NULL){printf("Input file %s not found!\n",fn[n]);exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#105">#</a>
+						
+              <code id="105">                                                                  ^</code><br />
+						
+            
+            <a class="navhash" href="#106">#</a>
+						
+              <code id="106">poly.c:154:28: warning: assignment makes pointer from integer without a cast [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#107">#</a>
+						
+              <code id="107">     if (narg > ++n) outFILE=fopen(fn[n],"w");</code><br />
+						
+            
+            <a class="navhash" href="#108">#</a>
+						
+              <code id="108">                            ^</code><br />
+						
+            
+            <a class="navhash" href="#109">#</a>
+						
+              <code id="109">poly.c:159:70: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#110">#</a>
+						
+              <code id="110">     if (FI==NULL) {puts("Unable to allocate space for FaceInfo FI"); exit(0);}}</code><br />
+						
+            
+            <a class="navhash" href="#111">#</a>
+						
+              <code id="111">                                                                      ^</code><br />
+						
+            
+            <a class="navhash" href="#112">#</a>
+						
+              <code id="112">poly.c:177:5: warning: implicit declaration of function 'fprintf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#113">#</a>
+						
+              <code id="113">     if (D&&!R) {fprintf(outFILE,"Input not reflexive!\n"); continue;}</code><br />
+						
+            
+            <a class="navhash" href="#114">#</a>
+						
+              <code id="114">     ^</code><br />
+						
+            
+            <a class="navhash" href="#115">#</a>
+						
+              <code id="115">poly.c:177:17: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#116">#</a>
+						
+              <code id="116">     if (D&&!R) {fprintf(outFILE,"Input not reflexive!\n"); continue;}</code><br />
+						
+            
+            <a class="navhash" href="#117">#</a>
+						
+              <code id="117">                 ^</code><br />
+						
+            
+            <a class="navhash" href="#118">#</a>
+						
+              <code id="118">poly.c:185:6: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#119">#</a>
+						
+              <code id="119">  {   fprintf(stderr,"Transpose_PM failed because #eq=%d > VERT_Nmax\n",</code><br />
+						
+            
+            <a class="navhash" href="#120">#</a>
+						
+              <code id="120">      ^</code><br />
+						
+            
+            <a class="navhash" href="#121">#</a>
+						
+              <code id="121">poly.c:185:14: error: 'stderr' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#122">#</a>
+						
+              <code id="122">  {   fprintf(stderr,"Transpose_PM failed because #eq=%d > VERT_Nmax\n",</code><br />
+						
+            
+            <a class="navhash" href="#123">#</a>
+						
+              <code id="123">              ^</code><br />
+						
+            
+            <a class="navhash" href="#124">#</a>
+						
+              <code id="124">poly.c:186:13: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#125">#</a>
+						
+              <code id="125">      E->ne);exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#126">#</a>
+						
+              <code id="126">             ^</code><br />
+						
+            
+            <a class="navhash" href="#127">#</a>
+						
+              <code id="127">poly.c:203:7: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#128">#</a>
+						
+              <code id="128">       fprintf(outFILE,"No Span\n");</code><br />
+						
+            
+            <a class="navhash" href="#129">#</a>
+						
+              <code id="129">       ^</code><br />
+						
+            
+            <a class="navhash" href="#130">#</a>
+						
+              <code id="130">poly.c:216:7: warning: implicit declaration of function 'assert' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#131">#</a>
+						
+              <code id="131">       assert(VP!=NULL);</code><br />
+						
+            
+            <a class="navhash" href="#132">#</a>
+						
+              <code id="132">       ^</code><br />
+						
+            
+            <a class="navhash" href="#133">#</a>
+						
+              <code id="133">poly.c:218:7: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#134">#</a>
+						
+              <code id="134">       free(VP);}</code><br />
+						
+            
+            <a class="navhash" href="#135">#</a>
+						
+              <code id="135">       ^</code><br />
+						
+            
+            <a class="navhash" href="#136">#</a>
+						
+              <code id="136">poly.c:218:7: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#137">#</a>
+						
+              <code id="137">poly.c:214:19: warning: variable 'VPMSymNum' set but not used [-Wunused-but-set-variable]</code><br />
+						
+            
+            <a class="navhash" href="#138">#</a>
+						
+              <code id="138">       int SymNum, VPMSymNum; Long NF[POLY_Dmax][VERT_Nmax]; </code><br />
+						
+            
+            <a class="navhash" href="#139">#</a>
+						
+              <code id="139">                   ^</code><br />
+						
+            
+            <a class="navhash" href="#140">#</a>
+						
+              <code id="140">poly.c:222:7: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#141">#</a>
+						
+              <code id="141">       if(g>1){sprintf(divi,"divisible by factor=%ld",g); Print_VL(_P,&V,divi);}}</code><br />
+						
+            
+            <a class="navhash" href="#142">#</a>
+						
+              <code id="142">       ^</code><br />
+						
+            
+            <a class="navhash" href="#143">#</a>
+						
+              <code id="143">poly.c:222:15: warning: incompatible implicit declaration of built-in function 'sprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#144">#</a>
+						
+              <code id="144">       if(g>1){sprintf(divi,"divisible by factor=%ld",g); Print_VL(_P,&V,divi);}}</code><br />
+						
+            
+            <a class="navhash" href="#145">#</a>
+						
+              <code id="145">               ^</code><br />
+						
+            
+            <a class="navhash" href="#146">#</a>
+						
+              <code id="146">poly.c:225:46: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#147">#</a>
+						
+              <code id="147">       Long vol=LatVol_Barycent(_P,&V,vB,&Z); printf("vol=%ld, baricent=(",vol); </code><br />
+						
+            
+            <a class="navhash" href="#148">#</a>
+						
+              <code id="148">                                              ^</code><br />
+						
+            
+            <a class="navhash" href="#149">#</a>
+						
+              <code id="149">poly.c:238:5: warning: implicit declaration of function 'fflush' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#150">#</a>
+						
+              <code id="150">     fflush(outFILE);     }</code><br />
+						
+            
+            <a class="navhash" href="#151">#</a>
+						
+              <code id="151">     ^</code><br />
+						
+            
+            <a class="navhash" href="#152">#</a>
+						
+              <code id="152">make: *** [<builtin>: poly.o] Error 1</code><br />
+						
+            
+            <a class="navhash" href="#153">#</a>
+						
+              <code id="153">make: *** Waiting for unfinished jobs....</code><br />
+						
+            
+            <a class="navhash" href="#154">#</a>
+						
+              <code id="154">cc1: error: no include path in which to search for stdc-predef.h</code><br />
+						
+            
+            <a class="navhash" href="#155">#</a>
+						
+              <code id="155">In file included from Rat.c:1:0:</code><br />
+						
+            
+            <a class="navhash" href="#156">#</a>
+						
+              <code id="156">Global.h:1:19: error: no include path in which to search for stdio.h</code><br />
+						
+            
+            <a class="navhash" href="#157">#</a>
+						
+              <code id="157"> #include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#158">#</a>
+						
+              <code id="158">                   ^</code><br />
+						
+            
+            <a class="navhash" href="#159">#</a>
+						
+              <code id="159">Global.h:2:20: error: no include path in which to search for stdlib.h</code><br />
+						
+            
+            <a class="navhash" href="#160">#</a>
+						
+              <code id="160"> #include <stdlib.h></code><br />
+						
+            
+            <a class="navhash" href="#161">#</a>
+						
+              <code id="161">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#162">#</a>
+						
+              <code id="162">cc1: error: no include path in which to search for stdc-predef.h</code><br />
+						
+            
+            <a class="navhash" href="#163">#</a>
+						
+              <code id="163">Global.h:3:20: error: no include path in which to search for string.h</code><br />
+						
+            
+            <a class="navhash" href="#164">#</a>
+						
+              <code id="164"> #include <string.h></code><br />
+						
+            
+            <a class="navhash" href="#165">#</a>
+						
+              <code id="165">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#166">#</a>
+						
+              <code id="166">Global.h:4:18: error: no include path in which to search for time.h</code><br />
+						
+            
+            <a class="navhash" href="#167">#</a>
+						
+              <code id="167"> #include <time.h></code><br />
+						
+            
+            <a class="navhash" href="#168">#</a>
+						
+              <code id="168">                  ^</code><br />
+						
+            
+            <a class="navhash" href="#169">#</a>
+						
+              <code id="169">Global.h:5:20: error: no include path in which to search for assert.h</code><br />
+						
+            
+            <a class="navhash" href="#170">#</a>
+						
+              <code id="170"> #include <assert.h></code><br />
+						
+            
+            <a class="navhash" href="#171">#</a>
+						
+              <code id="171">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#172">#</a>
+						
+              <code id="172">cc1: error: no include path in which to search for stdc-predef.h</code><br />
+						
+            
+            <a class="navhash" href="#173">#</a>
+						<span class="error">
+              <code id="173">Global.h:96:1: error: unknown type name 'FILE'</code><br />
+						</span>
+            
+            <a class="navhash" href="#174">#</a>
+						
+              <code id="174"> extern FILE *inFILE, *outFILE;</code><br />
+						
+            
+            <a class="navhash" href="#175">#</a>
+						
+              <code id="175"> ^</code><br />
+						
+            
+            <a class="navhash" href="#176">#</a>
+						
+              <code id="176">In file included from Coord.c:1:0:</code><br />
+						
+            
+            <a class="navhash" href="#177">#</a>
+						
+              <code id="177">Global.h:1:19: error: no include path in which to search for stdio.h</code><br />
+						
+            
+            <a class="navhash" href="#178">#</a>
+						
+              <code id="178"> #include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#179">#</a>
+						
+              <code id="179">                   ^</code><br />
+						
+            
+            <a class="navhash" href="#180">#</a>
+						
+              <code id="180">Global.h:2:20: error: no include path in which to search for stdlib.h</code><br />
+						
+            
+            <a class="navhash" href="#181">#</a>
+						
+              <code id="181"> #include <stdlib.h></code><br />
+						
+            
+            <a class="navhash" href="#182">#</a>
+						
+              <code id="182">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#183">#</a>
+						
+              <code id="183">Global.h:3:20: error: no include path in which to search for string.h</code><br />
+						
+            
+            <a class="navhash" href="#184">#</a>
+						
+              <code id="184"> #include <string.h></code><br />
+						
+            
+            <a class="navhash" href="#185">#</a>
+						
+              <code id="185">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#186">#</a>
+						
+              <code id="186">Global.h:4:18: error: no include path in which to search for time.h</code><br />
+						
+            
+            <a class="navhash" href="#187">#</a>
+						
+              <code id="187"> #include <time.h></code><br />
+						
+            
+            <a class="navhash" href="#188">#</a>
+						
+              <code id="188">                  ^</code><br />
+						
+            
+            <a class="navhash" href="#189">#</a>
+						
+              <code id="189">Global.h:5:20: error: no include path in which to search for assert.h</code><br />
+						
+            
+            <a class="navhash" href="#190">#</a>
+						
+              <code id="190"> #include <assert.h></code><br />
+						
+            
+            <a class="navhash" href="#191">#</a>
+						
+              <code id="191">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#192">#</a>
+						
+              <code id="192">In file included from Vertex.c:1:0:</code><br />
+						
+            
+            <a class="navhash" href="#193">#</a>
+						
+              <code id="193">Global.h:1:19: error: no include path in which to search for stdio.h</code><br />
+						
+            
+            <a class="navhash" href="#194">#</a>
+						
+              <code id="194"> #include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#195">#</a>
+						
+              <code id="195">                   ^</code><br />
+						
+            
+            <a class="navhash" href="#196">#</a>
+						
+              <code id="196">Global.h:2:20: error: no include path in which to search for stdlib.h</code><br />
+						
+            
+            <a class="navhash" href="#197">#</a>
+						
+              <code id="197"> #include <stdlib.h></code><br />
+						
+            
+            <a class="navhash" href="#198">#</a>
+						
+              <code id="198">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#199">#</a>
+						
+              <code id="199">Global.h:3:20: error: no include path in which to search for string.h</code><br />
+						
+            
+            <a class="navhash" href="#200">#</a>
+						
+              <code id="200"> #include <string.h></code><br />
+						
+            
+            <a class="navhash" href="#201">#</a>
+						
+              <code id="201">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#202">#</a>
+						
+              <code id="202">Global.h:4:18: error: no include path in which to search for time.h</code><br />
+						
+            
+            <a class="navhash" href="#203">#</a>
+						
+              <code id="203"> #include <time.h></code><br />
+						
+            
+            <a class="navhash" href="#204">#</a>
+						
+              <code id="204">                  ^</code><br />
+						
+            
+            <a class="navhash" href="#205">#</a>
+						
+              <code id="205">Global.h:5:20: error: no include path in which to search for assert.h</code><br />
+						
+            
+            <a class="navhash" href="#206">#</a>
+						
+              <code id="206"> #include <assert.h></code><br />
+						
+            
+            <a class="navhash" href="#207">#</a>
+						
+              <code id="207">                    ^</code><br />
+						
+            
+            <a class="navhash" href="#208">#</a>
+						<span class="error">
+              <code id="208">Global.h:96:1: error: unknown type name 'FILE'</code><br />
+						</span>
+            
+            <a class="navhash" href="#209">#</a>
+						
+              <code id="209"> extern FILE *inFILE, *outFILE;</code><br />
+						
+            
+            <a class="navhash" href="#210">#</a>
+						
+              <code id="210"> ^</code><br />
+						
+            
+            <a class="navhash" href="#211">#</a>
+						<span class="error">
+              <code id="211">Global.h:96:1: error: unknown type name 'FILE'</code><br />
+						</span>
+            
+            <a class="navhash" href="#212">#</a>
+						
+              <code id="212"> extern FILE *inFILE, *outFILE;</code><br />
+						
+            
+            <a class="navhash" href="#213">#</a>
+						
+              <code id="213"> ^</code><br />
+						
+            
+            <a class="navhash" href="#214">#</a>
+						
+              <code id="214">Coord.c: In function 'IsNextDigit':</code><br />
+						
+            
+            <a class="navhash" href="#215">#</a>
+						
+              <code id="215">Coord.c:17:3: warning: implicit declaration of function 'fgetc' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#216">#</a>
+						
+              <code id="216">   char c; c=fgetc(inFILE); ungetc(c,inFILE);</code><br />
+						
+            
+            <a class="navhash" href="#217">#</a>
+						
+              <code id="217">   ^</code><br />
+						
+            
+            <a class="navhash" href="#218">#</a>
+						
+              <code id="218">Coord.c:17:3: warning: implicit declaration of function 'ungetc' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#219">#</a>
+						
+              <code id="219">Rat.c: In function 'Rpr':</code><br />
+						
+            
+            <a class="navhash" href="#220">#</a>
+						
+              <code id="220">Coord.c: In function 'Print_PPL':</code><br />
+						
+            
+            <a class="navhash" href="#221">#</a>
+						
+              <code id="221">Rat.c:57:1: warning: implicit declaration of function 'fprintf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#222">#</a>
+						
+              <code id="222"> {    fprintf(outFILE,"%d/%d",(int) c.N, (int) c.D);</code><br />
+						
+            
+            <a class="navhash" href="#223">#</a>
+						
+              <code id="223"> ^</code><br />
+						
+            
+            <a class="navhash" href="#224">#</a>
+						
+              <code id="224">Coord.c:24:5: warning: implicit declaration of function 'fprintf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#225">#</a>
+						
+              <code id="225">     fprintf(outFILE,"%d %d  %s\n",_P->np,_P->n,comment);</code><br />
+						
+            
+            <a class="navhash" href="#226">#</a>
+						
+              <code id="226">     ^</code><br />
+						
+            
+            <a class="navhash" href="#227">#</a>
+						
+              <code id="227">Rat.c:57:6: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#228">#</a>
+						
+              <code id="228"> {    fprintf(outFILE,"%d/%d",(int) c.N, (int) c.D);</code><br />
+						
+            
+            <a class="navhash" href="#229">#</a>
+						
+              <code id="229">      ^</code><br />
+						
+            
+            <a class="navhash" href="#230">#</a>
+						
+              <code id="230">Coord.c:24:5: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#231">#</a>
+						
+              <code id="231">Coord.c:29:5: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#232">#</a>
+						
+              <code id="232">     fprintf(outFILE,"%d %d  %s\n",_P->n,_P->np,comment);</code><br />
+						
+            
+            <a class="navhash" href="#233">#</a>
+						
+              <code id="233">     ^</code><br />
+						
+            
+            <a class="navhash" href="#234">#</a>
+						
+              <code id="234">Vertex.c: In function 'Print_INCI':</code><br />
+						
+            
+            <a class="navhash" href="#235">#</a>
+						
+              <code id="235">Vertex.c:72:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#236">#</a>
+						
+              <code id="236">   while(!INCI_EQ_0(X)) {printf("%d", (int) INCI_M2(X)); X=INCI_D2(X); i++;} </code><br />
+						
+            
+            <a class="navhash" href="#237">#</a>
+						
+              <code id="237">   ^</code><br />
+						
+            
+            <a class="navhash" href="#238">#</a>
+						
+              <code id="238">Vertex.c:72:25: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#239">#</a>
+						
+              <code id="239">   while(!INCI_EQ_0(X)) {printf("%d", (int) INCI_M2(X)); X=INCI_D2(X); i++;} </code><br />
+						
+            
+            <a class="navhash" href="#240">#</a>
+						
+              <code id="240">                         ^</code><br />
+						
+            
+            <a class="navhash" href="#241">#</a>
+						
+              <code id="241">Coord.c: In function 'Print_VL':</code><br />
+						
+            
+            <a class="navhash" href="#242">#</a>
+						
+              <code id="242">Vertex.c: In function 'Print_FaceInfo':</code><br />
+						
+            
+            <a class="navhash" href="#243">#</a>
+						
+              <code id="243">Coord.c:38:5: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#244">#</a>
+						
+              <code id="244">     fprintf(outFILE,"%d %d  %s\n",_V->nv,_P->n,comment);</code><br />
+						
+            
+            <a class="navhash" href="#245">#</a>
+						
+              <code id="245">     ^</code><br />
+						
+            
+            <a class="navhash" href="#246">#</a>
+						
+              <code id="246">Vertex.c:79:3: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#247">#</a>
+						
+              <code id="247">   printf("Incidences as binary numbers [F-vector=(%d",_I->nf[0]);</code><br />
+						
+            
+            <a class="navhash" href="#248">#</a>
+						
+              <code id="248">   ^</code><br />
+						
+            
+            <a class="navhash" href="#249">#</a>
+						
+              <code id="249">Vertex.c:80:3: warning: implicit declaration of function 'puts' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#250">#</a>
+						
+              <code id="250">   for(i=1;i<=M;i++)printf(" %d",_I->nf[i]); puts(")]:");</code><br />
+						
+            
+            <a class="navhash" href="#251">#</a>
+						
+              <code id="251">   ^</code><br />
+						
+            
+            <a class="navhash" href="#252">#</a>
+						
+              <code id="252">Coord.c:43:5: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#253">#</a>
+						
+              <code id="253">     fprintf(outFILE,"%d %d  %s\n",_P->n,_V->nv,comment);</code><br />
+						
+            
+            <a class="navhash" href="#254">#</a>
+						
+              <code id="254">     ^</code><br />
+						
+            
+            <a class="navhash" href="#255">#</a>
+						
+              <code id="255">Rat.c: In function 'W_to_GLZ':</code><br />
+						
+            
+            <a class="navhash" href="#256">#</a>
+						
+              <code id="256">Coord.c: In function 'Print_EL':</code><br />
+						
+            
+            <a class="navhash" href="#257">#</a>
+						
+              <code id="257">Rat.c:127:1: warning: implicit declaration of function 'assert' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#258">#</a>
+						
+              <code id="258"> {    int i, j; Long G, *E=*GLZ, *B=GLZ[1]; for(i=0;i<*d;i++) assert(W[i]!=0);</code><br />
+						
+            
+            <a class="navhash" href="#259">#</a>
+						
+              <code id="259"> ^</code><br />
+						
+            
+            <a class="navhash" href="#260">#</a>
+						
+              <code id="260">Coord.c:51:3: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#261">#</a>
+						
+              <code id="261">   fprintf(outFILE,"%d %d  %s\n",_E->ne,*n,comment);</code><br />
+						
+            
+            <a class="navhash" href="#262">#</a>
+						
+              <code id="262">   ^</code><br />
+						
+            
+            <a class="navhash" href="#263">#</a>
+						
+              <code id="263">Vertex.c: In function 'Make_Incidence':</code><br />
+						
+            
+            <a class="navhash" href="#264">#</a>
+						
+              <code id="264">Vertex.c:117:6: warning: implicit declaration of function 'assert' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#265">#</a>
+						
+              <code id="265">      assert(_E->ne<=VERT_Nmax);</code><br />
+						
+            
+            <a class="navhash" href="#266">#</a>
+						
+              <code id="266">      ^</code><br />
+						
+            
+            <a class="navhash" href="#267">#</a>
+						
+              <code id="267">Coord.c: In function 'Print_Matrix':</code><br />
+						
+            
+            <a class="navhash" href="#268">#</a>
+						
+              <code id="268">Coord.c:61:3: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#269">#</a>
+						
+              <code id="269">   fprintf(outFILE,"%d %d  %s\n",n_lines, n_columns, comment);</code><br />
+						
+            
+            <a class="navhash" href="#270">#</a>
+						
+              <code id="270">   ^</code><br />
+						
+            
+            <a class="navhash" href="#271">#</a>
+						
+              <code id="271">Coord.c: In function 'CWSZerror':</code><br />
+						
+            
+            <a class="navhash" href="#272">#</a>
+						
+              <code id="272">Coord.c:71:1: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#273">#</a>
+						
+              <code id="273"> {    printf("Format error %s in Read_CWS_Zinfo\n",c);exit(0);</code><br />
+						
+            
+            <a class="navhash" href="#274">#</a>
+						
+              <code id="274"> ^</code><br />
+						
+            
+            <a class="navhash" href="#275">#</a>
+						
+              <code id="275">Coord.c:71:6: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#276">#</a>
+						
+              <code id="276"> {    printf("Format error %s in Read_CWS_Zinfo\n",c);exit(0);</code><br />
+						
+            
+            <a class="navhash" href="#277">#</a>
+						
+              <code id="277">      ^</code><br />
+						
+            
+            <a class="navhash" href="#278">#</a>
+						
+              <code id="278">Coord.c:71:1: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#279">#</a>
+						
+              <code id="279"> {    printf("Format error %s in Read_CWS_Zinfo\n",c);exit(0);</code><br />
+						
+            
+            <a class="navhash" href="#280">#</a>
+						
+              <code id="280"> ^</code><br />
+						
+            
+            <a class="navhash" href="#281">#</a>
+						
+              <code id="281">Coord.c:71:54: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#282">#</a>
+						
+              <code id="282"> {    printf("Format error %s in Read_CWS_Zinfo\n",c);exit(0);</code><br />
+						
+            
+            <a class="navhash" href="#283">#</a>
+						
+              <code id="283">                                                      ^</code><br />
+						
+            
+            <a class="navhash" href="#284">#</a>
+						
+              <code id="284">Coord.c: In function 'Print_CWS_Zinfo':</code><br />
+						
+            
+            <a class="navhash" href="#285">#</a>
+						
+              <code id="285">Coord.c:75:8: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#286">#</a>
+						
+              <code id="286">      { fprintf(outFILE,"/Z%d: ",CW->m[i]);</code><br />
+						
+            
+            <a class="navhash" href="#287">#</a>
+						
+              <code id="287">        ^</code><br />
+						
+            
+            <a class="navhash" href="#288">#</a>
+						
+              <code id="288">Coord.c: At top level:</code><br />
+						
+            
+            <a class="navhash" href="#289">#</a>
+						<span class="error">
+              <code id="289">Coord.c:79:21: error: unknown type name 'FILE'</code><br />
+						</span>
+            
+            <a class="navhash" href="#290">#</a>
+						
+              <code id="290"> int  Read_CWS_Zinfo(FILE *inFILE,CWS *CW)        /* return !EOF */</code><br />
+						
+            
+            <a class="navhash" href="#291">#</a>
+						
+              <code id="291">                     ^</code><br />
+						
+            
+            <a class="navhash" href="#292">#</a>
+						
+              <code id="292">Vertex.c:153:37: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#293">#</a>
+						
+              <code id="293">      if(M!=2*(d%2)){for(i=0;i<d;i++)printf("%3d",_I->nf[i]);puts("=F-vector");</code><br />
+						
+            
+            <a class="navhash" href="#294">#</a>
+						
+              <code id="294">                                     ^</code><br />
+						
+            
+            <a class="navhash" href="#295">#</a>
+						
+              <code id="295">Coord.c: In function 'checkDimension':</code><br />
+						
+            
+            <a class="navhash" href="#296">#</a>
+						
+              <code id="296">Rat.c: In function 'LRpr':</code><br />
+						
+            
+            <a class="navhash" href="#297">#</a>
+						
+              <code id="297">Coord.c:107:2: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#298">#</a>
+						
+              <code id="298">  printf("Please increase POLY_Dmax to at least %d = %d + %d - 1\n",</code><br />
+						
+            
+            <a class="navhash" href="#299">#</a>
+						
+              <code id="299">  ^</code><br />
+						
+            
+            <a class="navhash" href="#300">#</a>
+						
+              <code id="300">Rat.c:220:6: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#301">#</a>
+						
+              <code id="301"> {    fprintf(outFILE,"%lld/%lld",(LLong) c.N, (LLong) c.D);</code><br />
+						
+            
+            <a class="navhash" href="#302">#</a>
+						
+              <code id="302">      ^</code><br />
+						
+            
+            <a class="navhash" href="#303">#</a>
+						
+              <code id="303">Coord.c:109:2: warning: implicit declaration of function 'puts' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#304">#</a>
+						
+              <code id="304">  puts("(nef.x requires POLY_Dmax >= dim N + codim - 1)");}</code><br />
+						
+            
+            <a class="navhash" href="#305">#</a>
+						
+              <code id="305">  ^</code><br />
+						
+            
+            <a class="navhash" href="#306">#</a>
+						
+              <code id="306">Vertex.c: In function 'Sort_VL':</code><br />
+						
+            
+            <a class="navhash" href="#307">#</a>
+						
+              <code id="307">Coord.c:110:12: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#308">#</a>
+						
+              <code id="308">       else printf("Please increase POLY_Dmax to at least %d\n", polyDim);</code><br />
+						
+            
+            <a class="navhash" href="#309">#</a>
+						
+              <code id="309">            ^</code><br />
+						
+            
+            <a class="navhash" href="#310">#</a>
+						
+              <code id="310">Vertex.c:168:1: warning: implicit declaration of function 'qsort' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#311">#</a>
+						
+              <code id="311"> void Sort_VL(VertexNumList *_V){qsort(_V->v, _V->nv, sizeof(int), &diff);}</code><br />
+						
+            
+            <a class="navhash" href="#312">#</a>
+						
+              <code id="312"> ^</code><br />
+						
+            
+            <a class="navhash" href="#313">#</a>
+						
+              <code id="313">Coord.c:111:7: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#314">#</a>
+						
+              <code id="314">       exit(0);  }}</code><br />
+						
+            
+            <a class="navhash" href="#315">#</a>
+						
+              <code id="315">       ^</code><br />
+						
+            
+            <a class="navhash" href="#316">#</a>
+						
+              <code id="316">Coord.c:113:5: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#317">#</a>
+						
+              <code id="317">     printf("Please increase POLY_Dmax to at least %d = %d + 1\n",</code><br />
+						
+            
+            <a class="navhash" href="#318">#</a>
+						
+              <code id="318">     ^</code><br />
+						
+            
+            <a class="navhash" href="#319">#</a>
+						
+              <code id="319">Coord.c:116:5: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#320">#</a>
+						
+              <code id="320">     exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#321">#</a>
+						
+              <code id="321">     ^</code><br />
+						
+            
+            <a class="navhash" href="#322">#</a>
+						
+              <code id="322">Coord.c: In function 'ReadCwsPp':</code><br />
+						
+            
+            <a class="navhash" href="#323">#</a>
+						
+              <code id="323">Coord.c:125:36: error: 'NULL' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#324">#</a>
+						
+              <code id="324"> {    int i, j, FilterFlag=(inFILE==NULL); </code><br />
+						
+            
+            <a class="navhash" href="#325">#</a>
+						
+              <code id="325">                                    ^</code><br />
+						
+            
+            <a class="navhash" href="#326">#</a>
+						
+              <code id="326">Coord.c:125:36: note: each undeclared identifier is reported only once for each function it appears in</code><br />
+						
+            
+            <a class="navhash" href="#327">#</a>
+						
+              <code id="327">Coord.c:130:28: error: 'stdin' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#328">#</a>
+						
+              <code id="328">      if(FilterFlag) inFILE=stdin; </code><br />
+						
+            
+            <a class="navhash" href="#329">#</a>
+						
+              <code id="329">                            ^</code><br />
+						
+            
+            <a class="navhash" href="#330">#</a>
+						
+              <code id="330">Coord.c:137:8: warning: implicit declaration of function 'fscanf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#331">#</a>
+						
+              <code id="331">        if(IsNextDigit()) fscanf(inFILE,"%d",&IN[i]); else break;</code><br />
+						
+            
+            <a class="navhash" href="#332">#</a>
+						
+              <code id="332">        ^</code><br />
+						
+            
+            <a class="navhash" href="#333">#</a>
+						
+              <code id="333">Coord.c:137:26: warning: incompatible implicit declaration of built-in function 'fscanf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#334">#</a>
+						
+              <code id="334">        if(IsNextDigit()) fscanf(inFILE,"%d",&IN[i]); else break;</code><br />
+						
+            
+            <a class="navhash" href="#335">#</a>
+						
+              <code id="335">                          ^</code><br />
+						
+            
+            <a class="navhash" href="#336">#</a>
+						
+              <code id="336">Coord.c:139:59: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#337">#</a>
+						
+              <code id="337">      if(i==0) { if(!InputOK){puts("-h gives you help\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#338">#</a>
+						
+              <code id="338">                                                           ^</code><br />
+						
+            
+            <a class="navhash" href="#339">#</a>
+						
+              <code id="339">Coord.c:141:67: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#340">#</a>
+						
+              <code id="340">      if(i==1) { puts("Error in INPUT: need at least 2 numbers!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#341">#</a>
+						
+              <code id="341">                                                                   ^</code><br />
+						
+            
+            <a class="navhash" href="#342">#</a>
+						
+              <code id="342">Coord.c:146:3: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#343">#</a>
+						
+              <code id="343">   exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#344">#</a>
+						
+              <code id="344">   ^</code><br />
+						
+            
+            <a class="navhash" href="#345">#</a>
+						
+              <code id="345">Vertex.c: In function 'Vec_Greater_Than':</code><br />
+						
+            
+            <a class="navhash" href="#346">#</a>
+						
+              <code id="346">Vertex.c:246:3: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#347">#</a>
+						
+              <code id="347">   puts("Identical points in Vec_Greater_Than !!"); exit(0); return 0;</code><br />
+						
+            
+            <a class="navhash" href="#348">#</a>
+						
+              <code id="348">   ^</code><br />
+						
+            
+            <a class="navhash" href="#349">#</a>
+						
+              <code id="349">Coord.c:149:61: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#350">#</a>
+						
+              <code id="350">   if(IN[1]>POINT_Nmax) {puts("Please increase POINT_Nmax"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#351">#</a>
+						
+              <code id="351">                                                             ^</code><br />
+						
+            
+            <a class="navhash" href="#352">#</a>
+						
+              <code id="352">Vertex.c:246:52: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#353">#</a>
+						
+              <code id="353">   puts("Identical points in Vec_Greater_Than !!"); exit(0); return 0;</code><br />
+						
+            
+            <a class="navhash" href="#354">#</a>
+						
+              <code id="354">                                                    ^</code><br />
+						
+            
+            <a class="navhash" href="#355">#</a>
+						
+              <code id="355">Coord.c:151:4: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#356">#</a>
+						
+              <code id="356">    printf("Type the %d coordinates as %s=%d lines with %s=%d columns:\n",</code><br />
+						
+            
+            <a class="navhash" href="#357">#</a>
+						
+              <code id="357">    ^</code><br />
+						
+            
+            <a class="navhash" href="#358">#</a>
+						
+              <code id="358">Coord.c:158:15: warning: incompatible implicit declaration of built-in function 'fscanf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#359">#</a>
+						
+              <code id="359">    {   int X; fscanf(inFILE,"%d",&X); _P->x[j][i]=X; }</code><br />
+						
+            
+            <a class="navhash" href="#360">#</a>
+						
+              <code id="360">               ^</code><br />
+						
+            
+            <a class="navhash" href="#361">#</a>
+						
+              <code id="361">Coord.c:160:15: warning: incompatible implicit declaration of built-in function 'fscanf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#362">#</a>
+						
+              <code id="362">    {   int X; fscanf(inFILE,"%d",&X); _P->x[i][j]=X; }</code><br />
+						
+            
+            <a class="navhash" href="#363">#</a>
+						
+              <code id="363">               ^</code><br />
+						
+            
+            <a class="navhash" href="#364">#</a>
+						
+              <code id="364">Coord.c:162:2: warning: implicit declaration of function 'feof' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#365">#</a>
+						
+              <code id="365">  while(fgetc(inFILE )-'\n') if(feof(inFILE)) return 0;/* read to EOL */</code><br />
+						
+            
+            <a class="navhash" href="#366">#</a>
+						
+              <code id="366">  ^</code><br />
+						
+            
+            <a class="navhash" href="#367">#</a>
+						
+              <code id="367">Coord.c:165:6: warning: implicit declaration of function 'assert' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#368">#</a>
+						
+              <code id="368">      assert(i!=3);</code><br />
+						
+            
+            <a class="navhash" href="#369">#</a>
+						
+              <code id="369">      ^</code><br />
+						
+            
+            <a class="navhash" href="#370">#</a>
+						
+              <code id="370">Coord.c:178:59: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#371">#</a>
+						
+              <code id="371">  {   if(S) { puts("Error in INPUT: degree vs. weights!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#372">#</a>
+						
+              <code id="372">                                                           ^</code><br />
+						
+            
+            <a class="navhash" href="#373">#</a>
+						
+              <code id="373">Coord.c:183:56: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#374">#</a>
+						
+              <code id="374">   {   if(i%(1+_CW->N)) {puts("INPUT error: numbers?"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#375">#</a>
+						
+              <code id="375">                                                        ^</code><br />
+						
+            
+            <a class="navhash" href="#376">#</a>
+						
+              <code id="376">Coord.c:184:56: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#377">#</a>
+						
+              <code id="377">   }   if(j%(1+_CW->N)) {puts("INPUT error: degrees?"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#378">#</a>
+						
+              <code id="378">                                                        ^</code><br />
+						
+            
+            <a class="navhash" href="#379">#</a>
+						
+              <code id="379">Coord.c:190:39: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#380">#</a>
+						
+              <code id="380">      {   puts("Increase AMBI_Dmax!"); exit(0);</code><br />
+						
+            
+            <a class="navhash" href="#381">#</a>
+						
+              <code id="381">                                       ^</code><br />
+						
+            
+            <a class="navhash" href="#382">#</a>
+						
+              <code id="382">Coord.c:201:4: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#383">#</a>
+						
+              <code id="383">    printf("Use poly.x -l for (single) WeightSystems with ");</code><br />
+						
+            
+            <a class="navhash" href="#384">#</a>
+						
+              <code id="384">    ^</code><br />
+						
+            
+            <a class="navhash" href="#385">#</a>
+						
+              <code id="385">Coord.c:203:41: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#386">#</a>
+						
+              <code id="386">    puts("PolyPointList in that case)"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#387">#</a>
+						
+              <code id="387">                                         ^</code><br />
+						
+            
+            <a class="navhash" href="#388">#</a>
+						
+              <code id="388">Coord.c:206:6: warning: implicit declaration of function 'Read_CWS_Zinfo' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#389">#</a>
+						
+              <code id="389">      if(!Read_CWS_Zinfo(inFILE,_CW))      /* read Z to EOL */</code><br />
+						
+            
+            <a class="navhash" href="#390">#</a>
+						
+              <code id="390">      ^</code><br />
+						
+            
+            <a class="navhash" href="#391">#</a>
+						
+              <code id="391">Coord.c: In function 'Read_PP':</code><br />
+						
+            
+            <a class="navhash" href="#392">#</a>
+						
+              <code id="392">Coord.c:217:36: error: 'NULL' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#393">#</a>
+						
+              <code id="393"> {    int i, j, FilterFlag=(inFILE==NULL);</code><br />
+						
+            
+            <a class="navhash" href="#394">#</a>
+						
+              <code id="394">                                    ^</code><br />
+						
+            
+            <a class="navhash" href="#395">#</a>
+						
+              <code id="395">Coord.c:222:28: error: 'stdin' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#396">#</a>
+						
+              <code id="396">      if(FilterFlag) inFILE=stdin;</code><br />
+						
+            
+            <a class="navhash" href="#397">#</a>
+						
+              <code id="397">                            ^</code><br />
+						
+            
+            <a class="navhash" href="#398">#</a>
+						
+              <code id="398">Coord.c:224:8: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#399">#</a>
+						
+              <code id="399">        printf("`#lines #columns' (= `PolyDim #Points' or `#Points PolyDim'):\n");</code><br />
+						
+            
+            <a class="navhash" href="#400">#</a>
+						
+              <code id="400">        ^</code><br />
+						
+            
+            <a class="navhash" href="#401">#</a>
+						
+              <code id="401">Coord.c:229:26: warning: incompatible implicit declaration of built-in function 'fscanf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#402">#</a>
+						
+              <code id="402">        if(IsNextDigit()) fscanf(inFILE,"%d",&IN[i]); else break;</code><br />
+						
+            
+            <a class="navhash" href="#403">#</a>
+						
+              <code id="403">                          ^</code><br />
+						
+            
+            <a class="navhash" href="#404">#</a>
+						
+              <code id="404">Coord.c:231:59: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#405">#</a>
+						
+              <code id="405">      if(i==0) { if(!InputOK){puts("-h gives you help\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#406">#</a>
+						
+              <code id="406">                                                           ^</code><br />
+						
+            
+            <a class="navhash" href="#407">#</a>
+						
+              <code id="407">Coord.c:233:67: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#408">#</a>
+						
+              <code id="408">      if(i==1) { puts("Error in INPUT: need at least 2 numbers!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#409">#</a>
+						
+              <code id="409">                                                                   ^</code><br />
+						
+            
+            <a class="navhash" href="#410">#</a>
+						
+              <code id="410">Coord.c:238:3: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#411">#</a>
+						
+              <code id="411">   exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#412">#</a>
+						
+              <code id="412">   ^</code><br />
+						
+            
+            <a class="navhash" href="#413">#</a>
+						
+              <code id="413">Coord.c:240:52: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#414">#</a>
+						
+              <code id="414">  if(IN[0]>POLY_Dmax) {puts("increase POLY_Dmax!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#415">#</a>
+						
+              <code id="415">                                                    ^</code><br />
+						
+            
+            <a class="navhash" href="#416">#</a>
+						
+              <code id="416">Coord.c:241:55: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#417">#</a>
+						
+              <code id="417">   if(IN[1]>POINT_Nmax) {puts("increase POINT_Nmax!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#418">#</a>
+						
+              <code id="418">                                                       ^</code><br />
+						
+            
+            <a class="navhash" href="#419">#</a>
+						
+              <code id="419">Coord.c:243:4: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#420">#</a>
+						
+              <code id="420">    printf("Type the %d coordinates as %s=%d lines with %s=%d columns:\n",</code><br />
+						
+            
+            <a class="navhash" href="#421">#</a>
+						
+              <code id="421">    ^</code><br />
+						
+            
+            <a class="navhash" href="#422">#</a>
+						
+              <code id="422">Coord.c:250:15: warning: incompatible implicit declaration of built-in function 'fscanf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#423">#</a>
+						
+              <code id="423">    {   int X; fscanf(inFILE,"%d",&X); _P->x[j][i]=X; }</code><br />
+						
+            
+            <a class="navhash" href="#424">#</a>
+						
+              <code id="424">               ^</code><br />
+						
+            
+            <a class="navhash" href="#425">#</a>
+						
+              <code id="425">Coord.c:252:15: warning: incompatible implicit declaration of built-in function 'fscanf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#426">#</a>
+						
+              <code id="426">    {   int X; fscanf(inFILE,"%d",&X); _P->x[i][j]=X; }</code><br />
+						
+            
+            <a class="navhash" href="#427">#</a>
+						
+              <code id="427">               ^</code><br />
+						
+            
+            <a class="navhash" href="#428">#</a>
+						
+              <code id="428">Coord.c:257:81: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#429">#</a>
+						
+              <code id="429">      if(i>2){puts("Error: expected input format is matrix of polytope points!");exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#430">#</a>
+						
+              <code id="430">                                                                                 ^</code><br />
+						
+            
+            <a class="navhash" href="#431">#</a>
+						
+              <code id="431">Coord.c: In function 'Read_CWS':</code><br />
+						
+            
+            <a class="navhash" href="#432">#</a>
+						
+              <code id="432">Coord.c:262:36: error: 'NULL' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#433">#</a>
+						
+              <code id="433"> {    int i, j, FilterFlag=(inFILE==NULL);</code><br />
+						
+            
+            <a class="navhash" href="#434">#</a>
+						
+              <code id="434">                                    ^</code><br />
+						
+            
+            <a class="navhash" href="#435">#</a>
+						
+              <code id="435">Coord.c:268:28: error: 'stdin' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#436">#</a>
+						
+              <code id="436">      if(FilterFlag) inFILE=stdin;</code><br />
+						
+            
+            <a class="navhash" href="#437">#</a>
+						
+              <code id="437">                            ^</code><br />
+						
+            
+            <a class="navhash" href="#438">#</a>
+						
+              <code id="438">Coord.c:270:8: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#439">#</a>
+						
+              <code id="439">        printf("Degrees and weights  `d1 w11 w12 ... d2 w21 w22 ...':\n");</code><br />
+						
+            
+            <a class="navhash" href="#440">#</a>
+						
+              <code id="440">        ^</code><br />
+						
+            
+            <a class="navhash" href="#441">#</a>
+						
+              <code id="441">Coord.c:275:26: warning: incompatible implicit declaration of built-in function 'fscanf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#442">#</a>
+						
+              <code id="442">        if(IsNextDigit()) fscanf(inFILE,"%d",&IN[i]); else break;</code><br />
+						
+            
+            <a class="navhash" href="#443">#</a>
+						
+              <code id="443">                          ^</code><br />
+						
+            
+            <a class="navhash" href="#444">#</a>
+						
+              <code id="444">Coord.c:277:59: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#445">#</a>
+						
+              <code id="445">      if(i==0) { if(!InputOK){puts("-h gives you help\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#446">#</a>
+						
+              <code id="446">                                                           ^</code><br />
+						
+            
+            <a class="navhash" href="#447">#</a>
+						
+              <code id="447">Coord.c:279:67: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#448">#</a>
+						
+              <code id="448">      if(i==1) { puts("Error in INPUT: need at least 2 numbers!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#449">#</a>
+						
+              <code id="449">                                                                   ^</code><br />
+						
+            
+            <a class="navhash" href="#450">#</a>
+						
+              <code id="450">Coord.c:280:62: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#451">#</a>
+						
+              <code id="451">      if(i==2) {puts("Error: expected input format is CWS!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#452">#</a>
+						
+              <code id="452">                                                              ^</code><br />
+						
+            
+            <a class="navhash" href="#453">#</a>
+						
+              <code id="453">make: *** [<builtin>: Rat.o] Error 1</code><br />
+						
+            
+            <a class="navhash" href="#454">#</a>
+						
+              <code id="454">Coord.c:292:59: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#455">#</a>
+						
+              <code id="455">  {   if(S) { puts("Error in INPUT: degree vs. weights!"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#456">#</a>
+						
+              <code id="456">                                                           ^</code><br />
+						
+            
+            <a class="navhash" href="#457">#</a>
+						
+              <code id="457">Coord.c:296:56: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#458">#</a>
+						
+              <code id="458">   {   if(i%(1+_CW->N)) {puts("INPUT error: numbers?"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#459">#</a>
+						
+              <code id="459">                                                        ^</code><br />
+						
+            
+            <a class="navhash" href="#460">#</a>
+						
+              <code id="460">Coord.c:297:56: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#461">#</a>
+						
+              <code id="461">   }   if(j%(1+_CW->N)) {puts("INPUT error: degrees?"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#462">#</a>
+						
+              <code id="462">                                                        ^</code><br />
+						
+            
+            <a class="navhash" href="#463">#</a>
+						
+              <code id="463">Coord.c:303:39: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#464">#</a>
+						
+              <code id="464">      {   puts("Increase AMBI_Dmax!"); exit(0);</code><br />
+						
+            
+            <a class="navhash" href="#465">#</a>
+						
+              <code id="465">                                       ^</code><br />
+						
+            
+            <a class="navhash" href="#466">#</a>
+						
+              <code id="466">Coord.c:309:8: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#467">#</a>
+						
+              <code id="467">        printf("Please increase POLY_Dmax to at least %d\n", _CW->N-_CW->nw);</code><br />
+						
+            
+            <a class="navhash" href="#468">#</a>
+						
+              <code id="468">        ^</code><br />
+						
+            
+            <a class="navhash" href="#469">#</a>
+						
+              <code id="469">Coord.c:310:8: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#470">#</a>
+						
+              <code id="470">        exit(0);} /* increase POLY_Dmax */</code><br />
+						
+            
+            <a class="navhash" href="#471">#</a>
+						
+              <code id="471">        ^</code><br />
+						
+            
+            <a class="navhash" href="#472">#</a>
+						
+              <code id="472">Coord.c:315:11: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#473">#</a>
+						
+              <code id="473">  if(sum){ printf("Use poly.x -w for (single) WeightSystems with ");</code><br />
+						
+            
+            <a class="navhash" href="#474">#</a>
+						
+              <code id="474">           ^</code><br />
+						
+            
+            <a class="navhash" href="#475">#</a>
+						
+              <code id="475">Coord.c:317:40: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#476">#</a>
+						
+              <code id="476">   puts("PolyPointList in that case)"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#477">#</a>
+						
+              <code id="477">                                        ^</code><br />
+						
+            
+            <a class="navhash" href="#478">#</a>
+						
+              <code id="478">Coord.c: In function 'Print_CWH':</code><br />
+						
+            
+            <a class="navhash" href="#479">#</a>
+						
+              <code id="479">Coord.c:329:5: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#480">#</a>
+						
+              <code id="480">     fprintf(outFILE,"%d ",(int) _W->d[i]);</code><br />
+						
+            
+            <a class="navhash" href="#481">#</a>
+						
+              <code id="481">     ^</code><br />
+						
+            
+            <a class="navhash" href="#482">#</a>
+						
+              <code id="482">Vertex.c: In function 'Find_Equations':</code><br />
+						
+            
+            <a class="navhash" href="#483">#</a>
+						
+              <code id="483">Coord.c:334:5: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#484">#</a>
+						
+              <code id="484">     fprintf(outFILE,"M:%d %d N:%d %d",_BH->mp,_BH->mv,_BH->np,_BH->nv);</code><br />
+						
+            
+            <a class="navhash" href="#485">#</a>
+						
+              <code id="485">     ^</code><br />
+						
+            
+            <a class="navhash" href="#486">#</a>
+						
+              <code id="486">Vertex.c:624:3: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#487">#</a>
+						
+              <code id="487">   CEqList *CEq = (CEqList *) malloc(sizeof(CEqList)); </code><br />
+						
+            
+            <a class="navhash" href="#488">#</a>
+						
+              <code id="488">   ^</code><br />
+						
+            
+            <a class="navhash" href="#489">#</a>
+						
+              <code id="489">Vertex.c:624:30: warning: incompatible implicit declaration of built-in function 'malloc' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#490">#</a>
+						
+              <code id="490">   CEqList *CEq = (CEqList *) malloc(sizeof(CEqList)); </code><br />
+						
+            
+            <a class="navhash" href="#491">#</a>
+						
+              <code id="491">                              ^</code><br />
+						
+            
+            <a class="navhash" href="#492">#</a>
+						
+              <code id="492">Coord.c:343:5: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#493">#</a>
+						
+              <code id="493">     fprintf(outFILE,"M:%d %d F:%d",_BH->mp,_BH->mv,_BH->nv);</code><br />
+						
+            
+            <a class="navhash" href="#494">#</a>
+						
+              <code id="494">     ^</code><br />
+						
+            
+            <a class="navhash" href="#495">#</a>
+						
+              <code id="495">Vertex.c:628:12: error: 'NULL' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#496">#</a>
+						
+              <code id="496">   if((CEq==NULL)||(CEq_I==NULL)||(F_I==NULL)) {</code><br />
+						
+            
+            <a class="navhash" href="#497">#</a>
+						
+              <code id="497">            ^</code><br />
+						
+            
+            <a class="navhash" href="#498">#</a>
+						
+              <code id="498">Vertex.c:628:12: note: each undeclared identifier is reported only once for each function it appears in</code><br />
+						
+            
+            <a class="navhash" href="#499">#</a>
+						
+              <code id="499">Coord.c: In function 'PrintBasis':</code><br />
+						
+            
+            <a class="navhash" href="#500">#</a>
+						
+              <code id="500">Vertex.c:629:6: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#501">#</a>
+						
+              <code id="501">      printf("Allocation failure in Find_Equations\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#502">#</a>
+						
+              <code id="502">      ^</code><br />
+						
+            
+            <a class="navhash" href="#503">#</a>
+						
+              <code id="503">Coord.c:363:29: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#504">#</a>
+						
+              <code id="504">      { for(j=0;j<_B->N;j++) fprintf(outFILE,"%6d ",(int) _B->x[i][j]); </code><br />
+						
+            
+            <a class="navhash" href="#505">#</a>
+						
+              <code id="505">                             ^</code><br />
+						
+            
+            <a class="navhash" href="#506">#</a>
+						
+              <code id="506">Vertex.c:629:56: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#507">#</a>
+						
+              <code id="507">      printf("Allocation failure in Find_Equations\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#508">#</a>
+						
+              <code id="508">                                                        ^</code><br />
+						
+            
+            <a class="navhash" href="#509">#</a>
+						
+              <code id="509">Vertex.c:633:5: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#510">#</a>
+						
+              <code id="510">     free(CEq); free(CEq_I); free(F_I); </code><br />
+						
+            
+            <a class="navhash" href="#511">#</a>
+						
+              <code id="511">     ^</code><br />
+						
+            
+            <a class="navhash" href="#512">#</a>
+						
+              <code id="512">Vertex.c:633:5: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#513">#</a>
+						
+              <code id="513">Vertex.c:638:7: warning: implicit declaration of function 'fprintf' [-Wimplicit-function-declaration]</code><br />
+						
+            
+            <a class="navhash" href="#514">#</a>
+						
+              <code id="514">       {fprintf(outFILE,"Bad CEq in Find_Equations"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#515">#</a>
+						
+              <code id="515">       ^</code><br />
+						
+            
+            <a class="navhash" href="#516">#</a>
+						
+              <code id="516">Vertex.c:638:8: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#517">#</a>
+						
+              <code id="517">       {fprintf(outFILE,"Bad CEq in Find_Equations"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#518">#</a>
+						
+              <code id="518">        ^</code><br />
+						
+            
+            <a class="navhash" href="#519">#</a>
+						
+              <code id="519">Vertex.c:638:54: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#520">#</a>
+						
+              <code id="520">       {fprintf(outFILE,"Bad CEq in Find_Equations"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#521">#</a>
+						
+              <code id="521">                                                      ^</code><br />
+						
+            
+            <a class="navhash" href="#522">#</a>
+						
+              <code id="522">Vertex.c:640:3: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#523">#</a>
+						
+              <code id="523">   free(CEq); free(CEq_I); free(F_I);</code><br />
+						
+            
+            <a class="navhash" href="#524">#</a>
+						
+              <code id="524">   ^</code><br />
+						
+            
+            <a class="navhash" href="#525">#</a>
+						
+              <code id="525">Vertex.c: In function 'IP_Check':</code><br />
+						
+            
+            <a class="navhash" href="#526">#</a>
+						
+              <code id="526">Vertex.c:657:30: warning: incompatible implicit declaration of built-in function 'malloc' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#527">#</a>
+						
+              <code id="527">   CEqList *CEq = (CEqList *) malloc(sizeof(CEqList)); </code><br />
+						
+            
+            <a class="navhash" href="#528">#</a>
+						
+              <code id="528">                              ^</code><br />
+						
+            
+            <a class="navhash" href="#529">#</a>
+						
+              <code id="529">Vertex.c:660:12: error: 'NULL' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#530">#</a>
+						
+              <code id="530">   if((CEq==NULL)||(CEq_I==NULL)||(F_I==NULL)) {</code><br />
+						
+            
+            <a class="navhash" href="#531">#</a>
+						
+              <code id="531">            ^</code><br />
+						
+            
+            <a class="navhash" href="#532">#</a>
+						
+              <code id="532">Vertex.c:661:5: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#533">#</a>
+						
+              <code id="533">     printf("Allocation failure in IP_Check\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#534">#</a>
+						
+              <code id="534">     ^</code><br />
+						
+            
+            <a class="navhash" href="#535">#</a>
+						
+              <code id="535">Vertex.c:661:49: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#536">#</a>
+						
+              <code id="536">     printf("Allocation failure in IP_Check\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#537">#</a>
+						
+              <code id="537">                                                 ^</code><br />
+						
+            
+            <a class="navhash" href="#538">#</a>
+						
+              <code id="538">Vertex.c:663:5: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#539">#</a>
+						
+              <code id="539">     free(CEq); free(CEq_I); free(F_I); return 0;}</code><br />
+						
+            
+            <a class="navhash" href="#540">#</a>
+						
+              <code id="540">     ^</code><br />
+						
+            
+            <a class="navhash" href="#541">#</a>
+						
+              <code id="541">Vertex.c:666:8: warning: incompatible implicit declaration of built-in function 'fprintf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#542">#</a>
+						
+              <code id="542">       {fprintf(outFILE,"Bad CEq in IP_Check"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#543">#</a>
+						
+              <code id="543">        ^</code><br />
+						
+            
+            <a class="navhash" href="#544">#</a>
+						
+              <code id="544">Vertex.c:666:48: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#545">#</a>
+						
+              <code id="545">       {fprintf(outFILE,"Bad CEq in IP_Check"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#546">#</a>
+						
+              <code id="546">                                                ^</code><br />
+						
+            
+            <a class="navhash" href="#547">#</a>
+						
+              <code id="547">Vertex.c:669:3: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#548">#</a>
+						
+              <code id="548">   free(CEq); free(CEq_I); free(F_I);</code><br />
+						
+            
+            <a class="navhash" href="#549">#</a>
+						
+              <code id="549">   ^</code><br />
+						
+            
+            <a class="navhash" href="#550">#</a>
+						
+              <code id="550">Vertex.c: In function 'Ref_Check':</code><br />
+						
+            
+            <a class="navhash" href="#551">#</a>
+						
+              <code id="551">Vertex.c:686:30: warning: incompatible implicit declaration of built-in function 'malloc' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#552">#</a>
+						
+              <code id="552">   CEqList *CEq = (CEqList *) malloc(sizeof(CEqList)); </code><br />
+						
+            
+            <a class="navhash" href="#553">#</a>
+						
+              <code id="553">                              ^</code><br />
+						
+            
+            <a class="navhash" href="#554">#</a>
+						
+              <code id="554">Vertex.c:689:12: error: 'NULL' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#555">#</a>
+						
+              <code id="555">   if((CEq==NULL)||(CEq_I==NULL)||(F_I==NULL)) {</code><br />
+						
+            
+            <a class="navhash" href="#556">#</a>
+						
+              <code id="556">            ^</code><br />
+						
+            
+            <a class="navhash" href="#557">#</a>
+						
+              <code id="557">Vertex.c:690:5: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#558">#</a>
+						
+              <code id="558">     printf("Allocation failure in Ref_Check\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#559">#</a>
+						
+              <code id="559">     ^</code><br />
+						
+            
+            <a class="navhash" href="#560">#</a>
+						
+              <code id="560">Vertex.c:690:50: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#561">#</a>
+						
+              <code id="561">     printf("Allocation failure in Ref_Check\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#562">#</a>
+						
+              <code id="562">                                                  ^</code><br />
+						
+            
+            <a class="navhash" href="#563">#</a>
+						
+              <code id="563">Coord.c: In function 'Old_Make_CWS_Points':</code><br />
+						
+            
+            <a class="navhash" href="#564">#</a>
+						
+              <code id="564">Coord.c:537:41: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#565">#</a>
+						
+              <code id="565">       else {puts("Increase POINT_Nmax");exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#566">#</a>
+						
+              <code id="566">                                         ^</code><br />
+						
+            
+            <a class="navhash" href="#567">#</a>
+						
+              <code id="567">Vertex.c:692:5: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#568">#</a>
+						
+              <code id="568">     free(CEq); free(CEq_I); free(F_I); return 0;}</code><br />
+						
+            
+            <a class="navhash" href="#569">#</a>
+						
+              <code id="569">     ^</code><br />
+						
+            
+            <a class="navhash" href="#570">#</a>
+						
+              <code id="570">Vertex.c:696:3: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#571">#</a>
+						
+              <code id="571">   free(CEq); free(CEq_I); free(F_I);</code><br />
+						
+            
+            <a class="navhash" href="#572">#</a>
+						
+              <code id="572">   ^</code><br />
+						
+            
+            <a class="navhash" href="#573">#</a>
+						
+              <code id="573">Vertex.c: In function 'Complete_Poly':</code><br />
+						
+            
+            <a class="navhash" href="#574">#</a>
+						
+              <code id="574">Vertex.c:803:2: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#575">#</a>
+						
+              <code id="575">  exit(0);}}} </code><br />
+						
+            
+            <a class="navhash" href="#576">#</a>
+						
+              <code id="576">  ^</code><br />
+						
+            
+            <a class="navhash" href="#577">#</a>
+						
+              <code id="577">Coord.c: In function 'Make_CWS_Points':</code><br />
+						
+            
+            <a class="navhash" href="#578">#</a>
+						
+              <code id="578">Coord.c:650:41: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#579">#</a>
+						
+              <code id="579">       else {puts("Increase POINT_Nmax");exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#580">#</a>
+						
+              <code id="580">                                         ^</code><br />
+						
+            
+            <a class="navhash" href="#581">#</a>
+						
+              <code id="581">Vertex.c: In function 'PrintFaceIPs':</code><br />
+						
+            
+            <a class="navhash" href="#582">#</a>
+						
+              <code id="582">Vertex.c:870:5: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#583">#</a>
+						
+              <code id="583">     printf("ip[%d]:",i);</code><br />
+						
+            
+            <a class="navhash" href="#584">#</a>
+						
+              <code id="584">     ^</code><br />
+						
+            
+            <a class="navhash" href="#585">#</a>
+						
+              <code id="585">Vertex.c:874:5: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#586">#</a>
+						
+              <code id="586">     printf("dip[%d]:",i);</code><br />
+						
+            
+            <a class="navhash" href="#587">#</a>
+						
+              <code id="587">     ^</code><br />
+						
+            
+            <a class="navhash" href="#588">#</a>
+						
+              <code id="588">Vertex.c: In function 'RC_Calc_BaHo':</code><br />
+						
+            
+            <a class="navhash" href="#589">#</a>
+						
+              <code id="589">Vertex.c:900:30: warning: incompatible implicit declaration of built-in function 'malloc' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#590">#</a>
+						
+              <code id="590">   FaceInfo *_FI=(FaceInfo *) malloc(sizeof(FaceInfo)); </code><br />
+						
+            
+            <a class="navhash" href="#591">#</a>
+						
+              <code id="591">                              ^</code><br />
+						
+            
+            <a class="navhash" href="#592">#</a>
+						
+              <code id="592">Vertex.c:901:11: error: 'NULL' undeclared (first use in this function)</code><br />
+						
+            
+            <a class="navhash" href="#593">#</a>
+						
+              <code id="593">   if(_FI==NULL) {printf("RC_Calc_BaHo: Unable to allocate _FI\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#594">#</a>
+						
+              <code id="594">           ^</code><br />
+						
+            
+            <a class="navhash" href="#595">#</a>
+						
+              <code id="595">Vertex.c:901:18: warning: incompatible implicit declaration of built-in function 'printf' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#596">#</a>
+						
+              <code id="596">   if(_FI==NULL) {printf("RC_Calc_BaHo: Unable to allocate _FI\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#597">#</a>
+						
+              <code id="597">                  ^</code><br />
+						
+            
+            <a class="navhash" href="#598">#</a>
+						
+              <code id="598">Vertex.c:901:68: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#599">#</a>
+						
+              <code id="599">   if(_FI==NULL) {printf("RC_Calc_BaHo: Unable to allocate _FI\n"); exit(0);}</code><br />
+						
+            
+            <a class="navhash" href="#600">#</a>
+						
+              <code id="600">                                                                    ^</code><br />
+						
+            
+            <a class="navhash" href="#601">#</a>
+						
+              <code id="601">Vertex.c:907:3: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]</code><br />
+						
+            
+            <a class="navhash" href="#602">#</a>
+						
+              <code id="602">   free(_FI);</code><br />
+						
+            
+            <a class="navhash" href="#603">#</a>
+						
+              <code id="603">   ^</code><br />
+						
+            
+            <a class="navhash" href="#604">#</a>
+						
+              <code id="604">make: *** [<builtin>: Coord.o] Error 1</code><br />
+						
+            
+            <a class="navhash" href="#605">#</a>
+						
+              <code id="605">make: *** [<builtin>: Vertex.o] Error 1</code><br />
+						
+            
+            <a class="navhash" href="#606">#</a>
+						
+              <code id="606">==> ERROR: A failure occurred in build().</code><br />
+						
+            
+            <a class="navhash" href="#607">#</a>
+						
+              <code id="607">    Aborting...</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+  </body>
+</html>

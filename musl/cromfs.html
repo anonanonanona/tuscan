@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html>
+<!-- Jinja template for reports of individual builds
+
+  Copyright 2016 Kareem Khazem. All Rights Reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+ 		 http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+  implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+  <head>
+    <meta charset="UTF-8">
+    <title>musl/cromfs</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+          rel='stylesheet' type='text/css'>
+    <link
+    href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+          rel='stylesheet' type='text/css'>
+    <link href="../style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Build of cromfs
+        with <a href="../index.html">musl</a>
+        toolchain</h1>
+    <p>The build took 00h 01m 14s and was
+    NOT successful.</p>
+    <p>
+    The program in this build is written in the following languages,
+    according to <a
+    href="http://www.dwheeler.com/sloccount/">sloccount</a>:
+    </p>
+    <table>
+      <tr><th>SLOC</th><th>Language</th></tr>
+      
+      <tr><td class="loc"><code>15,917</code></td>
+          <td class="lang">cpp</td></tr>
+      <tr><td class="loc"><code>13,409</code></td>
+          <td class="lang">ansic</td></tr>
+      <tr><td class="loc"><code>1,356</code></td>
+          <td class="lang">php</td></tr>
+      <tr><td class="loc"><code>656</code></td>
+          <td class="lang">sh</td></tr>
+      <tr><td class="loc"><code>300</code></td>
+          <td class="lang">makefile</td></tr>
+      <tr><td><code>31,638</code></td>
+          <td><em>total</em></td></tr>
+    </table>
+    <p>
+      The process tree of the build process is <a
+      href="cromfs-tree.html">here</a>.
+    </p>
+    
+    
+      <p>
+      Several sub-process invocations were improper; see the process tree
+      for details. Summary:
+      </p>
+      <ul>
+        <li>malformed path:<ul>
+            <li>&times;18: PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+</li>
+        
+            <li>&times;1: PATH=/usr/local/sbin:/usr/local/bin:/usr/bin
+</li>
+        </ul></li>
+      
+        <li>hardcoded invocation:<ul>
+            <li>&times;1: /usr/bin/cc
+
+/sysroot/bin/clang
+</li>
+        
+            <li>&times;1: /usr/bin/gcc
+
+/sysroot/bin/clang
+</li>
+        
+            <li>&times;53: g++
+
+/sysroot/bin/clang++
+</li>
+        
+            <li>&times;53: /usr/bin/g++
+
+/sysroot/bin/clang++
+</li>
+        
+            <li>&times;1: cc
+
+/sysroot/bin/clang
+</li>
+        
+            <li>&times;1: gcc
+
+/sysroot/bin/clang
+</li>
+        </ul></li>
+      </ul>
+    
+    
+    
+    
+    
+    <h2>Log</h2>
+    <p>
+    To avoid scrolling, you may jump to the <a
+    href="#121">last line</a> of the
+    invocation of <code>makepkg</code> that was used to build this
+    package.
+    </p>
+    
+    
+      <div class="block">
+        <div class="info">
+          <code>Removed vanilla repositories from pacman.conf and added:</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#1">#</a>
+						
+              <code id="1">[tuscan]</code><br />
+						
+            
+            <a class="navhash" href="#2">#</a>
+						
+              <code id="2">Server = file:///var/cache/pacman/pkg/</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+      <div class="block">
+        <div class="command">
+          <code><span class="prompt">CMD: </span>pacman -Syy --noconfirm</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#3">#</a>
+						
+              <code id="3">:: Synchronizing package databases...</code><br />
+						
+            
+            <a class="navhash" href="#4">#</a>
+						
+              <code id="4">downloading tuscan.db...</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+      <div class="block">
+        <div class="info">
+          <code>There were existing files in /sysroot, using those</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#5">#</a>
+						
+              <code id="5">/sysroot/lib</code><br />
+						
+            
+            <a class="navhash" href="#6">#</a>
+						
+              <code id="6">/sysroot/share</code><br />
+						
+            
+            <a class="navhash" href="#7">#</a>
+						
+              <code id="7">/sysroot/bin</code><br />
+						
+            
+            <a class="navhash" href="#8">#</a>
+						
+              <code id="8">/sysroot/include</code><br />
+						
+            
+            <a class="navhash" href="#9">#</a>
+						
+              <code id="9">/sysroot/libexec</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+      <div class="block">
+        <div class="command">
+          <code><span class="prompt">CMD: </span>sudo -u tuscan PATH=/sysroot/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin CC=clang CXX=clang++ red makepkg --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#10">#</a>
+						
+              <code id="10">==> Making package: cromfs 1.5.10.2-2 (Wed Apr  5 00:25:28 UTC 2017)</code><br />
+						
+            
+            <a class="navhash" href="#11">#</a>
+						
+              <code id="11">==> Checking runtime dependencies...</code><br />
+						
+            
+            <a class="navhash" href="#12">#</a>
+						
+              <code id="12">==> Installing missing dependencies...</code><br />
+						
+            
+            <a class="navhash" href="#13">#</a>
+						
+              <code id="13">resolving dependencies...</code><br />
+						
+            
+            <a class="navhash" href="#14">#</a>
+						
+              <code id="14">looking for conflicting packages...</code><br />
+						
+            
+            <a class="navhash" href="#15">#</a>
+						
+              <code id="15"></code><br />
+						
+            
+            <a class="navhash" href="#16">#</a>
+						
+              <code id="16">Packages (1) fuse-2.9.7-1</code><br />
+						
+            
+            <a class="navhash" href="#17">#</a>
+						
+              <code id="17"></code><br />
+						
+            
+            <a class="navhash" href="#18">#</a>
+						
+              <code id="18">Total Installed Size:  0.48 MiB</code><br />
+						
+            
+            <a class="navhash" href="#19">#</a>
+						
+              <code id="19"></code><br />
+						
+            
+            <a class="navhash" href="#20">#</a>
+						
+              <code id="20">:: Proceed with installation? [Y/n] </code><br />
+						
+            
+            <a class="navhash" href="#21">#</a>
+						
+              <code id="21">checking keyring...</code><br />
+						
+            
+            <a class="navhash" href="#22">#</a>
+						
+              <code id="22">checking package integrity...</code><br />
+						
+            
+            <a class="navhash" href="#23">#</a>
+						
+              <code id="23">loading package files...</code><br />
+						
+            
+            <a class="navhash" href="#24">#</a>
+						
+              <code id="24">checking for file conflicts...</code><br />
+						
+            
+            <a class="navhash" href="#25">#</a>
+						
+              <code id="25">checking available disk space...</code><br />
+						
+            
+            <a class="navhash" href="#26">#</a>
+						
+              <code id="26">:: Processing package changes...</code><br />
+						
+            
+            <a class="navhash" href="#27">#</a>
+						
+              <code id="27">installing fuse...</code><br />
+						
+            
+            <a class="navhash" href="#28">#</a>
+						
+              <code id="28">:: Running post-transaction hooks...</code><br />
+						
+            
+            <a class="navhash" href="#29">#</a>
+						
+              <code id="29">(1/1) Updating manpage index...</code><br />
+						
+            
+            <a class="navhash" href="#30">#</a>
+						
+              <code id="30">==> Checking buildtime dependencies...</code><br />
+						
+            
+            <a class="navhash" href="#31">#</a>
+						
+              <code id="31">==> WARNING: Using existing $srcdir/ tree</code><br />
+						
+            
+            <a class="navhash" href="#32">#</a>
+						
+              <code id="32">==> Starting build()...</code><br />
+						
+            
+            <a class="navhash" href="#33">#</a>
+						
+              <code id="33">Determining compiler version to use... CXX=g++(4.2.1) CPP=cpp(6.1.1) CC=gcc(4.2.1) </code><br />
+						
+            
+            <a class="navhash" href="#34">#</a>
+						
+              <code id="34">Checking if the determined compiler works... Ok</code><br />
+						
+            
+            <a class="navhash" href="#35">#</a>
+						
+              <code id="35">Checking if your compiler supports OpenMP... No</code><br />
+						
+            
+            <a class="navhash" href="#36">#</a>
+						
+              <code id="36">Checking if your compiler supports -pthread... Yes</code><br />
+						
+            
+            <a class="navhash" href="#37">#</a>
+						
+              <code id="37">Checking for pkg-config... Yes</code><br />
+						
+            
+            <a class="navhash" href="#38">#</a>
+						
+              <code id="38">Checking for fuse (dynamic)... Yes</code><br />
+						
+            
+            <a class="navhash" href="#39">#</a>
+						
+              <code id="39">Checking for fuse (static)... No</code><br />
+						
+            
+            <a class="navhash" href="#40">#</a>
+						
+              <code id="40">Note: cromfs-driver-static will not be built, because</code><br />
+						
+            
+            <a class="navhash" href="#41">#</a>
+						
+              <code id="41">your system does not have a statically linked Fuse library.</code><br />
+						
+            
+            <a class="navhash" href="#42">#</a>
+						
+              <code id="42">You can still use the dynamically linked cromfs-driver.</code><br />
+						
+            
+            <a class="navhash" href="#43">#</a>
+						
+              <code id="43">Checking for liblzo2 (dynamic)... No</code><br />
+						
+            
+            <a class="navhash" href="#44">#</a>
+						
+              <code id="44">Checking for liblzo2 (static)... No</code><br />
+						
+            
+            <a class="navhash" href="#45">#</a>
+						
+              <code id="45">- In the absense of assembler-optimized liblzo2, mkcromfs will use lzo1x_1_15 (shipped)</code><br />
+						
+            
+            <a class="navhash" href="#46">#</a>
+						
+              <code id="46">Checking for vsnprintf... Yes</code><br />
+						
+            
+            <a class="navhash" href="#47">#</a>
+						
+              <code id="47">Checking for lutimes... Yes</code><br />
+						
+            
+            <a class="navhash" href="#48">#</a>
+						
+              <code id="48">Checking for stdint.h... Yes</code><br />
+						
+            
+            <a class="navhash" href="#49">#</a>
+						
+              <code id="49">Checking for inttypes.h... Yes</code><br />
+						
+            
+            <a class="navhash" href="#50">#</a>
+						
+              <code id="50">Checking for readdir_r... Yes</code><br />
+						
+            
+            <a class="navhash" href="#51">#</a>
+						
+              <code id="51">Checking for uint16_t... Yes</code><br />
+						
+            
+            <a class="navhash" href="#52">#</a>
+						
+              <code id="52">Checking for u_int16_t... No</code><br />
+						
+            
+            <a class="navhash" href="#53">#</a>
+						
+              <code id="53">Checking for __uint16_t... No</code><br />
+						
+            
+            <a class="navhash" href="#54">#</a>
+						
+              <code id="54">Checking for long long... Yes</code><br />
+						
+            
+            <a class="navhash" href="#55">#</a>
+						
+              <code id="55">Checking for sys/types.h... Yes</code><br />
+						
+            
+            <a class="navhash" href="#56">#</a>
+						
+              <code id="56">Checking if your compiler supports -minline-stringops-dynamically... No</code><br />
+						
+            
+            <a class="navhash" href="#57">#</a>
+						
+              <code id="57">Checking if your compiler supports -ffast-math... Yes</code><br />
+						
+            
+            <a class="navhash" href="#58">#</a>
+						
+              <code id="58">Checking if your compiler supports -mrecip... Yes</code><br />
+						
+            
+            <a class="navhash" href="#59">#</a>
+						
+              <code id="59">Checking if your compiler supports -fvpt... No</code><br />
+						
+            
+            <a class="navhash" href="#60">#</a>
+						
+              <code id="60">Checking if your compiler supports -ffunction-cse... No</code><br />
+						
+            
+            <a class="navhash" href="#61">#</a>
+						
+              <code id="61">Checking if your compiler supports -ffunction-sections... Yes</code><br />
+						
+            
+            <a class="navhash" href="#62">#</a>
+						
+              <code id="62">Checking if your compiler supports -fdata-sections... Yes</code><br />
+						
+            
+            <a class="navhash" href="#63">#</a>
+						
+              <code id="63">Checking if your compiler supports -Wall... Yes</code><br />
+						
+            
+            <a class="navhash" href="#64">#</a>
+						
+              <code id="64">Checking if your compiler supports -Wundef... Yes</code><br />
+						
+            
+            <a class="navhash" href="#65">#</a>
+						
+              <code id="65">Checking if your compiler supports -Wcast-qual... Yes</code><br />
+						
+            
+            <a class="navhash" href="#66">#</a>
+						
+              <code id="66">Checking if your compiler supports -Wpointer-arith... Yes</code><br />
+						
+            
+            <a class="navhash" href="#67">#</a>
+						
+              <code id="67">Checking if your compiler supports -Wconversion... Yes</code><br />
+						
+            
+            <a class="navhash" href="#68">#</a>
+						
+              <code id="68">Checking if your compiler supports -Wwrite-strings... Yes</code><br />
+						
+            
+            <a class="navhash" href="#69">#</a>
+						
+              <code id="69">Checking if your compiler supports -Wsign-compare... Yes</code><br />
+						
+            
+            <a class="navhash" href="#70">#</a>
+						
+              <code id="70">Checking if your compiler supports -Wredundant-decls... Yes</code><br />
+						
+            
+            <a class="navhash" href="#71">#</a>
+						
+              <code id="71">Checking if your compiler supports -Winit-self... Yes</code><br />
+						
+            
+            <a class="navhash" href="#72">#</a>
+						
+              <code id="72">Checking if your compiler supports -Wextra... Yes</code><br />
+						
+            
+            <a class="navhash" href="#73">#</a>
+						
+              <code id="73">Checking if your compiler supports -Wsequence-points... Yes</code><br />
+						
+            
+            <a class="navhash" href="#74">#</a>
+						
+              <code id="74">Checking if your compiler supports -Wparentheses... Yes</code><br />
+						
+            
+            <a class="navhash" href="#75">#</a>
+						
+              <code id="75">Checking if your compiler supports -Wcast-align... Yes</code><br />
+						
+            
+            <a class="navhash" href="#76">#</a>
+						
+              <code id="76">Checking if your compiler supports -Wformat... Yes</code><br />
+						
+            
+            <a class="navhash" href="#77">#</a>
+						
+              <code id="77">Checking if your compiler supports -Wno-conversion... Yes</code><br />
+						
+            
+            <a class="navhash" href="#78">#</a>
+						
+              <code id="78">Checking if your compiler supports -Waggregate-return... Yes</code><br />
+						
+            
+            <a class="navhash" href="#79">#</a>
+						
+              <code id="79">Checking if your compiler supports -Wshadow... Yes</code><br />
+						
+            
+            <a class="navhash" href="#80">#</a>
+						
+              <code id="80">Checking if your compiler supports -Winline... Yes</code><br />
+						
+            
+            <a class="navhash" href="#81">#</a>
+						
+              <code id="81">Checking if your compiler supports -Wstrict-prototypes... Yes</code><br />
+						
+            
+            <a class="navhash" href="#82">#</a>
+						
+              <code id="82">Checking if your compiler supports -Wmissing-prototypes... Yes</code><br />
+						
+            
+            <a class="navhash" href="#83">#</a>
+						
+              <code id="83">Checking if your compiler supports -Woverloaded-virtual... Yes</code><br />
+						
+            
+            <a class="navhash" href="#84">#</a>
+						
+              <code id="84">Checking if your compiler supports -Wno-non-virtual-dtor... Yes</code><br />
+						
+            
+            <a class="navhash" href="#85">#</a>
+						
+              <code id="85">Checking if your CPU supports MMX... Yes, using -mmmx</code><br />
+						
+            
+            <a class="navhash" href="#86">#</a>
+						
+              <code id="86">Checking if your CPU supports 3dnow... No</code><br />
+						
+            
+            <a class="navhash" href="#87">#</a>
+						
+              <code id="87">Checking if your CPU supports SSE... Yes, using -msse</code><br />
+						
+            
+            <a class="navhash" href="#88">#</a>
+						
+              <code id="88">Checking if your CPU supports SSE2... Yes, using -msse2</code><br />
+						
+            
+            <a class="navhash" href="#89">#</a>
+						
+              <code id="89">Checking if your CPU supports SSE3... No</code><br />
+						
+            
+            <a class="navhash" href="#90">#</a>
+						
+              <code id="90">Checking if your CPU supports SSSE3... Yes, using -mssse3</code><br />
+						
+            
+            <a class="navhash" href="#91">#</a>
+						
+              <code id="91">Checking if your CPU supports sahf... Yes, but your compiler does not support -msahf</code><br />
+						
+            
+            <a class="navhash" href="#92">#</a>
+						
+              <code id="92">- Using -DHAS_SAHF anyway</code><br />
+						
+            
+            <a class="navhash" href="#93">#</a>
+						
+              <code id="93">Checking if your CPU supports VFP... No</code><br />
+						
+            
+            <a class="navhash" href="#94">#</a>
+						
+              <code id="94">Updating Makefile.sets ...</code><br />
+						
+            
+            <a class="navhash" href="#95">#</a>
+						
+              <code id="95">perl -pe 's@([-+a-zA-Z0-9._/]+)@lib/$1@g' < "lib/.depend" > ".libdepend"</code><br />
+						
+            
+            <a class="navhash" href="#96">#</a>
+						
+              <code id="96">g++  -O3 -ffast-math -mrecip -ffunction-sections -fdata-sections -mmmx -msse -msse2 -mssse3 -DHAS_SAHF -Wall -Wundef -Wcast-qual -Wpointer-arith -Wconversion -Wwrite-strings -Wsign-compare -Wredundant-decls -Winit-self -Wextra -Wsequence-points -Wparentheses -Wcast-align -Wformat -Wno-conversion -Woverloaded-virtual -Wno-non-virtual-dtor  -DVERSION=\"1.5.10.2\" -g -pipe -DUSE_PTHREADS=1 -pthread -DHAS_LZO2=1 -DHAS_ASM_LZO2=0 -DHAS_VSNPRINTF -DHAS_LUTIMES -DHAS_STDINT_H -DHAS_INTTYPES_H -DHAS_READDIR_R -DHAS_UINT16_T -DHAS_LONG_LONG -DHAS_SYS_TYPES_H `pkg-config --cflags fuse` -D_7ZIP_ST  -c -o cromfs.o cromfs.cc</code><br />
+						
+            
+            <a class="navhash" href="#97">#</a>
+						
+              <code id="97">warning: unknown warning option '-Wsequence-points'; did you mean '-Wsequence-point'? [-Wunknown-warning-option]</code><br />
+						
+            
+            <a class="navhash" href="#98">#</a>
+						
+              <code id="98">cromfs.cc:606:31: error: no matching function for call to 'min'</code><br />
+						
+            
+            <a class="navhash" href="#99">#</a>
+						
+              <code id="99">        uint_fast32_t bytes = std::min(fblock.size() - startoffs, size);</code><br />
+						
+            
+            <a class="navhash" href="#100">#</a>
+						
+              <code id="100">                              ^~~~~~~~</code><br />
+						
+            
+            <a class="navhash" href="#101">#</a>
+						
+              <code id="101">/sysroot/bin/../include/c++/v1/algorithm:2570:1: note: candidate template ignored: deduced conflicting types for parameter '_Tp' ('unsigned long' vs. 'unsigned int')</code><br />
+						
+            
+            <a class="navhash" href="#102">#</a>
+						
+              <code id="102">min(const _Tp& __a, const _Tp& __b)</code><br />
+						
+            
+            <a class="navhash" href="#103">#</a>
+						
+              <code id="103">^</code><br />
+						
+            
+            <a class="navhash" href="#104">#</a>
+						
+              <code id="104">/sysroot/bin/../include/c++/v1/algorithm:2562:1: note: candidate function template not viable: requires 3 arguments, but 2 were provided</code><br />
+						
+            
+            <a class="navhash" href="#105">#</a>
+						
+              <code id="105">min(const _Tp& __a, const _Tp& __b, _Compare __comp)</code><br />
+						
+            
+            <a class="navhash" href="#106">#</a>
+						
+              <code id="106">^</code><br />
+						
+            
+            <a class="navhash" href="#107">#</a>
+						
+              <code id="107">1 warning and 1 error generated.</code><br />
+						
+            
+            <a class="navhash" href="#108">#</a>
+						
+              <code id="108">make: *** [<builtin>: cromfs.o] Error 1</code><br />
+						
+            
+            <a class="navhash" href="#109">#</a>
+						
+              <code id="109">==> ERROR: A failure occurred in build().</code><br />
+						
+            
+            <a class="navhash" href="#110">#</a>
+						
+              <code id="110">    Aborting...</code><br />
+						
+            
+            <a class="navhash" href="#111">#</a>
+						
+              <code id="111">red: Something unexpected had happened.</code><br />
+						
+            
+            <a class="navhash" href="#112">#</a>
+						
+              <code id="112">Traceback (most recent call last):</code><br />
+						
+            
+            <a class="navhash" href="#113">#</a>
+						
+              <code id="113">  File "/usr/sbin/red", line 65, in main</code><br />
+						
+            
+            <a class="navhash" href="#114">#</a>
+						
+              <code id="114">    return capture(args)</code><br />
+						
+            
+            <a class="navhash" href="#115">#</a>
+						
+              <code id="115">  File "/usr/sbin/red", line 97, in capture</code><br />
+						
+            
+            <a class="navhash" href="#116">#</a>
+						
+              <code id="116">    json.dump(list(entries), handle, sort_keys=True, indent=4)</code><br />
+						
+            
+            <a class="navhash" href="#117">#</a>
+						
+              <code id="117">  File "/usr/sbin/red", line 135, in parse_exec_trace</code><br />
+						
+            
+            <a class="navhash" href="#118">#</a>
+						
+              <code id="118">    content = handler.read()</code><br />
+						
+            
+            <a class="navhash" href="#119">#</a>
+						
+              <code id="119">  File "/usr/lib/python3.5/encodings/ascii.py", line 26, in decode</code><br />
+						
+            
+            <a class="navhash" href="#120">#</a>
+						
+              <code id="120">    return codecs.ascii_decode(input, self.errors)[0]</code><br />
+						
+            
+            <a class="navhash" href="#121">#</a>
+						
+              <code id="121">UnicodeDecodeError: 'ascii' codec can't decode byte 0xa7 in position 74: ordinal not in range(128)</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+      <div class="block">
+        <div class="info">
+          <code>Printing config logfiles</code>
+        </div>
+        
+      </div>
+      <br />
+    
+      <div class="block">
+        <div class="command">
+          <code><span class="prompt">CMD: </span>config logfiles '/tmp/cromfs/src/cromfs-1.5.10.2/configure.log'</code>
+        </div>
+        
+          <div class="output">
+            
+            <a class="navhash" href="#122">#</a>
+						
+              <code id="122">Determining compiler version to use...</code><br />
+						
+            
+            <a class="navhash" href="#123">#</a>
+						
+              <code id="123">4.2.1	g++</code><br />
+						
+            
+            <a class="navhash" href="#124">#</a>
+						
+              <code id="124">CXX=g++(4.2.1)</code><br />
+						
+            
+            <a class="navhash" href="#125">#</a>
+						
+              <code id="125">6.1.1	cpp</code><br />
+						
+            
+            <a class="navhash" href="#126">#</a>
+						
+              <code id="126">CPP=cpp(6.1.1)</code><br />
+						
+            
+            <a class="navhash" href="#127">#</a>
+						
+              <code id="127">4.2.1	gcc</code><br />
+						
+            
+            <a class="navhash" href="#128">#</a>
+						
+              <code id="128">4.2.1	cc</code><br />
+						
+            
+            <a class="navhash" href="#129">#</a>
+						
+              <code id="129">/sysroot/bin/ranlib: invalid option -- 'd'</code><br />
+						
+            
+            <a class="navhash" href="#130">#</a>
+						
+              <code id="130">/sysroot/bin/ranlib: invalid option -- 'u'</code><br />
+						
+            
+            <a class="navhash" href="#131">#</a>
+						
+              <code id="131">/sysroot/bin/ranlib: invalid option -- 'm'</code><br />
+						
+            
+            <a class="navhash" href="#132">#</a>
+						
+              <code id="132">/sysroot/bin/ranlib: invalid option -- 'p'</code><br />
+						
+            
+            <a class="navhash" href="#133">#</a>
+						
+              <code id="133">/sysroot/bin/ranlib: invalid option -- 'e'</code><br />
+						
+            
+            <a class="navhash" href="#134">#</a>
+						
+              <code id="134">/sysroot/bin/ranlib: invalid option -- 'r'</code><br />
+						
+            
+            <a class="navhash" href="#135">#</a>
+						
+              <code id="135">/sysroot/bin/ranlib: invalid option -- 's'</code><br />
+						
+            
+            <a class="navhash" href="#136">#</a>
+						
+              <code id="136">/sysroot/bin/ranlib: invalid option -- 'i'</code><br />
+						
+            
+            <a class="navhash" href="#137">#</a>
+						
+              <code id="137">/sysroot/bin/ranlib: invalid option -- 'o'</code><br />
+						
+            
+            <a class="navhash" href="#138">#</a>
+						
+              <code id="138">/sysroot/bin/ranlib: invalid option -- 'n'</code><br />
+						
+            
+            <a class="navhash" href="#139">#</a>
+						
+              <code id="139">GNU ranlib (GNU Binutils) 2.26.20160125</code><br />
+						
+            
+            <a class="navhash" href="#140">#</a>
+						
+              <code id="140">Copyright (C) 2015 Free Software Foundation, Inc.</code><br />
+						
+            
+            <a class="navhash" href="#141">#</a>
+						
+              <code id="141">This program is free software; you may redistribute it under the terms of</code><br />
+						
+            
+            <a class="navhash" href="#142">#</a>
+						
+              <code id="142">the GNU General Public License version 3 or (at your option) any later version.</code><br />
+						
+            
+            <a class="navhash" href="#143">#</a>
+						
+              <code id="143">This program has absolutely no warranty.	gcc-ranlib</code><br />
+						
+            
+            <a class="navhash" href="#144">#</a>
+						
+              <code id="144">CC=gcc(4.2.1)</code><br />
+						
+            
+            <a class="navhash" href="#145">#</a>
+						
+              <code id="145"></code><br />
+						
+            
+            <a class="navhash" href="#146">#</a>
+						
+              <code id="146">Checking if the determined compiler works...</code><br />
+						
+            
+            <a class="navhash" href="#147">#</a>
+						
+              <code id="147">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#148">#</a>
+						
+              <code id="148">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#149">#</a>
+						
+              <code id="149">int main () { for(int a=0; a<10;++a) { for(int a=0; a<5;++a) { } } puts("ok"); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#150">#</a>
+						
+              <code id="150">g++ conftest.cpp    -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#151">#</a>
+						
+              <code id="151">Ok</code><br />
+						
+            
+            <a class="navhash" href="#152">#</a>
+						
+              <code id="152">Checking if your compiler supports OpenMP...</code><br />
+						
+            
+            <a class="navhash" href="#153">#</a>
+						
+              <code id="153">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#154">#</a>
+						
+              <code id="154">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#155">#</a>
+						
+              <code id="155">int main () { int x,y[100];for(x=0; x<100;++x)y[x]=5; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#156">#</a>
+						
+              <code id="156">g++ conftest.cpp   -fopenmp -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#157">#</a>
+						
+              <code id="157">/sysroot/bin/ld: error: cannot find -lomp</code><br />
+						
+            
+            <a class="navhash" href="#158">#</a>
+						
+              <code id="158">clang-3.8: error: linker command failed with exit code 1 (use -v to see invocation)</code><br />
+						
+            
+            <a class="navhash" href="#159">#</a>
+						
+              <code id="159">No</code><br />
+						
+            
+            <a class="navhash" href="#160">#</a>
+						
+              <code id="160">Checking if your compiler supports -pthread...</code><br />
+						
+            
+            <a class="navhash" href="#161">#</a>
+						
+              <code id="161">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#162">#</a>
+						
+              <code id="162">#include "lib/threadfun.hh"</code><br />
+						
+            
+            <a class="navhash" href="#163">#</a>
+						
+              <code id="163">int main () { ThreadType t;JoinThread(t); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#164">#</a>
+						
+              <code id="164">g++ conftest.cpp   -pthread -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#165">#</a>
+						
+              <code id="165">Yes</code><br />
+						
+            
+            <a class="navhash" href="#166">#</a>
+						
+              <code id="166">Checking for pkg-config...</code><br />
+						
+            
+            <a class="navhash" href="#167">#</a>
+						
+              <code id="167">Yes</code><br />
+						
+            
+            <a class="navhash" href="#168">#</a>
+						
+              <code id="168">Checking for fuse (dynamic)...</code><br />
+						
+            
+            <a class="navhash" href="#169">#</a>
+						
+              <code id="169">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#170">#</a>
+						
+              <code id="170">#include <fuse_lowlevel.h></code><br />
+						
+            
+            <a class="navhash" href="#171">#</a>
+						
+              <code id="171">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#172">#</a>
+						
+              <code id="172">g++ conftest.cpp   -pthread -DFUSE_USE_VERSION=25 -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -lfuse -pthread -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#173">#</a>
+						
+              <code id="173">Yes</code><br />
+						
+            
+            <a class="navhash" href="#174">#</a>
+						
+              <code id="174">Checking for fuse (static)...</code><br />
+						
+            
+            <a class="navhash" href="#175">#</a>
+						
+              <code id="175">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#176">#</a>
+						
+              <code id="176">#include <fuse_lowlevel.h></code><br />
+						
+            
+            <a class="navhash" href="#177">#</a>
+						
+              <code id="177">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#178">#</a>
+						
+              <code id="178">g++ conftest.cpp   -pthread -static -DFUSE_USE_VERSION=25 -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -lfuse -pthread -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#179">#</a>
+						
+              <code id="179">/sysroot/bin/ld: error: cannot find -lc++</code><br />
+						
+            
+            <a class="navhash" href="#180">#</a>
+						
+              <code id="180">/sysroot/bin/ld: error: cannot find -lunwind</code><br />
+						
+            
+            <a class="navhash" href="#181">#</a>
+						
+              <code id="181">//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginT.o(.text+0x1): error: undefined reference to '__TMC_END__'</code><br />
+						
+            
+            <a class="navhash" href="#182">#</a>
+						
+              <code id="182">//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginT.o(.text+0x41): error: undefined reference to '__TMC_END__'</code><br />
+						
+            
+            <a class="navhash" href="#183">#</a>
+						
+              <code id="183">clang-3.8: error: linker command failed with exit code 1 (use -v to see invocation)</code><br />
+						
+            
+            <a class="navhash" href="#184">#</a>
+						
+              <code id="184">No</code><br />
+						
+            
+            <a class="navhash" href="#185">#</a>
+						
+              <code id="185">Note: cromfs-driver-static will not be built, because</code><br />
+						
+            
+            <a class="navhash" href="#186">#</a>
+						
+              <code id="186">your system does not have a statically linked Fuse library.</code><br />
+						
+            
+            <a class="navhash" href="#187">#</a>
+						
+              <code id="187">You can still use the dynamically linked cromfs-driver.</code><br />
+						
+            
+            <a class="navhash" href="#188">#</a>
+						
+              <code id="188">Checking for liblzo2 (dynamic)...</code><br />
+						
+            
+            <a class="navhash" href="#189">#</a>
+						
+              <code id="189">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#190">#</a>
+						
+              <code id="190">#include <lzo/lzo1x.h></code><br />
+						
+            
+            <a class="navhash" href="#191">#</a>
+						
+              <code id="191">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#192">#</a>
+						
+              <code id="192">g++ conftest.cpp   -pthread -llzo2 -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#193">#</a>
+						
+              <code id="193">conftest.cpp:1:10: fatal error: 'lzo/lzo1x.h' file not found</code><br />
+						
+            
+            <a class="navhash" href="#194">#</a>
+						
+              <code id="194">#include <lzo/lzo1x.h></code><br />
+						
+            
+            <a class="navhash" href="#195">#</a>
+						
+              <code id="195">^</code><br />
+						
+            
+            <a class="navhash" href="#196">#</a>
+						
+              <code id="196">1 error generated.</code><br />
+						
+            
+            <a class="navhash" href="#197">#</a>
+						
+              <code id="197">No</code><br />
+						
+            
+            <a class="navhash" href="#198">#</a>
+						
+              <code id="198">Checking for liblzo2 (static)...</code><br />
+						
+            
+            <a class="navhash" href="#199">#</a>
+						
+              <code id="199">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#200">#</a>
+						
+              <code id="200">#include <lzo/lzo1x.h></code><br />
+						
+            
+            <a class="navhash" href="#201">#</a>
+						
+              <code id="201">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#202">#</a>
+						
+              <code id="202">g++ conftest.cpp   -pthread -Bstatic -llzo2 -Bdynamic -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#203">#</a>
+						
+              <code id="203">conftest.cpp:1:10: fatal error: 'lzo/lzo1x.h' file not found</code><br />
+						
+            
+            <a class="navhash" href="#204">#</a>
+						
+              <code id="204">#include <lzo/lzo1x.h></code><br />
+						
+            
+            <a class="navhash" href="#205">#</a>
+						
+              <code id="205">^</code><br />
+						
+            
+            <a class="navhash" href="#206">#</a>
+						
+              <code id="206">1 error generated.</code><br />
+						
+            
+            <a class="navhash" href="#207">#</a>
+						
+              <code id="207">No</code><br />
+						
+            
+            <a class="navhash" href="#208">#</a>
+						
+              <code id="208">- In the absense of assembler-optimized liblzo2, mkcromfs will use lzo1x_1_15 (shipped)</code><br />
+						
+            
+            <a class="navhash" href="#209">#</a>
+						
+              <code id="209">Checking for vsnprintf...</code><br />
+						
+            
+            <a class="navhash" href="#210">#</a>
+						
+              <code id="210">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#211">#</a>
+						
+              <code id="211">#include <cstdio></code><br />
+						
+            
+            <a class="navhash" href="#212">#</a>
+						
+              <code id="212">int main () { char Buf[10];using namespace std; va_list ap;vsnprintf(Buf,sizeof Buf,"gruu",ap); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#213">#</a>
+						
+              <code id="213">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#214">#</a>
+						
+              <code id="214">Yes</code><br />
+						
+            
+            <a class="navhash" href="#215">#</a>
+						
+              <code id="215">Checking for lutimes...</code><br />
+						
+            
+            <a class="navhash" href="#216">#</a>
+						
+              <code id="216">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#217">#</a>
+						
+              <code id="217">#include <sys/time.h></code><br />
+						
+            
+            <a class="navhash" href="#218">#</a>
+						
+              <code id="218">int main () { struct timeval tv[2]; lutimes(__FILE__, tv); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#219">#</a>
+						
+              <code id="219">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#220">#</a>
+						
+              <code id="220">Yes</code><br />
+						
+            
+            <a class="navhash" href="#221">#</a>
+						
+              <code id="221">Checking for stdint.h...</code><br />
+						
+            
+            <a class="navhash" href="#222">#</a>
+						
+              <code id="222">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#223">#</a>
+						
+              <code id="223">#include <stdint.h></code><br />
+						
+            
+            <a class="navhash" href="#224">#</a>
+						
+              <code id="224">int main () { typedef int x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#225">#</a>
+						
+              <code id="225">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#226">#</a>
+						
+              <code id="226">Yes</code><br />
+						
+            
+            <a class="navhash" href="#227">#</a>
+						
+              <code id="227">Checking for inttypes.h...</code><br />
+						
+            
+            <a class="navhash" href="#228">#</a>
+						
+              <code id="228">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#229">#</a>
+						
+              <code id="229">#include <inttypes.h></code><br />
+						
+            
+            <a class="navhash" href="#230">#</a>
+						
+              <code id="230">int main () { typedef int x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#231">#</a>
+						
+              <code id="231">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#232">#</a>
+						
+              <code id="232">Yes</code><br />
+						
+            
+            <a class="navhash" href="#233">#</a>
+						
+              <code id="233">Checking for readdir_r...</code><br />
+						
+            
+            <a class="navhash" href="#234">#</a>
+						
+              <code id="234">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#235">#</a>
+						
+              <code id="235">#include <dirent.h></code><br />
+						
+            
+            <a class="navhash" href="#236">#</a>
+						
+              <code id="236">int main () { DIR*dir=opendir(".");dirent e,*ep;readdir_r(dir,&e,&ep); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#237">#</a>
+						
+              <code id="237">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#238">#</a>
+						
+              <code id="238">Yes</code><br />
+						
+            
+            <a class="navhash" href="#239">#</a>
+						
+              <code id="239">Checking for uint16_t...</code><br />
+						
+            
+            <a class="navhash" href="#240">#</a>
+						
+              <code id="240">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#241">#</a>
+						
+              <code id="241">#include <stdint.h></code><br />
+						
+            
+            <a class="navhash" href="#242">#</a>
+						
+              <code id="242">int main () { typedef uint16_t x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#243">#</a>
+						
+              <code id="243">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#244">#</a>
+						
+              <code id="244">Yes</code><br />
+						
+            
+            <a class="navhash" href="#245">#</a>
+						
+              <code id="245">Checking for u_int16_t...</code><br />
+						
+            
+            <a class="navhash" href="#246">#</a>
+						
+              <code id="246">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#247">#</a>
+						
+              <code id="247">#include <stdint.h></code><br />
+						
+            
+            <a class="navhash" href="#248">#</a>
+						
+              <code id="248">int main () { typedef u_int16_t x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#249">#</a>
+						
+              <code id="249">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#250">#</a>
+						
+              <code id="250">conftest.cpp:2:23: error: unknown type name 'u_int16_t'; did you mean 'uint16_t'?</code><br />
+						
+            
+            <a class="navhash" href="#251">#</a>
+						
+              <code id="251">int main () { typedef u_int16_t x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#252">#</a>
+						
+              <code id="252">^~~~~~~~~</code><br />
+						
+            
+            <a class="navhash" href="#253">#</a>
+						
+              <code id="253">uint16_t</code><br />
+						
+            
+            <a class="navhash" href="#254">#</a>
+						
+              <code id="254">/sysroot/include/bits/alltypes.h:167:25: note: 'uint16_t' declared here</code><br />
+						
+            
+            <a class="navhash" href="#255">#</a>
+						
+              <code id="255">typedef unsigned short  uint16_t;</code><br />
+						
+            
+            <a class="navhash" href="#256">#</a>
+						
+              <code id="256">^</code><br />
+						
+            
+            <a class="navhash" href="#257">#</a>
+						
+              <code id="257">1 error generated.</code><br />
+						
+            
+            <a class="navhash" href="#258">#</a>
+						
+              <code id="258">No</code><br />
+						
+            
+            <a class="navhash" href="#259">#</a>
+						
+              <code id="259">Checking for __uint16_t...</code><br />
+						
+            
+            <a class="navhash" href="#260">#</a>
+						
+              <code id="260">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#261">#</a>
+						
+              <code id="261">#include <stdint.h></code><br />
+						
+            
+            <a class="navhash" href="#262">#</a>
+						
+              <code id="262">int main () { typedef _uint16_t x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#263">#</a>
+						
+              <code id="263">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#264">#</a>
+						
+              <code id="264">conftest.cpp:2:23: error: unknown type name '_uint16_t'; did you mean 'uint16_t'?</code><br />
+						
+            
+            <a class="navhash" href="#265">#</a>
+						
+              <code id="265">int main () { typedef _uint16_t x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#266">#</a>
+						
+              <code id="266">^~~~~~~~~</code><br />
+						
+            
+            <a class="navhash" href="#267">#</a>
+						
+              <code id="267">uint16_t</code><br />
+						
+            
+            <a class="navhash" href="#268">#</a>
+						
+              <code id="268">/sysroot/include/bits/alltypes.h:167:25: note: 'uint16_t' declared here</code><br />
+						
+            
+            <a class="navhash" href="#269">#</a>
+						
+              <code id="269">typedef unsigned short  uint16_t;</code><br />
+						
+            
+            <a class="navhash" href="#270">#</a>
+						
+              <code id="270">^</code><br />
+						
+            
+            <a class="navhash" href="#271">#</a>
+						
+              <code id="271">1 error generated.</code><br />
+						
+            
+            <a class="navhash" href="#272">#</a>
+						
+              <code id="272">No</code><br />
+						
+            
+            <a class="navhash" href="#273">#</a>
+						
+              <code id="273">Checking for long long...</code><br />
+						
+            
+            <a class="navhash" href="#274">#</a>
+						
+              <code id="274">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#275">#</a>
+						
+              <code id="275">#include <stdint.h></code><br />
+						
+            
+            <a class="navhash" href="#276">#</a>
+						
+              <code id="276">int main () { typedef long long x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#277">#</a>
+						
+              <code id="277">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#278">#</a>
+						
+              <code id="278">Yes</code><br />
+						
+            
+            <a class="navhash" href="#279">#</a>
+						
+              <code id="279">Checking for sys/types.h...</code><br />
+						
+            
+            <a class="navhash" href="#280">#</a>
+						
+              <code id="280">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#281">#</a>
+						
+              <code id="281">#include <sys/types.h></code><br />
+						
+            
+            <a class="navhash" href="#282">#</a>
+						
+              <code id="282">int main () { typedef int x; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#283">#</a>
+						
+              <code id="283">g++ conftest.cpp   -pthread  -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#284">#</a>
+						
+              <code id="284">Yes</code><br />
+						
+            
+            <a class="navhash" href="#285">#</a>
+						
+              <code id="285">Checking if your compiler supports -minline-stringops-dynamically...</code><br />
+						
+            
+            <a class="navhash" href="#286">#</a>
+						
+              <code id="286">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#287">#</a>
+						
+              <code id="287">#include <string.h></code><br />
+						
+            
+            <a class="navhash" href="#288">#</a>
+						
+              <code id="288">int main () { char buf1[64],buf2[80]="kissa"; memcpy(buf1,buf2,sizeof(buf2)-strlen(buf2)); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#289">#</a>
+						
+              <code id="289">g++ conftest.cpp   -pthread -Xlinker --gc-sections -minline-stringops-dynamically -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#290">#</a>
+						
+              <code id="290">clang-3.8: error: unknown argument: '-minline-stringops-dynamically'</code><br />
+						
+            
+            <a class="navhash" href="#291">#</a>
+						
+              <code id="291">No</code><br />
+						
+            
+            <a class="navhash" href="#292">#</a>
+						
+              <code id="292">Checking if your compiler supports -ffast-math...</code><br />
+						
+            
+            <a class="navhash" href="#293">#</a>
+						
+              <code id="293">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#294">#</a>
+						
+              <code id="294">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#295">#</a>
+						
+              <code id="295">int main () { int x,y[100];for(x=0; x<100;++x)y[x]=5; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#296">#</a>
+						
+              <code id="296">g++ conftest.cpp   -pthread -Xlinker --gc-sections -ffast-math -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#297">#</a>
+						
+              <code id="297">Yes</code><br />
+						
+            
+            <a class="navhash" href="#298">#</a>
+						
+              <code id="298">Checking if your compiler supports -mrecip...</code><br />
+						
+            
+            <a class="navhash" href="#299">#</a>
+						
+              <code id="299">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#300">#</a>
+						
+              <code id="300">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#301">#</a>
+						
+              <code id="301">int main () { int x,y[100];for(x=0; x<100;++x)y[x]=5; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#302">#</a>
+						
+              <code id="302">g++ conftest.cpp   -pthread -Xlinker --gc-sections -mrecip -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#303">#</a>
+						
+              <code id="303">Yes</code><br />
+						
+            
+            <a class="navhash" href="#304">#</a>
+						
+              <code id="304">Checking if your compiler supports -fvpt...</code><br />
+						
+            
+            <a class="navhash" href="#305">#</a>
+						
+              <code id="305">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#306">#</a>
+						
+              <code id="306">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#307">#</a>
+						
+              <code id="307">int main () { int x,y[100];for(x=0; x<100;++x)y[x]=5; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#308">#</a>
+						
+              <code id="308">g++ conftest.cpp   -pthread -Xlinker --gc-sections -fvpt -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#309">#</a>
+						
+              <code id="309">clang-3.8: error: unknown argument: '-fvpt'</code><br />
+						
+            
+            <a class="navhash" href="#310">#</a>
+						
+              <code id="310">No</code><br />
+						
+            
+            <a class="navhash" href="#311">#</a>
+						
+              <code id="311">Checking if your compiler supports -ffunction-cse...</code><br />
+						
+            
+            <a class="navhash" href="#312">#</a>
+						
+              <code id="312">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#313">#</a>
+						
+              <code id="313">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#314">#</a>
+						
+              <code id="314">int main () { int x,y[100];for(x=0; x<100;++x)y[x]=5; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#315">#</a>
+						
+              <code id="315">g++ conftest.cpp   -pthread -Xlinker --gc-sections -ffunction-cse -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#316">#</a>
+						
+              <code id="316">clang-3.8: error: unknown argument: '-ffunction-cse'</code><br />
+						
+            
+            <a class="navhash" href="#317">#</a>
+						
+              <code id="317">No</code><br />
+						
+            
+            <a class="navhash" href="#318">#</a>
+						
+              <code id="318">Checking if your compiler supports -ffunction-sections...</code><br />
+						
+            
+            <a class="navhash" href="#319">#</a>
+						
+              <code id="319">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#320">#</a>
+						
+              <code id="320">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#321">#</a>
+						
+              <code id="321">int main () { int x,y[100];for(x=0; x<100;++x)y[x]=5; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#322">#</a>
+						
+              <code id="322">g++ conftest.cpp   -pthread -Xlinker --gc-sections -ffunction-sections -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#323">#</a>
+						
+              <code id="323">Yes</code><br />
+						
+            
+            <a class="navhash" href="#324">#</a>
+						
+              <code id="324">Checking if your compiler supports -fdata-sections...</code><br />
+						
+            
+            <a class="navhash" href="#325">#</a>
+						
+              <code id="325">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#326">#</a>
+						
+              <code id="326">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#327">#</a>
+						
+              <code id="327">int main () { int x,y[100];for(x=0; x<100;++x)y[x]=5; return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#328">#</a>
+						
+              <code id="328">g++ conftest.cpp   -pthread -Xlinker --gc-sections -fdata-sections -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#329">#</a>
+						
+              <code id="329">Yes</code><br />
+						
+            
+            <a class="navhash" href="#330">#</a>
+						
+              <code id="330">Checking if your compiler supports -Wall...</code><br />
+						
+            
+            <a class="navhash" href="#331">#</a>
+						
+              <code id="331">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#332">#</a>
+						
+              <code id="332">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#333">#</a>
+						
+              <code id="333">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#334">#</a>
+						
+              <code id="334">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wall -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#335">#</a>
+						
+              <code id="335">Yes</code><br />
+						
+            
+            <a class="navhash" href="#336">#</a>
+						
+              <code id="336">Checking if your compiler supports -Wundef...</code><br />
+						
+            
+            <a class="navhash" href="#337">#</a>
+						
+              <code id="337">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#338">#</a>
+						
+              <code id="338">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#339">#</a>
+						
+              <code id="339">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#340">#</a>
+						
+              <code id="340">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wundef -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#341">#</a>
+						
+              <code id="341">Yes</code><br />
+						
+            
+            <a class="navhash" href="#342">#</a>
+						
+              <code id="342">Checking if your compiler supports -Wcast-qual...</code><br />
+						
+            
+            <a class="navhash" href="#343">#</a>
+						
+              <code id="343">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#344">#</a>
+						
+              <code id="344">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#345">#</a>
+						
+              <code id="345">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#346">#</a>
+						
+              <code id="346">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wcast-qual -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#347">#</a>
+						
+              <code id="347">Yes</code><br />
+						
+            
+            <a class="navhash" href="#348">#</a>
+						
+              <code id="348">Checking if your compiler supports -Wpointer-arith...</code><br />
+						
+            
+            <a class="navhash" href="#349">#</a>
+						
+              <code id="349">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#350">#</a>
+						
+              <code id="350">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#351">#</a>
+						
+              <code id="351">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#352">#</a>
+						
+              <code id="352">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wpointer-arith -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#353">#</a>
+						
+              <code id="353">Yes</code><br />
+						
+            
+            <a class="navhash" href="#354">#</a>
+						
+              <code id="354">Checking if your compiler supports -Wconversion...</code><br />
+						
+            
+            <a class="navhash" href="#355">#</a>
+						
+              <code id="355">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#356">#</a>
+						
+              <code id="356">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#357">#</a>
+						
+              <code id="357">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#358">#</a>
+						
+              <code id="358">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wconversion -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#359">#</a>
+						
+              <code id="359">Yes</code><br />
+						
+            
+            <a class="navhash" href="#360">#</a>
+						
+              <code id="360">Checking if your compiler supports -Wwrite-strings...</code><br />
+						
+            
+            <a class="navhash" href="#361">#</a>
+						
+              <code id="361">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#362">#</a>
+						
+              <code id="362">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#363">#</a>
+						
+              <code id="363">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#364">#</a>
+						
+              <code id="364">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wwrite-strings -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#365">#</a>
+						
+              <code id="365">Yes</code><br />
+						
+            
+            <a class="navhash" href="#366">#</a>
+						
+              <code id="366">Checking if your compiler supports -Wsign-compare...</code><br />
+						
+            
+            <a class="navhash" href="#367">#</a>
+						
+              <code id="367">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#368">#</a>
+						
+              <code id="368">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#369">#</a>
+						
+              <code id="369">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#370">#</a>
+						
+              <code id="370">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wsign-compare -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#371">#</a>
+						
+              <code id="371">Yes</code><br />
+						
+            
+            <a class="navhash" href="#372">#</a>
+						
+              <code id="372">Checking if your compiler supports -Wredundant-decls...</code><br />
+						
+            
+            <a class="navhash" href="#373">#</a>
+						
+              <code id="373">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#374">#</a>
+						
+              <code id="374">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#375">#</a>
+						
+              <code id="375">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#376">#</a>
+						
+              <code id="376">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wredundant-decls -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#377">#</a>
+						
+              <code id="377">Yes</code><br />
+						
+            
+            <a class="navhash" href="#378">#</a>
+						
+              <code id="378">Checking if your compiler supports -Winit-self...</code><br />
+						
+            
+            <a class="navhash" href="#379">#</a>
+						
+              <code id="379">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#380">#</a>
+						
+              <code id="380">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#381">#</a>
+						
+              <code id="381">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#382">#</a>
+						
+              <code id="382">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Winit-self -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#383">#</a>
+						
+              <code id="383">Yes</code><br />
+						
+            
+            <a class="navhash" href="#384">#</a>
+						
+              <code id="384">Checking if your compiler supports -Wextra...</code><br />
+						
+            
+            <a class="navhash" href="#385">#</a>
+						
+              <code id="385">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#386">#</a>
+						
+              <code id="386">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#387">#</a>
+						
+              <code id="387">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#388">#</a>
+						
+              <code id="388">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wextra -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#389">#</a>
+						
+              <code id="389">Yes</code><br />
+						
+            
+            <a class="navhash" href="#390">#</a>
+						
+              <code id="390">Checking if your compiler supports -Wsequence-points...</code><br />
+						
+            
+            <a class="navhash" href="#391">#</a>
+						
+              <code id="391">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#392">#</a>
+						
+              <code id="392">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#393">#</a>
+						
+              <code id="393">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#394">#</a>
+						
+              <code id="394">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wsequence-points -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#395">#</a>
+						
+              <code id="395">warning: unknown warning option '-Wsequence-points'; did you mean '-Wsequence-point'? [-Wunknown-warning-option]</code><br />
+						
+            
+            <a class="navhash" href="#396">#</a>
+						
+              <code id="396">1 warning generated.</code><br />
+						
+            
+            <a class="navhash" href="#397">#</a>
+						
+              <code id="397">Yes</code><br />
+						
+            
+            <a class="navhash" href="#398">#</a>
+						
+              <code id="398">Checking if your compiler supports -Wparentheses...</code><br />
+						
+            
+            <a class="navhash" href="#399">#</a>
+						
+              <code id="399">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#400">#</a>
+						
+              <code id="400">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#401">#</a>
+						
+              <code id="401">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#402">#</a>
+						
+              <code id="402">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wparentheses -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#403">#</a>
+						
+              <code id="403">Yes</code><br />
+						
+            
+            <a class="navhash" href="#404">#</a>
+						
+              <code id="404">Checking if your compiler supports -Wcast-align...</code><br />
+						
+            
+            <a class="navhash" href="#405">#</a>
+						
+              <code id="405">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#406">#</a>
+						
+              <code id="406">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#407">#</a>
+						
+              <code id="407">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#408">#</a>
+						
+              <code id="408">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wcast-align -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#409">#</a>
+						
+              <code id="409">Yes</code><br />
+						
+            
+            <a class="navhash" href="#410">#</a>
+						
+              <code id="410">Checking if your compiler supports -Wformat...</code><br />
+						
+            
+            <a class="navhash" href="#411">#</a>
+						
+              <code id="411">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#412">#</a>
+						
+              <code id="412">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#413">#</a>
+						
+              <code id="413">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#414">#</a>
+						
+              <code id="414">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wformat -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#415">#</a>
+						
+              <code id="415">Yes</code><br />
+						
+            
+            <a class="navhash" href="#416">#</a>
+						
+              <code id="416">Checking if your compiler supports -Wno-conversion...</code><br />
+						
+            
+            <a class="navhash" href="#417">#</a>
+						
+              <code id="417">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#418">#</a>
+						
+              <code id="418">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#419">#</a>
+						
+              <code id="419">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#420">#</a>
+						
+              <code id="420">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wno-conversion -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#421">#</a>
+						
+              <code id="421">Yes</code><br />
+						
+            
+            <a class="navhash" href="#422">#</a>
+						
+              <code id="422">Checking if your compiler supports -Waggregate-return...</code><br />
+						
+            
+            <a class="navhash" href="#423">#</a>
+						
+              <code id="423">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#424">#</a>
+						
+              <code id="424">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#425">#</a>
+						
+              <code id="425">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#426">#</a>
+						
+              <code id="426">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Waggregate-return -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#427">#</a>
+						
+              <code id="427">Yes</code><br />
+						
+            
+            <a class="navhash" href="#428">#</a>
+						
+              <code id="428">Checking if your compiler supports -Wshadow...</code><br />
+						
+            
+            <a class="navhash" href="#429">#</a>
+						
+              <code id="429">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#430">#</a>
+						
+              <code id="430">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#431">#</a>
+						
+              <code id="431">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#432">#</a>
+						
+              <code id="432">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wshadow -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#433">#</a>
+						
+              <code id="433">Yes</code><br />
+						
+            
+            <a class="navhash" href="#434">#</a>
+						
+              <code id="434">Checking if your compiler supports -Winline...</code><br />
+						
+            
+            <a class="navhash" href="#435">#</a>
+						
+              <code id="435">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#436">#</a>
+						
+              <code id="436">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#437">#</a>
+						
+              <code id="437">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#438">#</a>
+						
+              <code id="438">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Winline -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#439">#</a>
+						
+              <code id="439">Yes</code><br />
+						
+            
+            <a class="navhash" href="#440">#</a>
+						
+              <code id="440">Checking if your compiler supports -Wstrict-prototypes...</code><br />
+						
+            
+            <a class="navhash" href="#441">#</a>
+						
+              <code id="441">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#442">#</a>
+						
+              <code id="442">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#443">#</a>
+						
+              <code id="443">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#444">#</a>
+						
+              <code id="444">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wstrict-prototypes -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#445">#</a>
+						
+              <code id="445">Yes</code><br />
+						
+            
+            <a class="navhash" href="#446">#</a>
+						
+              <code id="446">Checking if your compiler supports -Wmissing-prototypes...</code><br />
+						
+            
+            <a class="navhash" href="#447">#</a>
+						
+              <code id="447">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#448">#</a>
+						
+              <code id="448">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#449">#</a>
+						
+              <code id="449">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#450">#</a>
+						
+              <code id="450">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wmissing-prototypes -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#451">#</a>
+						
+              <code id="451">Yes</code><br />
+						
+            
+            <a class="navhash" href="#452">#</a>
+						
+              <code id="452">Checking if your compiler supports -Woverloaded-virtual...</code><br />
+						
+            
+            <a class="navhash" href="#453">#</a>
+						
+              <code id="453">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#454">#</a>
+						
+              <code id="454">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#455">#</a>
+						
+              <code id="455">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#456">#</a>
+						
+              <code id="456">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Woverloaded-virtual -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#457">#</a>
+						
+              <code id="457">Yes</code><br />
+						
+            
+            <a class="navhash" href="#458">#</a>
+						
+              <code id="458">Checking if your compiler supports -Wno-non-virtual-dtor...</code><br />
+						
+            
+            <a class="navhash" href="#459">#</a>
+						
+              <code id="459">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#460">#</a>
+						
+              <code id="460">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#461">#</a>
+						
+              <code id="461">int main () {  return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#462">#</a>
+						
+              <code id="462">g++ conftest.cpp   -pthread -Xlinker --gc-sections -Wno-non-virtual-dtor -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#463">#</a>
+						
+              <code id="463">Yes</code><br />
+						
+            
+            <a class="navhash" href="#464">#</a>
+						
+              <code id="464">Your CPU has these features:</code><br />
+						
+            
+            <a class="navhash" href="#465">#</a>
+						
+              <code id="465">- abm acpi aes aperfmperf apic arat arch_perfmon avx</code><br />
+						
+            
+            <a class="navhash" href="#466">#</a>
+						
+              <code id="466">- avx2 bmi1 bmi2 bts clflush cmov constant_tsc cqm cqm_llc</code><br />
+						
+            
+            <a class="navhash" href="#467">#</a>
+						
+              <code id="467">- cqm_occup_llc cx16 cx8 dca de ds_cpl dtes64 dtherm dts epb</code><br />
+						
+            
+            <a class="navhash" href="#468">#</a>
+						
+              <code id="468">- ept erms est f16c flexpriority fma fpu fsgsbase fxsr ht ida</code><br />
+						
+            
+            <a class="navhash" href="#469">#</a>
+						
+              <code id="469">- intel_ppin invpcid lahf_lm lm mca mce mmx monitor movbe msr</code><br />
+						
+            
+            <a class="navhash" href="#470">#</a>
+						
+              <code id="470">- mtrr nonstop_tsc nopl nx pae pat pbe pcid pclmulqdq pdcm</code><br />
+						
+            
+            <a class="navhash" href="#471">#</a>
+						
+              <code id="471">- pdpe1gb pebs pge pln pni popcnt pse pse36 pts rdrand rdtscp</code><br />
+						
+            
+            <a class="navhash" href="#472">#</a>
+						
+              <code id="472">- rep_good sdbg sep smep ss sse sse2 sse4_1 sse4_2 ssse3</code><br />
+						
+            
+            <a class="navhash" href="#473">#</a>
+						
+              <code id="473">- syscall tm tm2 tpr_shadow tsc tsc_adjust tsc_deadline_timer</code><br />
+						
+            
+            <a class="navhash" href="#474">#</a>
+						
+              <code id="474">- vme vmx vnmi vpid x2apic xsave xsaveopt xtopology xtpr</code><br />
+						
+            
+            <a class="navhash" href="#475">#</a>
+						
+              <code id="475">Checking if your CPU supports MMX...</code><br />
+						
+            
+            <a class="navhash" href="#476">#</a>
+						
+              <code id="476">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#477">#</a>
+						
+              <code id="477">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#478">#</a>
+						
+              <code id="478">int main () { puts("ok"); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#479">#</a>
+						
+              <code id="479">g++ conftest.cpp   -pthread -Xlinker --gc-sections -mmmx -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#480">#</a>
+						
+              <code id="480">Yes, using -mmmx</code><br />
+						
+            
+            <a class="navhash" href="#481">#</a>
+						
+              <code id="481">Checking if your CPU supports 3dnow...</code><br />
+						
+            
+            <a class="navhash" href="#482">#</a>
+						
+              <code id="482">No</code><br />
+						
+            
+            <a class="navhash" href="#483">#</a>
+						
+              <code id="483">Checking if your CPU supports SSE...</code><br />
+						
+            
+            <a class="navhash" href="#484">#</a>
+						
+              <code id="484">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#485">#</a>
+						
+              <code id="485">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#486">#</a>
+						
+              <code id="486">int main () { puts("ok"); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#487">#</a>
+						
+              <code id="487">g++ conftest.cpp   -pthread -Xlinker --gc-sections -msse -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#488">#</a>
+						
+              <code id="488">Yes, using -msse</code><br />
+						
+            
+            <a class="navhash" href="#489">#</a>
+						
+              <code id="489">Checking if your CPU supports SSE2...</code><br />
+						
+            
+            <a class="navhash" href="#490">#</a>
+						
+              <code id="490">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#491">#</a>
+						
+              <code id="491">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#492">#</a>
+						
+              <code id="492">int main () { puts("ok"); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#493">#</a>
+						
+              <code id="493">g++ conftest.cpp   -pthread -Xlinker --gc-sections -msse2 -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#494">#</a>
+						
+              <code id="494">Yes, using -msse2</code><br />
+						
+            
+            <a class="navhash" href="#495">#</a>
+						
+              <code id="495">Checking if your CPU supports SSE3...</code><br />
+						
+            
+            <a class="navhash" href="#496">#</a>
+						
+              <code id="496">No</code><br />
+						
+            
+            <a class="navhash" href="#497">#</a>
+						
+              <code id="497">Checking if your CPU supports SSSE3...</code><br />
+						
+            
+            <a class="navhash" href="#498">#</a>
+						
+              <code id="498">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#499">#</a>
+						
+              <code id="499">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#500">#</a>
+						
+              <code id="500">int main () { puts("ok"); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#501">#</a>
+						
+              <code id="501">g++ conftest.cpp   -pthread -Xlinker --gc-sections -mssse3 -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#502">#</a>
+						
+              <code id="502">Yes, using -mssse3</code><br />
+						
+            
+            <a class="navhash" href="#503">#</a>
+						
+              <code id="503">Checking if your CPU supports sahf...</code><br />
+						
+            
+            <a class="navhash" href="#504">#</a>
+						
+              <code id="504">conftest.cpp:</code><br />
+						
+            
+            <a class="navhash" href="#505">#</a>
+						
+              <code id="505">#include <stdio.h></code><br />
+						
+            
+            <a class="navhash" href="#506">#</a>
+						
+              <code id="506">int main () { puts("ok"); return 0; }</code><br />
+						
+            
+            <a class="navhash" href="#507">#</a>
+						
+              <code id="507">g++ conftest.cpp   -pthread -Xlinker --gc-sections -msahf -o conftest</code><br />
+						
+            
+            <a class="navhash" href="#508">#</a>
+						
+              <code id="508">clang-3.8: error: unknown argument: '-msahf'</code><br />
+						
+            
+            <a class="navhash" href="#509">#</a>
+						
+              <code id="509">Yes, but your compiler does not support -msahf</code><br />
+						
+            
+            <a class="navhash" href="#510">#</a>
+						
+              <code id="510">- Using -DHAS_SAHF anyway</code><br />
+						
+            
+            <a class="navhash" href="#511">#</a>
+						
+              <code id="511">Checking if your CPU supports VFP...</code><br />
+						
+            
+            <a class="navhash" href="#512">#</a>
+						
+              <code id="512">No</code><br />
+						
+            
+            <a class="navhash" href="#513">#</a>
+						
+              <code id="513">Updating Makefile.sets ...</code><br />
+						
+            
+          </div>
+        
+      </div>
+      <br />
+    
+  </body>
+</html>

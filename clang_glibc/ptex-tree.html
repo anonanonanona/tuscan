@@ -1,0 +1,232 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/ptex</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="ptex.html">ptex</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="bad-return">2</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T git doxygen python2</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="bad-return">2</span>&nbsp;<code>make</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>make -C ptex INSTALLDIR=../../install LIBDIR=lib</code>
+            <ul class="level-6">
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexCache.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexCache.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexCache.o -x c++ PtexCache.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexCache.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexFilters.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexFilters.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexFilters.o -x c++ PtexFilters.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexFilters.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexHalf.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexHalf.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexHalf.o -x c++ PtexHalf.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexHalf.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexReader.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexReader.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexReader.o -x c++ PtexReader.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexReader.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexSeparableFilter.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexSeparableFilter.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexSeparableFilter.o -x c++ PtexSeparableFilter.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexSeparableFilter.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexSeparableKernel.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexSeparableKernel.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexSeparableKernel.o -x c++ PtexSeparableKernel.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexSeparableKernel.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexTriangleFilter.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexTriangleFilter.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexTriangleFilter.o -x c++ PtexTriangleFilter.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexTriangleFilter.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexTriangleKernel.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexTriangleKernel.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexTriangleKernel.o -x c++ PtexTriangleKernel.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexTriangleKernel.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexUtils.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexUtils.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexUtils.o -x c++ PtexUtils.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexUtils.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name PtexWriter.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/ptex/src/ptex-2.0.62/src/ptex/PtexWriter.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D NDEBUG -I . -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -W -pedantic -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/ptex/src/ptex-2.0.62/src/ptex -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o PtexWriter.o -x c++ PtexWriter.cpp</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rv libPtex.a PtexWriter.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libPtex.so /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib PtexCache.o PtexFilters.o PtexHalf.o PtexReader.o PtexSeparableFilter.o PtexSeparableKernel.o PtexTriangleFilter.o PtexTriangleKernel.o PtexUtils.o PtexWriter.o -lm -lz -lpthread -lstdc++ -lm -lgcc_s -lc -lgcc_s /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -C utils INSTALLDIR=../../install LIBDIR=lib</code>
+            <ul class="level-6">
+              <li><span class="bad-return">128</span>&nbsp;<code>git rev-list --max-count=1 HEAD</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">128</span>&nbsp;<code>git describe</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">128</span>&nbsp;<code>git rev-list --max-count=1 HEAD</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o ptxinfo /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/ptxinfo-deb235.o ../ptex/libPtex.a -lm -lz -lpthread -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="bad-return">2</span>&nbsp;<code>make -C tests INSTALLDIR=../../install LIBDIR=lib</code>
+            <ul class="level-6">
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o halftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/halftest-559a9a.o ../ptex/libPtex.a -lm -lz -lpthread -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o wtest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/wtest-545a09.o ../ptex/libPtex.a -lm -lz -lpthread -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o rtest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/rtest-255b63.o ../ptex/libPtex.a -lm -lz -lpthread -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o ftest /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/ftest-403d1d.o ../ptex/libPtex.a -lm -lz -lpthread -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>python ./run_tests.py</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T zlib</code>
+    <ul class="level-2">
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

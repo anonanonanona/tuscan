@@ -1,0 +1,942 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/libcap</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="libcap.html">libcap</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="good-return">0</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T glibc attr</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T linux-api-headers</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>make -C libcap-2.25 KERNEL_HEADERS=/usr/include</code>
+        <ul class="level-4">
+          <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+            <ul class="level-6">
+              <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+            <ul class="level-6">
+              <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/.git" ]; then echo yes; fi</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -C libcap all</code>
+            <ul class="level-6">
+              <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/libcap/../.git" ]; then echo yes; fi</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c echo "=> making cap_names.list.h from /usr/include/linux/capability.h"</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c perl -e 'while ($l=<>) { if ($l =~ /^\#define[ \t](CAP[_A-Z]+)[ \t]+([0-9]+)\s+$/) { $tok=$1; $val=$2; $tok =~ tr/A-Z/a-z/; print "{\"$tok\",$val},\n"; } }' /usr/include/linux/capability.h | fgrep -v 0x > cap_names.list.h</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>perl -e while ($l=<>) { if ($l =~ /^\#define[ \t](CAP[_A-Z]+)[ \t]+([0-9]+)\s+$/) { $tok=$1; $val=$2; $tok =~ tr/A-Z/a-z/; print "{\"$tok\",$val},\n"; } } /usr/include/linux/capability.h</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o _makenames //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/_makenames-03de69.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c ./_makenames > cap_names.h</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>./_makenames</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name cap_alloc.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/libcap/cap_alloc.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -I /usr/include -I /tmp/libcap/src/libcap-2.25/libcap/../libcap/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/libcap -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o cap_alloc.o -x c cap_alloc.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name cap_proc.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/libcap/cap_proc.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -I /usr/include -I /tmp/libcap/src/libcap-2.25/libcap/../libcap/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/libcap -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o cap_proc.o -x c cap_proc.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name cap_extint.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/libcap/cap_extint.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -I /usr/include -I /tmp/libcap/src/libcap-2.25/libcap/../libcap/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/libcap -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o cap_extint.o -x c cap_extint.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name cap_flag.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/libcap/cap_flag.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -I /usr/include -I /tmp/libcap/src/libcap-2.25/libcap/../libcap/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/libcap -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o cap_flag.o -x c cap_flag.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name cap_text.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/libcap/cap_text.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -I /usr/include -I /tmp/libcap/src/libcap-2.25/libcap/../libcap/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/libcap -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o cap_text.o -x c cap_text.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name cap_file.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/libcap/cap_file.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -I /usr/include -I /tmp/libcap/src/libcap-2.25/libcap/../libcap/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/libcap -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o cap_file.o -x c cap_file.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libcap.so.2.25 //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L/tmp/libcap/src/libcap-2.25/libcap/../libcap -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib -x -soname libcap.so.2 cap_alloc.o cap_proc.o cap_extint.o cap_flag.o cap_text.o cap_file.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ar rcs libcap.a cap_alloc.o cap_proc.o cap_extint.o cap_flag.o cap_text.o cap_file.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>ranlib libcap.a</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c ldd /usr/bin/ld|egrep "ld-linux|ld.so"|cut -d/ -f2</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>ldd /usr/bin/ld</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/lib64/ld-linux-x86-64.so.2 --verify /usr/bin/ld</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c sed -e 's,@prefix@,/usr,' \
+	-e 's,@exec_prefix@,,' \
+	-e 's,@libdir@,/lib64,' \
+	-e 's,@includedir@,/usr/include,' \
+	-e 's,@VERSION@,2.25,' \
+	-e 's,@deps@,,' \
+	libcap.pc.in >libcap.pc</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -C pam_cap all</code>
+            <ul class="level-6">
+              <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/pam_cap/../.git" ]; then echo yes; fi</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name pam_cap.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/pam_cap/pam_cap.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -I /usr/include -I /tmp/libcap/src/libcap-2.25/pam_cap/../libcap/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/pam_cap -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o pam_cap.o -x c pam_cap.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o pam_cap.so //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L/tmp/libcap/src/libcap-2.25/pam_cap/../libcap -L../libcap -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib -x pam_cap.o -lcap -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make testcompile</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                    <ul class="level-10">
+                      <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/pam_cap/../.git" ]; then echo yes; fi</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o testcompile //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/tmp/libcap/src/libcap-2.25/pam_cap/../libcap -L../libcap -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/test-428b01.o pam_cap.o -lpam -ldl -lcap -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -C progs all</code>
+            <ul class="level-6">
+              <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/progs/../.git" ]; then echo yes; fi</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name getpcaps.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/progs/getpcaps.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I /usr/include -I /tmp/libcap/src/libcap-2.25/progs/../libcap/include -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/progs -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o getpcaps.o -x c getpcaps.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o getpcaps //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/tmp/libcap/src/libcap-2.25/progs/../libcap -L../libcap -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib getpcaps.o -lcap -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name capsh.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/progs/capsh.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I /usr/include -I /tmp/libcap/src/libcap-2.25/progs/../libcap/include -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/progs -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o capsh.o -x c capsh.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o capsh //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/tmp/libcap/src/libcap-2.25/progs/../libcap -L../libcap -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib capsh.o -lcap -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name getcap.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/progs/getcap.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I /usr/include -I /tmp/libcap/src/libcap-2.25/progs/../libcap/include -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/progs -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o getcap.o -x c getcap.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o getcap //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/tmp/libcap/src/libcap-2.25/progs/../libcap -L../libcap -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib getcap.o -lcap -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name setcap.c -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/libcap/src/libcap-2.25/progs/setcap.o -resource-dir /usr/bin/../lib/clang/3.8.0 -I /usr/include -I /tmp/libcap/src/libcap-2.25/progs/../libcap/include -D _LARGEFILE64_SOURCE -D _FILE_OFFSET_BITS=64 -D linux -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -fconst-strings -fdebug-compilation-dir /tmp/libcap/src/libcap-2.25/progs -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o setcap.o -x c setcap.c</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="red-error">hardcoded invocation: rel</span><span class="red-error-info"> (gcc
+
+/usr/bin/clang
+)</span><br />
+<span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o setcap //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/tmp/libcap/src/libcap-2.25/progs/../libcap -L../libcap -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L//../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib setcap.o -lcap -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o //../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -C doc all</code>
+            <ul class="level-6">
+              <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/doc/../.git" ]; then echo yes; fi</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>fakeroot -- /usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/faked</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/pacman --noconfirm --color never --noprogressbar -Q</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make prefix=/usr lib=/lib DESTDIR=/tmp/libcap/pkg/libcap RAISE_SETFCAP=no install</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                    <ul class="level-10">
+                      <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/.git" ]; then echo yes; fi</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -C libcap install</code>
+                    <ul class="level-10">
+                      <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                        <ul class="level-12">
+                          <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/libcap/../.git" ]; then echo yes; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>install -m 0644 include/sys/capability.h /tmp/libcap/pkg/libcap/usr/include/sys</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>install -m 0644 libcap.a /tmp/libcap/pkg/libcap/usr//lib/libcap.a</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>install -m 0644 libcap.so.2.25 /tmp/libcap/pkg/libcap/usr//lib/libcap.so.2.25</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>install -m 0644 libcap.pc /tmp/libcap/pkg/libcap/usr//lib/pkgconfig/libcap.pc</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -C pam_cap install</code>
+                    <ul class="level-10">
+                      <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                        <ul class="level-12">
+                          <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/pam_cap/../.git" ]; then echo yes; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make testcompile</code>
+                        <ul class="level-12">
+                          <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                            <ul class="level-14">
+                              <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/pam_cap/../.git" ]; then echo yes; fi</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>install -m 0755 pam_cap.so /tmp/libcap/pkg/libcap/usr//lib/security</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -C progs install</code>
+                    <ul class="level-10">
+                      <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                        <ul class="level-12">
+                          <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/progs/../.git" ]; then echo yes; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c for p in getpcaps capsh getcap setcap ; do \
+	install -m 0755 $p /tmp/libcap/pkg/libcap/usr/sbin ; \
+done</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 0755 getpcaps /tmp/libcap/pkg/libcap/usr/sbin</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 0755 capsh /tmp/libcap/pkg/libcap/usr/sbin</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 0755 getcap /tmp/libcap/pkg/libcap/usr/sbin</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 0755 setcap /tmp/libcap/pkg/libcap/usr/sbin</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -C doc install</code>
+                    <ul class="level-10">
+                      <li><span class="bad-return">1</span>&nbsp;<code>/bin/sh -c which gperf >/dev/null 2>/dev/null && echo yes</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>which gperf</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi</code>
+                        <ul class="level-12">
+                          <li><span class="bad-return">1</span>&nbsp;<code>which indent</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c if [ ! -d "/tmp/libcap/src/libcap-2.25/doc/../.git" ]; then echo yes; fi</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c for man in \
+	/tmp/libcap/pkg/libcap/usr/share/man/man1 capsh.1 \
+	/tmp/libcap/pkg/libcap/usr/share/man/man3 cap_init.3 cap_free.3 cap_dup.3 cap_clear.3 cap_clear_flag.3 cap_get_flag.3 cap_set_flag.3 cap_compare.3 cap_get_proc.3 cap_get_pid.3 cap_set_proc.3 cap_get_file.3 cap_get_fd.3 cap_set_file.3 cap_set_fd.3 cap_copy_ext.3 cap_size.3 cap_copy_int.3 cap_from_text.3 cap_to_text.3 cap_from_name.3 cap_to_name.3 capsetp.3 capgetp.3 libcap.3 cap_get_bound.3 cap_drop_bound.3 \
+	/tmp/libcap/pkg/libcap/usr/share/man/man8 getcap.8 setcap.8 \
+	; \
+do \
+	case $man in \
+	/*)	sub=$man ; continue ;; \
+	esac; \
+	install -m 644 $man $sub ; \
+done</code>
+                        <ul class="level-12">
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 capsh.1 /tmp/libcap/pkg/libcap/usr/share/man/man1</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_init.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_free.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_dup.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_clear.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_clear_flag.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_get_flag.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_set_flag.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_compare.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_get_proc.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_get_pid.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_set_proc.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_get_file.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_get_fd.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_set_file.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_set_fd.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_copy_ext.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_size.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_copy_int.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_from_text.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_to_text.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_from_name.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_to_name.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 capsetp.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 capgetp.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 libcap.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_get_bound.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 cap_drop_bound.3 /tmp/libcap/pkg/libcap/usr/share/man/man3</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 getcap.8 /tmp/libcap/pkg/libcap/usr/share/man/man8</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                          <li><span class="no-return">?</span>&nbsp;<code>install -m 644 setcap.8 /tmp/libcap/pkg/libcap/usr/share/man/man8</code>
+                            <ul class="level-14">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>install -Dm644 pam_cap/capability.conf /tmp/libcap/pkg/libcap/usr/share/doc/libcap/capability.conf.example</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/libcap/src</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/libcap/pkg</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>fakeroot -v</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>openssl dgst -sha256 /tmp/libcap/PKGBUILD</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -czf .MTREE --format=mtree --options=!all,use-set,type,uid,gid,mode,time,size,md5,sha256,link .PKGINFO .BUILDINFO usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -cf - .PKGINFO .BUILDINFO .MTREE usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>xz -c -z -</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/ld</code>
+    <ul class="level-2">
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>

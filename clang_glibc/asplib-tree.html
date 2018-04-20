@@ -1,0 +1,580 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Build tree clang_glibc/asplib</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,900'
+        rel='stylesheet' type='text/css'>
+  <link
+  href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700'
+        rel='stylesheet' type='text/css'>
+  <link href="../style.css" type="text/css" rel="stylesheet">
+  <style>
+  .good-return {
+    font-weight: bold;
+    color: blue;
+  }
+  .bad-return {
+    font-weight: bold;
+    color: red;
+  }
+  .no-return {
+    font-weight: bold;
+    color: purple;
+  }
+  li {
+    list-style: none;
+  }
+  ul{
+    padding-left: 1em;
+  }
+  .level-0{
+
+  }
+  .level-2{
+    background-color: #eee;
+  }
+  .level-4{
+    background-color: #ddd;
+  }
+  .level-6{
+    background-color: #ccc;
+  }
+  .level-8{
+    background-color: #bbb;
+  }
+  .level-10{
+    background-color: #aaa;
+  }
+  .level-12{
+    background-color: #999;
+  }
+  .level-14{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-16{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-18{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .level-20{
+    background-color: #999;
+    border-left: 1px dotted #222;
+  }
+  .red-error{
+    background-color: #ffcdd2;
+    color: #880e4f;
+  }
+  .red-error-info{
+    background-color: #ffcdd2;
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Build tree for &quot;<a
+    href="asplib.html">asplib</a>&quot;
+    on toolchain &quot;clang_glibc&quot;
+    </h1>
+    <ul class="level-0">
+  <li><span class="good-return">0</span>&nbsp;<code>None</code>
+    <ul class="level-2">
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T gcc-libs</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/pacman -T git cmake</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>git log -1 --date=short --format=%cd.%h</code>
+        <ul class="level-4">
+        </ul>
+      </li>
+      <li><span class="no-return">?</span>&nbsp;<code>cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=1</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -s  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -r  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c uname -m  2>&1</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/CMakeCCompilerId-72a5a2.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib /tmp/CMakeCXXCompilerId-ae4d96.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_a7a7a/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_a7a7a.dir/build.make CMakeFiles/cmTC_a7a7a.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_a7a7a.dir/testCCompiler.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name testCCompiler.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_a7a7a.dir/testCCompiler.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_a7a7a.dir/testCCompiler.c.o -x c /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/testCCompiler.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_a7a7a</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7a7a.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a7a7a /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_a7a7a.dir/testCCompiler.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_4cfe3/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_4cfe3.dir/build.make CMakeFiles/cmTC_4cfe3.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_4cfe3.dir/CMakeCCompilerABI.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_4cfe3.dir/CMakeCCompilerABI.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_4cfe3.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_4cfe3</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cfe3.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4cfe3 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_4cfe3.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_26ff5/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_26ff5.dir/build.make CMakeFiles/cmTC_26ff5.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_26ff5.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_26ff5.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c11 -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_26ff5.dir/feature_tests.c.o -x c /tmp/asplib/src/asplib/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_26ff5</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26ff5.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_26ff5 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_26ff5.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_847ad/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_847ad.dir/build.make CMakeFiles/cmTC_847ad.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_847ad.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_847ad.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c99 -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_847ad.dir/feature_tests.c.o -x c /tmp/asplib/src/asplib/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_847ad</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_847ad.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_847ad /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_847ad.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_27787/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_27787.dir/build.make CMakeFiles/cmTC_27787.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building C object CMakeFiles/cmTC_27787.dir/feature_tests.c.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_27787.dir/feature_tests.c.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c90 -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_27787.dir/feature_tests.c.o -x c /tmp/asplib/src/asplib/CMakeFiles/feature_tests.c</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking C executable cmTC_27787</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27787.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_27787 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_27787.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_73f66/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_73f66.dir/build.make CMakeFiles/cmTC_73f66.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_73f66.dir/testCXXCompiler.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name testCXXCompiler.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_73f66.dir/testCXXCompiler.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_73f66.dir/testCXXCompiler.cxx.o -x c++ /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/testCXXCompiler.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_73f66</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73f66.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_73f66 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_73f66.dir/testCXXCompiler.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_ebb9f/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_ebb9f.dir/build.make CMakeFiles/cmTC_ebb9f.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_ebb9f.dir/CMakeCXXCompilerABI.cpp.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_ebb9f.dir/CMakeCXXCompilerABI.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_ebb9f.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_ebb9f</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ebb9f.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ebb9f /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_ebb9f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_ab607/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_ab607.dir/build.make CMakeFiles/cmTC_ab607.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_ab607.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_ab607.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++14 -fdeprecated-macro -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_ab607.dir/feature_tests.cxx.o -x c++ /tmp/asplib/src/asplib/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_ab607</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab607.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ab607 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_ab607.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_a27b4/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_a27b4.dir/build.make CMakeFiles/cmTC_a27b4.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_a27b4.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_a27b4.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++11 -fdeprecated-macro -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_a27b4.dir/feature_tests.cxx.o -x c++ /tmp/asplib/src/asplib/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_a27b4</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a27b4.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a27b4 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_a27b4.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make cmTC_9393d/fast</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/make -f CMakeFiles/cmTC_9393d.dir/build.make CMakeFiles/cmTC_9393d.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/cmTC_9393d.dir/feature_tests.cxx.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_9393d.dir/feature_tests.cxx.o -resource-dir /usr/bin/../lib/clang/3.8.0 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /tmp/asplib/src/asplib/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_9393d.dir/feature_tests.cxx.o -x c++ /tmp/asplib/src/asplib/CMakeFiles/feature_tests.cxx</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles/CMakeTmp/CMakeFiles --progress-num=2 Linking CXX executable cmTC_9393d</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9393d.dir/link.txt --verbose=1</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld -export-dynamic --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9393d /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crt1.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbegin.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_9393d.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtend.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>make</code>
+        <ul class="level-4">
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -H/tmp/asplib/src/asplib -B/tmp/asplib/src/asplib --check-build-system CMakeFiles/Makefile.cmake 0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/asplib/src/asplib/CMakeFiles /tmp/asplib/src/asplib/CMakeFiles/progress.marks</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/Makefile2 all</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/asplib.dir/build.make CMakeFiles/asplib.dir/depend</code>
+                <ul class="level-8">
+                  <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/asplib/src/asplib && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib/CMakeFiles/asplib.dir/DependInfo.cmake --color=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib/CMakeFiles/asplib.dir/DependInfo.cmake --color=</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/asplib.dir/build.make CMakeFiles/asplib.dir/build</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/asplib/src/asplib/CMakeFiles --progress-num=1 Building CXX object CMakeFiles/asplib.dir/Biquads/Biquad_Native/asplib_Biquad_Native.cpp.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name asplib_Biquad_Native.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/asplib.dir/Biquads/Biquad_Native/asplib_Biquad_Native.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D asplib_EXPORTS -I /tmp/asplib/src/asplib -I /tmp/asplib/src/asplib/Biquads -I /usr/include/asplib -D TARGET_LINUX -D NDEBUG -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdeprecated-macro -fdebug-compilation-dir /tmp/asplib/src/asplib -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/asplib.dir/Biquads/Biquad_Native/asplib_Biquad_Native.cpp.o -x c++ /tmp/asplib/src/asplib/Biquads/Biquad_Native/asplib_Biquad_Native.cpp</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/tmp/asplib/src/asplib/CMakeFiles --progress-num=2 Building CXX object CMakeFiles/asplib.dir/Biquads/apslib_BiquadFactory.cpp.o</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/clang-3.8 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -disable-llvm-verifier -main-file-name apslib_BiquadFactory.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -momit-leaf-frame-pointer -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -coverage-file /tmp/asplib/src/asplib/CMakeFiles/asplib.dir/Biquads/apslib_BiquadFactory.cpp.o -resource-dir /usr/bin/../lib/clang/3.8.0 -D asplib_EXPORTS -I /tmp/asplib/src/asplib -I /tmp/asplib/src/asplib/Biquads -I /usr/include/asplib -D TARGET_LINUX -D NDEBUG -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1 -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/x86_64-pc-linux-gnu -internal-isystem /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/backward -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/clang/3.8.0/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdeprecated-macro -fdebug-compilation-dir /tmp/asplib/src/asplib -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/asplib.dir/Biquads/apslib_BiquadFactory.cpp.o -x c++ /tmp/asplib/src/asplib/Biquads/apslib_BiquadFactory.cpp</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/tmp/asplib/src/asplib/CMakeFiles --progress-num=3 Linking CXX shared library libasplib.so</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_link_script CMakeFiles/asplib.dir/link.txt --verbose=</code>
+                    <ul class="level-10">
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/ld --eh-frame-hdr -m elf_x86_64 -shared -o libasplib.so.0.2.0 /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crti.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtbeginS.o -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64 -L/usr/bin/../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../.. -L/usr/bin/../lib -L/lib -L/usr/lib -soname libasplib.so.0.0 CMakeFiles/asplib.dir/Biquads/Biquad_Native/asplib_Biquad_Native.cpp.o CMakeFiles/asplib.dir/Biquads/apslib_BiquadFactory.cpp.o -lstdc++ -lm -lgcc_s -lc -lgcc_s /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/crtendS.o /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../lib64/crtn.o</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_symlink_library libasplib.so.0.2.0 libasplib.so.0.0 libasplib.so</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E touch_nocreate libasplib.so</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles --progress-num=1,2,3 Built target asplib</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/asplib/src/asplib/CMakeFiles 0</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><span class="good-return">0</span>&nbsp;<code>fakeroot -- /usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+        <ul class="level-4">
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/faked</code>
+            <ul class="level-6">
+            </ul>
+          </li>
+          <li><span class="good-return">0</span>&nbsp;<code>/usr/bin/makepkg -F --noextract --syncdeps --skipinteg --skippgpcheck --skipchecksums --noconfirm --nocolor --log --noprogressbar --nocheck</code>
+            <ul class="level-6">
+              <li><span class="good-return">0</span>&nbsp;<code>None</code>
+                <ul class="level-8">
+                  <li><span class="bad-return">1</span>&nbsp;<code>/usr/bin/pacman --noconfirm --color never --noprogressbar -Q</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>make DESTDIR=/tmp/asplib/pkg/asplib/ install</code>
+                <ul class="level-8">
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -H/tmp/asplib/src/asplib -B/tmp/asplib/src/asplib --check-build-system CMakeFiles/Makefile.cmake 0</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/asplib/src/asplib/CMakeFiles /tmp/asplib/src/asplib/CMakeFiles/progress.marks</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/Makefile2 all</code>
+                    <ul class="level-10">
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/asplib.dir/build.make CMakeFiles/asplib.dir/depend</code>
+                        <ul class="level-12">
+                          <li><span class="good-return">0</span>&nbsp;<code>/bin/sh -c cd /tmp/asplib/src/asplib && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib/CMakeFiles/asplib.dir/DependInfo.cmake --color=</code>
+                            <ul class="level-14">
+                              <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_depends Unix Makefiles /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib /tmp/asplib/src/asplib/CMakeFiles/asplib.dir/DependInfo.cmake --color=</code>
+                                <ul class="level-16">
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/asplib.dir/build.make CMakeFiles/asplib.dir/build</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                      <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/tmp/asplib/src/asplib/CMakeFiles --progress-num=1,2,3 Built target asplib</code>
+                        <ul class="level-12">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_progress_start /tmp/asplib/src/asplib/CMakeFiles 0</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="good-return">0</span>&nbsp;<code>make -f CMakeFiles/Makefile2 preinstall</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -E cmake_echo_color --switch= --cyan Install the project...</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                  <li><span class="no-return">?</span>&nbsp;<code>/usr/bin/cmake -P cmake_install.cmake</code>
+                    <ul class="level-10">
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>xargs -0 grep -q -I /tmp/asplib/src</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="bad-return">123</span>&nbsp;<code>xargs -0 grep -q -I /tmp/asplib/pkg</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>fakeroot -v</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>openssl dgst -sha256 /tmp/asplib/PKGBUILD</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -czf .MTREE --format=mtree --options=!all,use-set,type,uid,gid,mode,time,size,md5,sha256,link .PKGINFO .BUILDINFO usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="no-return">?</span>&nbsp;<code>bsdtar -cf - .PKGINFO .BUILDINFO .MTREE usr</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+              <li><span class="good-return">0</span>&nbsp;<code>xz -c -z -</code>
+                <ul class="level-8">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  <body>
+<html>
